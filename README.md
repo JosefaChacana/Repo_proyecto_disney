@@ -1,3 +1,6 @@
 # Repo_proyecto_disney
 ## Síntesis del proyecto 
 
+La franquicia ha ido tomando dos caminos en la producción de sus filmes: el primero, optar por ideas nuevas y originales que puedan crear un nuevo título de Leyenda Disney, y el segundo, usar las ideas ya existentes y crear continuaciones que puedan apelar a un público ya asegurado, por ejemplo: nuevas películas del universo de Marvel. Las películas correspondientes al segundo punto, suelen tener un mejor recibimiento de parte de la audiencia, obteniendo una rápida popularización. Es por esto, que Disney aprovecha a su público seguro y escoge el camino confiable.
+
+Nuestro proyecto tiene como objetivo principal analizar de qué forma se invierte en películas con ideas nuevas y originales y comparar con las inversiones para películas que sigan una historia ya creada. Al mismo tiempo, también se evaluará la recaudación y llegada a la audiencia de cada una de estas películas, de esta forma, se podrá estudiar el comportamiento de los espectadores frente a ellas. Con esto, se realizará una investigación del impacto que generan ambos tipos de películas y de esta forma verificar si Disney realmente está apostando más por la creación de un supuesto “éxito seguro” que por nuevas historias. 
