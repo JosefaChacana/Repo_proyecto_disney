@@ -1,5 +1,6 @@
 # Repo_proyecto_disney
 ## Síntesis del proyecto 
+En los últimos años, la franquicia de Disney ha ido experimentando altos y bajos al momento de presentar nuevas ideas cinematográficas. Para algunas películas ya se les considera un éxito rotundo (incluso antes de su lanzamiento oficial), mientras que para otras, el mercado del cine no les ha dado la notoriedad y victoria que pudo haberse esperado.
 
 La franquicia ha ido tomando dos caminos en la producción de sus filmes: el primero, optar por ideas nuevas y originales que puedan crear un nuevo título de Leyenda Disney, y el segundo, usar las ideas ya existentes y crear continuaciones que puedan apelar a un público ya asegurado, por ejemplo: nuevas películas del universo de Marvel. Las películas correspondientes al segundo punto, suelen tener un mejor recibimiento de parte de la audiencia, obteniendo una rápida popularización. Es por esto, que Disney aprovecha a su público seguro y escoge el camino confiable.
 
