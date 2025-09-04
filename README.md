@@ -49,7 +49,7 @@ Siguiendo el mismo hilo, también podemos ver otra perspectiva de tal fracaso. E
 - Montos de recaudación.
 - Montos de inversión.
 -  Número de películas producidas. 
-- Cifra porcentual de reseñas del público y críticos.
+- Cifra porcentual de reseñas del público y críticos.  
 
 **Datos confiables:**
 
