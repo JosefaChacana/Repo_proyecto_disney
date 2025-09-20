@@ -21,10 +21,9 @@
 
 ## *Avances del proyecto:*
 
+En nuestra primera entrega, logramos definir que Disney, a lo largo de su historia en la industria, ha transitado por altos y bajos al momento de presentar nuevas ideas cinematográficas. La compañía ha pasado desde un  claro enfoque en la creación e inversión de películas originales hacia una estrategia cada vez más apoyada en el reciclaje y expansión de franquicias ya existentes, y que tuvieron un éxito en el pasado. 
 
-A lo largo de su historia en la industria, Disney ha transitado por altos y bajos al momento de presentar nuevas ideas cinematográficas. La compañía ha pasado desde un  claro enfoque en la creación e inversión de películas originales hacia una estrategia cada vez más apoyada en el reciclaje y expansión de franquicias ya existentes, y que tuvieron un éxito en el pasado. 
-
-Para demostrar esta evolución, nuestro proyecto tendrá por objetivo analizar toda la producción cinematográfica de Disney –incluyendo Disney Animation, Pixar, Marvel y Lucasfilm– con un principal foco en las películas estrenadas en salas de cine. 
+En esta ocasión reformulamos nuestras propuestas de investigación para demostrar esta evolución: nuestro proyecto tendrá por objetivo analizar toda la producción cinematográfica de Disney –incluyendo Disney Animation, Pixar, Marvel y Lucasfilm– con un principal foco en las películas estrenadas en salas de cine. 
 
 A través de la línea temporal de cada estreno de la industria (1937-Actualidad), escogeremos cuatro categorías para poder definir, clasificar y analizar cada una de las obra cinematográficas: 
 
@@ -38,6 +37,7 @@ A través de la línea temporal de cada estreno de la industria (1937-Actualidad
 
 Además, consideraremos otros detalles de cada obra, como lo es su inversión previa, el **rendimiento en taquilla, la recaudación, las reseñas o críticas y las campañas de promoción** (si es que hubo). También, tendremos en cuenta el escenario actual de la industria; el tiempo que hay entre el respectivo estreno en cines y la llegada de la obra a la plataforma digital –Disney+–.
 
-
 El conjunto de todos estos detalles nos permitirán comparar las películas originales, junto a los otros tres tópicos de clasificación, para poder observar si, efectivamente, Disney ha apostado por la innovación o si, por el contrario, ha tenido una tendencia a privilegiar los llamados “éxitos seguros”.
+
+
 
