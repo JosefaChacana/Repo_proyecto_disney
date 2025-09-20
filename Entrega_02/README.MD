@@ -23,7 +23,7 @@
 
 En nuestra primera entrega, logramos definir que Disney, a lo largo de su historia en la industria, ha transitado por altos y bajos al momento de presentar nuevas ideas cinematográficas. La compañía ha pasado desde un  claro enfoque en la creación e inversión de películas originales hacia una estrategia cada vez más apoyada en el reciclaje y expansión de franquicias ya existentes, y que tuvieron un éxito en el pasado. 
 
-En esta ocasión reformulamos nuestras propuestas de investigación para demostrar esta evolución: nuestro proyecto tendrá por objetivo analizar toda la producción cinematográfica de Disney –incluyendo Disney Animation, Pixar, Marvel y Lucasfilm– con un principal foco en las películas estrenadas en salas de cine. 
+En esta ocasión, reformulamos nuestras propuestas de investigación para demostrar esta evolución: nuestro proyecto tendrá por objetivo analizar toda la producción cinematográfica de Disney –incluyendo Disney Animation, Pixar, Marvel y Lucasfilm– con un principal foco en las películas estrenadas en salas de cine. 
 
 A través de la línea temporal de cada estreno de la industria (1937-Actualidad), escogeremos cuatro categorías para poder definir, clasificar y analizar cada una de las obra cinematográficas: 
 
