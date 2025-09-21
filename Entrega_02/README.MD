@@ -39,5 +39,6 @@ Además, consideraremos otros detalles de cada obra, como lo es su inversión pr
 
 El conjunto de todos estos detalles nos permitirán comparar las películas originales, junto a los otros tres tópicos de clasificación, para poder observar si, efectivamente, Disney ha apostado por la innovación o si, por el contrario, ha tenido una tendencia a privilegiar los llamados “éxitos seguros”.
 
+## *Síntesis:*
 
-
+En nuestro proyecto, exploraremos la historia de la franquicia de Disney analizando sus estrategias de producción desde sus orígenes hasta el día de hoy, enfocándonos en factores que permitan diferenciar los tipos de estrenos que presentan: películas originales, remakes, secuelas, precuelas, etc. También las diferencias de cada una de ellas en términos de financiamiento, rendimiento en taquilla y el papel que juega su plataforma digital Disney+. Al mismo tiempo, veremos de qué forma la audiencia recibe cada una de las películas para ver su exíto en reseñas. 
