@@ -9,6 +9,8 @@ En mi caso, decidí tener como variables: **Título de la película, año de est
 
 Con toda la información recolectada, la tabla comenzó a tomar forma, eliminé la variable de Wikipedia “pertenece a coproducción” y pegué los nombres y años de todas las películas. Manualmente, gracias a la lista de todas las películas de la franquicia encontrada en IMDB (además de revisar cada película en la plataforma en el caso de que no estuviera), pude ir **definiendo si los las películas corresponden a historias ya existentes o son completamente nuevas. Además de analizar cuáles son animadas y cuáles no**. 
 
+Como herramienta, la función de Excel "Hojas" fue de gran ayuda para poder dividir las tabla de Wikipedia por cada década, poniendo cada una en una hoja diferente. 
+
 Al llenar la tabla, a la variable de “Tipo de película” le añadí otra posible respuesta: **Mixta**, esto debido a que existen producciones que eran mitad animadas y mitad de imagen real; Encantada, por ejemplo. La variable de “Contenido” adoptó los siguientes valores: **original, remake, reboot, documental, secuela y precuela.**
 
 
