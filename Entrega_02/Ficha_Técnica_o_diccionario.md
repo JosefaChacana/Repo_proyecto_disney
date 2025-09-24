@@ -18,3 +18,16 @@ La cobertura de los datos es bastante amplia, abarcando desde los años 30 hasta
 En mi caso, los datos son de **carácter procesado**, debido a que fueron ordenados en las diversas plataformas para comprenderlos de manera simple y organizada, todos los datos son de **fuente abierta**. En su mayoría, corresponden a datos **estructurados.**
 
 Los datos obtenidos en su mayoría son **cualitativos** (títulos, tipos de películas, contenido). Sólo existe un tipo de dato que es **cuantitativo, las fechas de estreno.**
+
+## *Variables Incorporadas: variable | descripción.*
+
++ Título en español: Título de la película.
+
++ Tipo de película: si es Animada, de Imagen real o Mixta.
+
++ Año de estreno: el año en el que la película salió al aire o en cines.
+
++ Contenido: si la película corresponde a una secuela, remake, precuela, reboot o si es original.
+
+
+
