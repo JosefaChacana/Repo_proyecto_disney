@@ -4,7 +4,7 @@
 
 Como grupo, para comenzar la recolección utilizamos como pie una base de datos extraída de la página **Wikipedia**, en esta encontramos una amplia lista de todas las películas producidas y coproducidas por **Walt Disney Pictures**. Este documento se descargó y se traspasó a hojas de Excel para su comprensión, eliminando casillas que no aportan a nuestra hipótesis, por ejemplo, como la de si las películas formaban parte de una coproducción.
 
-En mi caso, utilicé la plataforma de **IMDB** para obtener detalles de cada película, cómo a qué género pertenece o si pertenece a una historia ya creada.
+En mi caso, utilicé la plataforma de cine **IMDB** para obtener detalles de cada película, cómo a qué género pertenece o si pertenece a una historia ya creada.
 Para complementar esta información utilicé también **Disney+**. 
 
 Este conjunto de datos fue organizado **pasando automáticamente los títulos y años de publicación de las películas**, mientras que los datos de IMDB y Disney+ (Tipo de película y Contenido) se incluyeron de **forma manual**. 
