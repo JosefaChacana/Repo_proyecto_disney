@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-72ab47cc1db8db3ba9148919415d9343"},
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "color": {"field": "Contenido", "type": "nominal"},
+    "theta": {"aggregate": "count", "type": "quantitative"}
+  },
+  "title": "Contenido de las películas de Walt Disney Pictures desde 1995",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-72ab47cc1db8db3ba9148919415d9343": [
+      {
+        "Título en español": "Pesos pesados",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Man of the House",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La leyenda de Pecos Bill",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Goofy, la película / Goofy e hijo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1995,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Pocahontas",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Operación elefante",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Aventuras en la corte del Rey Arturo / Un niño en la corte del Rey Arturo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El gran equipo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Frank y Ollie: Los magos de Disney",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Toy Story",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Tom and Huck",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1995,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Los Muppets en la isla del tesoro / Los Teleñecos en la Isla del Tesoro",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1996,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Volviendo a casa 2: perdidos en San Francisco",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1996,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "James y el melocotón gigante/ Jim y el durazno gigante",
+        "Tipo de película": "Mixta",
+        "Año de estreno": 1996,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El jorobado de Notre Dame",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1996,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "First Kid",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 1996,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El regreso de los mejores / Los campeones 3",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1996,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Aladdín y el rey de los ladrones / Aladdín y los 40 ladrones",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1996,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "101 dálmatas: ¡Ahora la magia es real! / 101 dálmatas: ¡Más vivos que nunca!",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1996,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Un gato del FBI",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1997,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Jungle 2 Jungle",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1997,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Hércules",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1997,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "George de la selva / George de la jungla",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1997,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Air Bud",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1997,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "RocketMan / El astronauta",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1997,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Flubber",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1997,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Mr. Magoo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1997,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "La bella y la bestia 2: Una Navidad Encantada",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1997,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Vaya par de locos / Locura en el campamento",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1998,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El mundo mágico de Bella",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1998,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Mulán",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1998,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Pocahontas 2: Viaje a un Nuevo Mundo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1998,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El rey león 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1998,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Juego de Gemelas / Tú a Londres y yo a California",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1998,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Air Bud 2: el fichaje de la liga",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1998,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "I'll Be Home for Christmas",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1998,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Bichos: Una aventura en miniatura",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1998,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Mi Gran Amigo Joe",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1998,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Mi marciano favorito",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1999,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Doug: La película / Doug: Su 1ª película",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1999,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Endurance",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1999,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Tarzán",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1999,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Inspector Gadget",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1999,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "The Straight Story",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1999,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La mano detrás del ratón: la historia de Ub Iwerks",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 1999,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Mickey celebra la Navidad / Mickey descubre la Navidad",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1999,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Toy Story 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 1999,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Fantasía 2000",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2000,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "La película de Tigger",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2000,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Aventura elefantástica",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2000,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Goofy 2: Extremadamente Goofy / Explosivamente Goofy",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2000,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Dinosaurio",
+        "Tipo de película": "Mixta",
+        "Año de estreno": 2000,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Buzz Lightyear, Comando Estelar: La aventura comienza / Buzz Lightyear: La película",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2000,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "La sirenita 2: Regreso al mar",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2000,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El chico / Mi encuentro conmigo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2000,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Duelo de Titanes / Grito de Titanes",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2000,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "102 Dálmatas",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2000,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Las locuras del emperador / El emperador y sus locuras",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2000,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La dama y el vagabundo II: Las aventuras de Scamp / La dama y el vagabundo II: Las aventuras de Golfillo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2001,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "La hija de Robin Hood",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2001,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Llegó el recreo / La banda del patio - La película",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2001,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Atlantis: El imperio perdido",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2001,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El diario de la princesa / Princesa por sorpresa",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2001,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Max Keeble's Big Movie",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2001,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "The Other Side of Heaven",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2001,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Monsters, Inc. / Monstruos S.A.",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2001,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El Club de los Villanos con Mickey y sus Amigos / El Club de los Villanos",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2001,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "La Navidad Mágica de Mickey",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2001,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Frío de perros / Aventuras en Alaska",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2002,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Peter Pan: El regreso al país de Nunca Jamás / Peter Pan en regreso al país de Nunca Jamás",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2002,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El novato",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2002,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Lilo & Stitch",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2002,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La Cenicienta 2: Un sueño hecho realidad / La Cenicienta 2: ¡La magia no termina a medianoche!",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2002,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El jorobado de Notre Dame 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2002,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Tarzán y Jane",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2002,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "The Country Bears",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2002,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Tuck Everlasting",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2002,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Santa Cláusula 2 / Santa Claus 2",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2002,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El planeta del tesoro",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2002,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "101 dálmatas 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El libro de la selva 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "La Gran Película de Piglet",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Atlantis: El regreso de Milo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "La película de Stitch",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Los fantasmas del Titanic",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2003,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "El misterio de los Excavadores",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2003,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Buscando a Nemo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Piratas del Caribe: La maldición de la Perla Negra / Piratas del Caribe: La maldición del Perla Negra",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2003,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Un viernes de locos / Ponte en mi lugar",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2003,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Lizzie Superstar / Lizzie McGuire: Estrella Pop",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2003,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Tierra de osos / Hermano oso",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La Mansión Encantada / La Mansión Embrujada",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2003,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Kim Possible: Problemas en el Tiempo / Kim Possible: A través del tiempo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2003,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "El joven corcel negro / Shetan, el caballo del desierto",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2003,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Mulán 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El rey león 3: ¡Hakuna Matata!",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Una Primavera con Rito",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Mickey, Donald y Goofy: Los tres mosqueteros",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Mickey y sus amigos juntos otra Navidad / Mickey: La Mejor Navidad",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Teacher's Pet / Este perro es un crack",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Miracle",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2004,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Confesiones de una típica adolescente / Quiero ser superfamosa",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2004,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Vacas Vaqueras / Zafarrancho en el rancho",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Sacred Planet",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2004,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "America's Heart and Soul",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2004,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "El Diario De La Princesa 2 / Princesa por sorpresa 2",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2004,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Los Increíbles",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2004,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La búsqueda / La leyenda del tesoro perdido",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2004,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Aliens of the Deep / Misterios del océano",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2005,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Winnie Pooh y el pequeño efelante / La película de Héffalump",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2005,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Tarzán 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2005,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Lilo y Stitch 2: En corto circuito / Lilo y Stitch 2: El efecto del defecto",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2005,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Kim Possible la película: Todo un drama / Kim Possible: Sí es para Tanto",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2005,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "La familia Proud: La película / Los Proud: La Película",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2005,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Una niñera a prueba de balas / Niñera a prueba de balas",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2005,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Soñando, soñando triunfé patinando / Sueños sobre hielo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2005,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Herbie: A Tope / Herbie a toda marcha",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2005,
+        "Contenido": "Reboot"
+      },
+      {
+        "Título en español": "Sky High: Una escuela de altos vuelos / Súper Escuela de Héroes",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2005,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El juego que hizo historia",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2005,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Chicken Little",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2005,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Las crónicas de Narnia: el león, la bruja y el armario / Las crónicas de Narnia: el león, la bruja y el ropero",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2005,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Las Locuras de Kronk / El emperador y sus locuras 2: La Gran Aventura de Kronk",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2005,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Bambi II: El príncipe del bosque",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2006,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Camino a la gloria",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Roving Mars",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Rescate en la Antártida / Bajo cero",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Un Papá con Pocas Pulgas / Cariño, estoy hecho un perro",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Salvaje / Vida salvaje",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Cars / Cars: Una aventura sobre ruedas",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2006,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Leroy y Stitch",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2006,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Tierra de osos 2 / Hermano Oso 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2006,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El zorro y el sabueso 2 / Tod y Toby 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2006,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Piratas del Caribe: El cofre del hombre muerto / Piratas de Caribe: El Cofre de la Muerte",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Buddy, Familia al recate / Air Buddies",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Invencible",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Santa Cláusula 3 / Santa Claus 3: Por una navidad sin frío",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2006,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "La Cenicienta 3: Un giro en el tiempo / Cenicienta: ¿Qué pasaría sí...?",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2007,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "La Familia del Futuro / Descubriendo a los Robinson",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2007,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Piratas del Caribe: en el fin del mundo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2007,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Ratatouille",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2007,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Superdog / Supercan",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2007,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La historia de Pixar",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2007,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Entrenando a papá / Papá por sorpresa",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2007,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Encantada / Encantada: la historia de Giselle",
+        "Tipo de película": "Mixta",
+        "Año de estreno": 2007,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La búsqueda 2: El diario secreto ",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2007,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Hannah Montana & Miley Cyrus en Concierto: Lo Mejor de Ambos Mundos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Loco Viaje al Campus / Un viaje de aquellos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Las crónicas de Narnia: el príncipe Caspian",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Dasavathaaram",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "WALL·E",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La sirenita 3: los comienzos de Ariel / El Origen de la sirenita",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2008,
+        "Contenido": "Precuela "
+      },
+      {
+        "Título en español": "Campanilla / Tinker Bell",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2008,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Snow Buddies - Cachorros en la nieve / Buddies en la nieve",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Una Chihuahua de Beverly Hills/ Un Chihuahua de Beverly Hills",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Cuentos que no son cuentos / Más allá de los Sueños",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Morning Light",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "High School Musical 3: Fin de Curso/ High School Musical 3: La Gradaución",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2008,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Roadside Romeo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Bolt: Un Perro fuera de serie",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2008,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Jonas Brothers en concierto 3D",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "La Montaña Embrujada",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Hannah Montana: La película",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "La Tierra",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Los muchachos: la historia de los hermanos Sherman",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Trail of the Panda",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Up: Una Aventura de Altura",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Kika Superbruja y el Libro de Hechizos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Fuerza G / G-Force: Licencia para espiar",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Walt y el grupo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Space Buddies",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "The Book of Masters",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Los Fantasmas de Scrooge / Cuento de navidad",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Par de colmilludos / Dos canguros muy maduros",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Tinker Bell y el tesoro perdido / Campanilla y el tesoro perdido",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2009,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "La princesa y el sapo / Tiana y el sapo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2009,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Tinker Bell: Hadas al rescate / Campanilla y el gran rescate",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2010,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Alicia en el país de las maravillas",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2010,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Océanos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "El príncipe de Persia: Las arenas del tiempo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Toy Story 3",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2010,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El aprendiz de brujo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El misterio del los flamencos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Campeón / Secretariat",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Do Dooni Chaar",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Enredados",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2010,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Tron: El legado / Tron: Legacy",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Anaganaga O Dheerudu",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Kika superbruja 2: el viaje a Mandolán",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2010,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Marte necesita mamás",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2011,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Zokkomon",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2011,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Felinos de África",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2011,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Fin de curso",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2011,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Piratas del Caribe: Navegando en aguas misteriosas / Piratas del Caribe:En mareas misteriosas",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2011,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Cars 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2011,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Winnie the Pooh",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2011,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Los Muppets",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2011,
+        "Contenido": "Reboot"
+      },
+      {
+        "Título en español": "John Carter",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2012,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Chimpancés",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2012,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Arjun: El príncipe guerrero",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2012,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Valiente / Indomable",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2012,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La extraña vida de Timothy Green",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2012,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Frankenweenie",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2012,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Ralph el demoledor / ¡Rompe Ralph!",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2012,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Tinker Bell y el secreto de las hadas / Campanilla y el secreto de las hadas",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2012,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Oz, el poderoso / Oz: Un mundo de fantasía",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2013,
+        "Contenido": "Precuela"
+      },
+      {
+        "Título en español": "Alas de vida",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2013,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Monsters University / Monstruos University",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2013,
+        "Contenido": "Precuela"
+      },
+      {
+        "Título en español": "El llanero solitario",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2013,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Aviones",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2013,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Frozen: Una Aventura Congelada / Frozen: El reino de hielo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2013,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El sueño de Walt / Al encuentro de Mr. Banks",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2013,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Muppets 2: Los más buscados / El tour de los Muppets",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2014,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Osos",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2014,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Un golpe de talento",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2014,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Maléfica",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2014,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Aviones 2: Equipo de Rescate / Aviones: Equipo de Rescate",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2014,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Tinker Bell: Hadas y piratas / Campanilla: Hadas y piratas",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2014,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Grandes Héroes / Big Hero 6",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2014,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Alexander y un día terrible, horrible, malo... ¡muy malo! / Alexander y el día terrible, horrible, espantoso, horroroso",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2014,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "En el bosque / Into the Woods",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2014,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "McFarland, sin límites",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2015,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La Cenicienta",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2015,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "El Reino de los Monos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2015,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Tomorrowland: El mundo del mañana",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2015,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Intensa-Mente / Del Revés",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2015,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Descendientes",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2015,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Un Gran Dinosaurio / El viaje de Arlo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2015,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Horas contadas / La hora decisiva",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Zootopia / Zootrópolis",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El libro de la selva",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2016,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Alicia a través del espejo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Tini: El gran cambio de Violetta",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El buen amigo gigante / Mi gran amigo el gigante",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Buscando a Dory",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2016,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Mi amigo el dragón / Peter y el dragón",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Reina de Katwe",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Moana: Un mar de aventuras / Vaiana",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Growing Up Wild",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Dangal",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2016,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La bella y la bestia",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2017,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "La marcha de los pingüinos 2",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2017,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Nacidos en China",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2017,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Piratas del Caribe: La venganza de Salazar",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2017,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Cars 3",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2017,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Ghost of the Mountains",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2017,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Jagga Jasoos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2017,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Coco",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2017,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Expedition China",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2017,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Un viaje en el tiempo / Un pliegue en el tiempo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2018,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Los Increíbles 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2018,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Christopher Robin",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2018,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "El Cascanueces y los cuatro reinos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2018,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Wi-Fi Ralph / Ralph Rompe Internet",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2018,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El Regreso de Mary Poppins",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2018,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Dumbo",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Pingüinos",
+        "Tipo de película": "Imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Documental"
+      },
+      {
+        "Título en español": "Aladdín",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Toy Story 4",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2019,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "El Rey León",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Maléfica: Dueña del Mal / Maléfica: Maestra del Mal",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "La Dama y el Vagabundo",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Noelle",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Frozen II",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2019,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Togo",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2019,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Las aventuras de Timmy Fracaso / DeSastre y Total: Agencia de detectives nº 1",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Unidos / Onward",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Stargirl",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Magic Camp: Campamento Mágico",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Phineas y Ferb, la película: Candace contra el Universo",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2020,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Artemis Fowl: El Mundo Subterráneo",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Hamilton",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El Único y Gran Iván / El Magnífico Iván",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Mulán",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Sociedad Secreta de Hijos Reales",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Belleza Negra",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Amandrihada",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Safety: La última línea de Defensa",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Soul",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2020,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Flora y Ulises",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2021,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Raya y el Último Dragón",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2021,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Cruella",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2021,
+        "Contenido": "Precuela"
+      },
+      {
+        "Título en español": "Luca",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2021,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Jungle Cruise",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2021,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Encanto",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2021,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "El diario de Greg",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2021,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "La era de hielo: Las aventuras de Buck / Ice Age: Las Aventuras de Buck",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2022,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Sneakerella",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2022,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Red",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2022,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Más barato por docena / Doce en casa",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2022,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Chip y Dale al rescate / Chip y Chop: los guardianes rescatadores",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2022,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Stargirl en Hollywood",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2022,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Lightyear",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2022,
+        "Contenido": "Spin-Off"
+      },
+      {
+        "Título en español": "Pinocho",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2022,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Abracadabra 2 / El Retorno de las Brujas 2",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2022,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Desencantada",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2022,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Un Mundo Extraño / Mundo extraño",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2022,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Una noche en el museo: el regreso de Kahmunrah / Noche en el museo: El retorno de Kahmunrah",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2022,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Peter Pan & Wendy",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2023,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "La Sirenita",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2023,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Elementos / Elemental",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2023,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Mansión Embrujada / Mansión Encantada",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2023,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Wish: El poder de los deseos",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2023,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Intensa-Mente 2 / Del revés 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2024,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Moana 2 / Vaiana 2",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2024,
+        "Contenido": "Secuela"
+      },
+      {
+        "Título en español": "Mufasa: El Rey León",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2024,
+        "Contenido": "Precuela"
+      },
+      {
+        "Título en español": "Blanca Nieves / Blancanieves",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2025,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Lilo y Stitch",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2025,
+        "Contenido": "Remake "
+      },
+      {
+        "Título en español": "Elio",
+        "Tipo de película": "Animada",
+        "Año de estreno": 2025,
+        "Contenido": "Original "
+      },
+      {
+        "Título en español": "Otro viernes de locos / Ponte en mi lugar de nuevo",
+        "Tipo de película": "imagen real",
+        "Año de estreno": 2025,
+        "Contenido": "Secuela"
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
