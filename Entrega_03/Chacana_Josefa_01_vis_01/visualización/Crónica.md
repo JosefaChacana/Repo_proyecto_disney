@@ -1,5 +1,7 @@
 # *Crónica*
 
+### La evolución histórica del contenido que entrega Walt Disney Pictures
+
 La franquicia de Disney es conocida por entregar series y películas dedicadas a todos los gustos y todas las edades, siempre respetando un gran legado que llevan cargando con un lema de mantener el espíritu familiar e infantil que lo caracteriza. 
 
 
