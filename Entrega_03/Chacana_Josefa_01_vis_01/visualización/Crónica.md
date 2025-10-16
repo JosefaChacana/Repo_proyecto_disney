@@ -1,6 +1,11 @@
 # *Crónica*
 
-El gráfico de visualización ayuda a representar visualmente los enfoques que ha tenido la industria de Disney. Al representar principalmente la variable de “Contenido” en un rango de tiempo de 30 años (desde 1995 hasta el presente), podemos analizar las prioridades de producción que Walt Disney Pictures ha presentado. Esta variable se divide en siete tipos de respuestas:
+La franquicia de Disney es conocida por entregar series y películas dedicadas a todos los gustos y todas las edades, siempre respetando un gran legado que llevan cargando con un lema de mantener el espíritu familiar e infantil que lo caracteriza. 
+
+
+A lo largo de su historia, Disney  ha experimentado con diferentes formas de hacer cine, pero la mayoría de las personas los reconoce por sus irremplazables clásicos, que logran traspasar generaciones a través de la cultura y por las diferentes continuidades que se les ha ido dando a sus historias, ya sea con secuelas o remakes. 
+
+El gráfico de visualización presentado ayuda a representar visualmente los enfoques que ha tenido la industria de Disney. Al representar principalmente la variable de “Contenido” en un rango de tiempo de 30 años (desde 1995 hasta el presente), podemos analizar las prioridades de producción que Walt Disney Pictures ha presentado. Esta variable se divide en siete tipos de respuestas:
 
 1. Original: película que nace de una idea nueva, sin antecedentes ni tampoco historia cinematográfica.
 
