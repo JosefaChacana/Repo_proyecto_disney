@@ -16,4 +16,4 @@ El gráfico de visualización ayuda a representar visualmente los enfoques que h
 
 7. Spin-Off: una nueva película que forma parte de un acontecimiento o personaje de un universo cinematográfico, siguiendo su historia propia con una narrativa paralela.
 
-En la visualización podemos apreciar cómo en los últimos años, Walt Disney Pictures ha realizado más películas de contenido original, mostrándose con una amplia mayoría frente a las otras opciones
+En la visualización podemos apreciar cómo en los últimos años, Walt Disney Pictures ha realizado más películas de contenido original, mostrándose con una amplia mayoría frente a las otras opciones.
