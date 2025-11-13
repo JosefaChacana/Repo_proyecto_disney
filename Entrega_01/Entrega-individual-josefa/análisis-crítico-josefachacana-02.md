@@ -2,7 +2,7 @@
 ## ¿Qué esperas contar y/o revelar del tema? ¿Cuál es el impacto que esperas generar? 
 En primer lugar, con este trabajo espero poder contar la **evolución que ha tenido Disney**, la forma en la que se caracteriza como creador de clásicos del cine animado y cómo las películas de este estilo cada vez se ven menos. Al mismo tiempo me gustaría poder analizar las posibles razones de las decisiones de producción de la franquicia y su influencia en los espectadores que siguen las historias ya creadas, como también en quienes descubren nuevas experiencias en la pantalla grande. 
 
-Sobre el impacto, espero que el proyecto pueda dejar una base clara acerca de la manera en la que **Disney ha ido funcionando en este último tiempo**, al mismo tiempo acercar a las personas a que también puedan darle una oportunidad a las nuevas ideas editoriales de la franquicia. Agregar que, personalmente este tema me emociona por el hecho de poder dar la oportunidad de que tanto nosotras como quienes puedan ver el proyecto, tengan la oportunidad de **reencontrarse con Disney y adentrarse en la nostalgia que la franquicia provoca**. 
+Sobre el impacto, espero que el proyecto pueda dejar una base clara acerca de la manera en la que **Disney ha ido funcionando en este último tiempo**, al mismo tiempo acercar a las personas a que también puedan darle una oportunidad a las nuevas ideas editoriales de la famosa franquicia. Agregar que, personalmente este tema me emociona por el hecho de poder dar la oportunidad de que tanto nosotras como quienes puedan ver el proyecto, tengan la oportunidad de **reencontrarse con Disney y adentrarse en la nostalgia que la franquicia provoca**. 
 
 ## Elabora al menos 3 ideas que te gustaría realizar para contar la historia 
 
