@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "axis": {"labelFontSize": 12, "titleFontSize": 14},
+    "legend": {"labelFontSize": 12, "titleFontSize": 13},
+    "title": {"anchor": "start", "color": "gray", "fontSize": 18}
+  },
+  "data": {"name": "data-af60f8051ec9aeddc8576e00cdfb875c"},
+  "mark": {"type": "line", "interpolate": "monotone", "point": true},
+  "encoding": {
+    "color": {
+      "field": "Contenido",
+      "scale": {"scheme": "tableau10"},
+      "title": "Tipo de contenido",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Año de estreno", "type": "quantitative"},
+      {"field": "Contenido", "type": "nominal"},
+      {"field": "Cantidad", "type": "quantitative"}
+    ],
+    "x": {
+      "field": "Año de estreno",
+      "title": "Año de estreno",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "Cantidad",
+      "title": "Cantidad de películas",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "title": "Evolución de los tipos de contenido en películas Disney",
+  "width": 800,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-af60f8051ec9aeddc8576e00cdfb875c": [
+      {"Año de estreno": 1995, "Contenido": "Original", "Cantidad": 9},
+      {"Año de estreno": 1995, "Contenido": "Secuela", "Cantidad": 1},
+      {"Año de estreno": 1995, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 1996, "Contenido": "Original", "Cantidad": 3},
+      {"Año de estreno": 1996, "Contenido": "Remake", "Cantidad": 1},
+      {"Año de estreno": 1996, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 1996, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 1997, "Contenido": "Original", "Cantidad": 4},
+      {"Año de estreno": 1997, "Contenido": "Remake", "Cantidad": 4},
+      {"Año de estreno": 1997, "Contenido": "Secuela", "Cantidad": 1},
+      {"Año de estreno": 1998, "Contenido": "Original", "Cantidad": 4},
+      {"Año de estreno": 1998, "Contenido": "Remake", "Cantidad": 2},
+      {"Año de estreno": 1998, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 1998, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 1999, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 1999, "Contenido": "Original", "Cantidad": 3},
+      {"Año de estreno": 1999, "Contenido": "Remake", "Cantidad": 2},
+      {"Año de estreno": 1999, "Contenido": "Secuela", "Cantidad": 1},
+      {"Año de estreno": 1999, "Contenido": "Spin-Off", "Cantidad": 2},
+      {"Año de estreno": 2000, "Contenido": "Original", "Cantidad": 4},
+      {"Año de estreno": 2000, "Contenido": "Secuela", "Cantidad": 5},
+      {"Año de estreno": 2000, "Contenido": "Spin-Off", "Cantidad": 2},
+      {"Año de estreno": 2001, "Contenido": "Original", "Cantidad": 6},
+      {"Año de estreno": 2001, "Contenido": "Secuela", "Cantidad": 1},
+      {"Año de estreno": 2001, "Contenido": "Spin-Off", "Cantidad": 3},
+      {"Año de estreno": 2002, "Contenido": "Original", "Cantidad": 6},
+      {"Año de estreno": 2002, "Contenido": "Secuela", "Cantidad": 5},
+      {"Año de estreno": 2003, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2003, "Contenido": "Original", "Cantidad": 6},
+      {"Año de estreno": 2003, "Contenido": "Remake", "Cantidad": 1},
+      {"Año de estreno": 2003, "Contenido": "Secuela", "Cantidad": 4},
+      {"Año de estreno": 2003, "Contenido": "Spin-Off", "Cantidad": 3},
+      {"Año de estreno": 2004, "Contenido": "Documental", "Cantidad": 2},
+      {"Año de estreno": 2004, "Contenido": "Original", "Cantidad": 5},
+      {"Año de estreno": 2004, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2004, "Contenido": "Spin-Off", "Cantidad": 4},
+      {"Año de estreno": 2005, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2005, "Contenido": "Original", "Cantidad": 6},
+      {"Año de estreno": 2005, "Contenido": "Reboot", "Cantidad": 1},
+      {"Año de estreno": 2005, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2005, "Contenido": "Spin-Off", "Cantidad": 3},
+      {"Año de estreno": 2006, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2006, "Contenido": "Original", "Cantidad": 6},
+      {"Año de estreno": 2006, "Contenido": "Secuela", "Cantidad": 6},
+      {"Año de estreno": 2006, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2007, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2007, "Contenido": "Original", "Cantidad": 5},
+      {"Año de estreno": 2007, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2008, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2008, "Contenido": "Original", "Cantidad": 8},
+      {"Año de estreno": 2008, "Contenido": "Precuela", "Cantidad": 1},
+      {"Año de estreno": 2008, "Contenido": "Secuela", "Cantidad": 1},
+      {"Año de estreno": 2008, "Contenido": "Spin-Off", "Cantidad": 3},
+      {"Año de estreno": 2009, "Contenido": "Documental", "Cantidad": 3},
+      {"Año de estreno": 2009, "Contenido": "Original", "Cantidad": 9},
+      {"Año de estreno": 2009, "Contenido": "Spin-Off", "Cantidad": 4},
+      {"Año de estreno": 2010, "Contenido": "Documental", "Cantidad": 2},
+      {"Año de estreno": 2010, "Contenido": "Original", "Cantidad": 6},
+      {"Año de estreno": 2010, "Contenido": "Remake", "Cantidad": 1},
+      {"Año de estreno": 2010, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2010, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2011, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2011, "Contenido": "Original", "Cantidad": 3},
+      {"Año de estreno": 2011, "Contenido": "Reboot", "Cantidad": 1},
+      {"Año de estreno": 2011, "Contenido": "Secuela", "Cantidad": 2},
+      {"Año de estreno": 2011, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2012, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2012, "Contenido": "Original", "Cantidad": 5},
+      {"Año de estreno": 2012, "Contenido": "Remake", "Cantidad": 1},
+      {"Año de estreno": 2012, "Contenido": "Secuela", "Cantidad": 1},
+      {"Año de estreno": 2013, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2013, "Contenido": "Original", "Cantidad": 3},
+      {"Año de estreno": 2013, "Contenido": "Precuela", "Cantidad": 2},
+      {"Año de estreno": 2013, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2014, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2014, "Contenido": "Original", "Cantidad": 4},
+      {"Año de estreno": 2014, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2014, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2015, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2015, "Contenido": "Original", "Cantidad": 4},
+      {"Año de estreno": 2015, "Contenido": "Remake", "Cantidad": 1},
+      {"Año de estreno": 2015, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2016, "Contenido": "Original", "Cantidad": 8},
+      {"Año de estreno": 2016, "Contenido": "Remake", "Cantidad": 2},
+      {"Año de estreno": 2016, "Contenido": "Secuela", "Cantidad": 1},
+      {"Año de estreno": 2016, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2017, "Contenido": "Documental", "Cantidad": 4},
+      {"Año de estreno": 2017, "Contenido": "Original", "Cantidad": 2},
+      {"Año de estreno": 2017, "Contenido": "Remake", "Cantidad": 1},
+      {"Año de estreno": 2017, "Contenido": "Secuela", "Cantidad": 2},
+      {"Año de estreno": 2018, "Contenido": "Original", "Cantidad": 2},
+      {"Año de estreno": 2018, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2018, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2019, "Contenido": "Documental", "Cantidad": 1},
+      {"Año de estreno": 2019, "Contenido": "Original", "Cantidad": 2},
+      {"Año de estreno": 2019, "Contenido": "Remake", "Cantidad": 4},
+      {"Año de estreno": 2019, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2020, "Contenido": "Original", "Cantidad": 12},
+      {"Año de estreno": 2020, "Contenido": "Remake", "Cantidad": 1},
+      {"Año de estreno": 2020, "Contenido": "Spin-Off", "Cantidad": 1},
+      {"Año de estreno": 2021, "Contenido": "Original", "Cantidad": 6},
+      {"Año de estreno": 2021, "Contenido": "Precuela", "Cantidad": 1},
+      {"Año de estreno": 2022, "Contenido": "Original", "Cantidad": 4},
+      {"Año de estreno": 2022, "Contenido": "Remake", "Cantidad": 2},
+      {"Año de estreno": 2022, "Contenido": "Secuela", "Cantidad": 3},
+      {"Año de estreno": 2022, "Contenido": "Spin-Off", "Cantidad": 3},
+      {"Año de estreno": 2023, "Contenido": "Original", "Cantidad": 3},
+      {"Año de estreno": 2023, "Contenido": "Remake", "Cantidad": 2},
+      {"Año de estreno": 2024, "Contenido": "Precuela", "Cantidad": 1},
+      {"Año de estreno": 2024, "Contenido": "Secuela", "Cantidad": 2},
+      {"Año de estreno": 2025, "Contenido": "Original", "Cantidad": 1},
+      {"Año de estreno": 2025, "Contenido": "Remake", "Cantidad": 2},
+      {"Año de estreno": 2025, "Contenido": "Secuela", "Cantidad": 1}
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
