@@ -23,7 +23,7 @@ Los datos obtenidos en su mayoría son **cualitativos** (títulos, tipos de pel�
 
 + Título en español: Título de la película.
 
-+ Tipo de película: si es Animada, de Imagen real o Mixta.
++ Tipo de película: si es Animada, si es de Imagen real o Mixta.
 
 + Año de estreno: el año en el que la película salió al aire o en cines.
 
