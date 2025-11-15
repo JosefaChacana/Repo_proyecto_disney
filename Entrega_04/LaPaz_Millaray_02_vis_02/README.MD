@@ -23,7 +23,7 @@ El título y el subtítulo fueron creados con el próposito de atraer la atenci�
 
 Se prosigue con una mini introducción para cotextualizar la información que el lector esta por leer, además, se deja una pregunta abierta para causar intriga por cómo se desarrollarán los datos expuestos. 
 
-El análisis de **1989-1999* es la "primera parada" de dato duro, donde se le expone al lector pura información. 
+El análisis de **1989-1999** es la "primera parada" de dato duro, donde se le expone al lector pura información. 
 
 Luego, prosigue el "Gráfico 1" que tiene el fin de ayudar a comprender la base detrás de la información. Este es sumamente relevante, ya que contiene, por distintos colores, cada película de la industria y enlazadas las que tienen una correlación. Este gráfico ayudará a comprender la información que sigue. 
 
