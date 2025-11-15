@@ -8,7 +8,7 @@ El afiche presenta un recorrido intuitivo de arriba hacia abajo. Los elementos r
 
 ## Elementos visuales y mensaje comunicacional 
 
-El afiche sigue los colores y estética de la franquicia de Disney: azul y amarillo. 
+El afiche sigue los colores y estética de la franquicia de Disney: azul, rojo y amarillo. 
 
 El elemento central es el gráfico, acompañado de elementos de los colores respectivos. 
 En la visualización presentada se encuentra la evolución en 30 años del contenido de las películas de Walt Disney Pictures, los cuáles se desglosan como: Documental, Original, Precuela, Secuela, Reboot, Remake y por último Spin-off. 
