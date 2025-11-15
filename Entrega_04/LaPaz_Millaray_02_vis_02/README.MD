@@ -17,7 +17,7 @@ Y por último, el análisis evolutivo de la inversión ejecutada entre los años
 
 Cerrando así, con una pequeña conclusión de este análisis evolutivo de la inversión de la industria Disney. 
 
-(2) de qué manera los elementos visuales, los datos y prosa potencian y clarifican el mensaje comunicacional de la pieza.
+(2) 
 
 El título y el subtítulo fueron creados con el próposito de atraer la atención del lector y que tenga interés leer la información expuesta.
 
