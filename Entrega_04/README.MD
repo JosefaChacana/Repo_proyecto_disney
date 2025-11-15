@@ -2,6 +2,8 @@
 
 ## Moodboard
 
+Se puede apreciar la inspiración de la estética que presenta Disney, desde elementos que son característicos desde el inicio de la franquicia, hasta algunos de los que se encuentran en Disney+ de la actualidad; por ejemplo, el color azul metálico del logo creado. 
+
 ## Colores 
 
 Para los colores decidimos seguir la estética clásica que caracteriza a Disney, con blanco, amarilo, y azul. Para el logo nos basamos en el color principal de Disney+, una variación del primer azul escogido, pero con estilo más metálico. 
