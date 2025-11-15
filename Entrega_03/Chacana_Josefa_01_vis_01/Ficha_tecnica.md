@@ -3,7 +3,7 @@
 ## *Características de los datos:*
 Los datos, al igual que en la entrega anterior, los datos son de carácter procesado, debido a que fueron ordenados en las diversas plataformas para comprenderlos de manera simple y organizada, debido a que pude encontrarlos en las páginas y plataformas también se puede concluir que todos los datos son de fuente abierta. En su mayoría, corresponden a datos estructurados.
 
-Los datos obtenidos en su mayoría son cualitativos (títulos, tipos de películas, contenido). Sólo existe un tipo de dato que es cuantitativo, las fechas de estreno.
+Los datos obtenidos en su mayoría son cualitativos (títulos, tipos de películas, contenido, etc). Sólo existe un tipo de dato que es cuantitativo, las fechas de estreno.
 
 ## *Variables*:
 
