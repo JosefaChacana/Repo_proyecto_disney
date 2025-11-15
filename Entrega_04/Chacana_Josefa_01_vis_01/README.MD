@@ -2,6 +2,7 @@
 
 ##  Descripción y lectura visual de la pieza 
 
+El afiche presenta un recorrido intuitivo de arriba hacia abajo. Los elementos relacionados al cine poseen los colores característicos de Disney en sus inicios, también presenta una referencia a la silueta del personaje principal de la industria: Mickey Mouse. La información se encuentra en letra más pequeña para llevar la atención hacia los elementos visuales.
 
 
 
