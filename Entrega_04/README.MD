@@ -9,7 +9,7 @@ Para los colores decidimos seguir la estética clásica que caracteriza a Disney
 
 ## Tipografía 
 
-Para el título general de la página utilizamos la fuente Noto Serif, la cual posee gran cuerpo para poder resaltar entre los elementos.
+Para el título general de la página utilizamos la fuente TAN Headline, la cual posee gran legibilidad para poder resaltar entre los elementos. Para la tipografía del cuerpo de texto utilizacmos Alice. 
 
 
 ## Recursos Gráficos 
