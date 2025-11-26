@@ -8,4 +8,4 @@ Cada visualización busca unir una pieza del puzzle para comprenderlo. Por un la
 
 Por otro lado, tenemos una visualización que muestra la inversión y la recaudación de cada película producida, en donde se puede evidenciar no sólo por cuanto dinero apuesta Disney hacia el éxito de sus películas, sino que también la forma en la que el público la recibe a través de los números obtenidos. 
 
-Por sí solos los gráficos cuentan una historoa por separado, pero al unirlos tenemos lo que vendría siendo el análisis total que buscamos hacer. 
+Por sí solos los gráficos cuentan una historia por separado, pero al unirlos tenemos lo que vendría siendo el análisis total que buscamos hacer. 
