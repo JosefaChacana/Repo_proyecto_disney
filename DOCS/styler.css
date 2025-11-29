@@ -60,3 +60,22 @@ p {
     font-size: 2.8em; 
 }
 
+.cuadrado p {
+    color: #113558; /* Color azul oscuro para contraste en el fondo amarillo */
+    font-size: 1.25em; /* Letra más grande y notoria */
+    font-weight: 600; /* Letra semi-negrita */
+    line-height: 1.5;
+    /* QUITAMOS LOS MÁRGENES DEL PÁRRAFO ESTÁNDAR para que el texto se centre en el cuadrado */
+    margin: 0; 
+}
+
+.cuadrado {
+    background-color: #ffdf07; /* El fondo amarillo */
+    padding: 30px; /* Aumentamos el espacio interno */
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 12px; /* Esquinas más redondeadas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Sombra más fuerte */
+}
+
