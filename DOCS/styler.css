@@ -1,7 +1,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #c6dcff;
+  background-color:whitesmoke;
   /* Color del texto (si usas el azul oscuro) */
   color: #113558; 
   margin: 0;
@@ -31,8 +31,25 @@ p {
   max-width: 1200px; 
   margin: 0 auto; 
   padding: 20px; 
-  background-color: white; 
+  background-color:#c6dcff; 
   border-radius: 10px;
-  /* Sombra para crear una diferencia visual clara y darle profundidad */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
 }
+
+.titulo-bloque {
+    background-color: #1c5791;
+    padding: 30px 20px; 
+ 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    margin: 0 ; 
+    width: auto; /* Permite que el margen negativo funcione */
+}
+
+.titulo-bloque h1 {
+    color: #ffdf07; 
+    text-align: center;
+    margin: 0; 
+    font-size: 2.8em; 
+}
+
