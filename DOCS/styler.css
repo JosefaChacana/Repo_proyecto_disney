@@ -69,18 +69,4 @@ p {
     margin: 0; 
 }
 
- {
-  /* CENTRADO DEL TEXTO DENTRO DEL BLOQUE */
-  text-align: center; 
-  
-  border-radius: 12px; 
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-}
-
-.cuadrado p {
-  /* Asegura que el texto use el color de contraste y anula los márgenes */
-  color: #113558; 
-  font-size: 1.25em; 
-  font-weight: 600; 
-  margin: 0; /* ¡Vital para el centrado perfecto! */
-}
+ 
