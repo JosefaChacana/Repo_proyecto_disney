@@ -69,15 +69,7 @@ p {
     margin: 0; 
 }
 
-.cuadrado {
-  background-color: #ffdf07; /* Amarillo de Disney */
-  color: #113558; /* Color de texto que hereda (aunque se sobrescribe en <p>) */
-  padding: 30px; /* Espacio interno grande */
-  
-  /* CENTRADO DEL BLOQUE */
-  max-width: 600px;
-  margin: 40px auto; 
-  
+ {
   /* CENTRADO DEL TEXTO DENTRO DEL BLOQUE */
   text-align: center; 
   
