@@ -64,3 +64,19 @@ p {
     line-height: 1.5;
     margin: 0; 
 }
+.cuadrado {
+    /* 1. CLAVE: Limita el ancho del bloque (ejemplo: 650px) */
+    max-width: 650px; 
+    
+    /* 2. CLAVE: Centra el bloque .cuadrado dentro del contenedor principal */
+    margin: 40px auto; 
+    
+    /* 3. Centra el texto de la pregunta dentro del bloque .cuadrado */
+    text-align: center; 
+    
+    /* Limpieza para que no se vea el cuadro: */
+    background-color: transparent; 
+    padding: 0; 
+    border: none; 
+    box-shadow: none; 
+}
