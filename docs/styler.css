@@ -31,9 +31,6 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   
-  /* CAMBIO CLAVE: Padding */
-  /* El orden es: arriba, derecha, abajo, izquierda */
-  /* Ponemos 0px arriba para que el banner se pegue al borde */
   padding: 0 20px 20px 20px; 
   
   background-color: white;
@@ -44,11 +41,11 @@ p {
 .titulo-bloque {
     background-color: #1c5791;
     padding: 30px 20px; 
-    /* ESTOS DOS SON CLAVE: Redondean las esquinas superiores */
+    
     border-top-left-radius: 10px; 
     border-top-right-radius: 10px;
     
-    /* Esto compensa el padding lateral del contenedor para que el color llene el espacio */
+  
     margin: 0 -20px; 
     width: auto;
 }
@@ -57,15 +54,14 @@ p {
     color: #ffdf07; 
     text-align: center;
     margin: 0; 
-    font-size: 2.8em; 
+    font-size: 2em; 
 }
 
 .cuadrado p {
-    color: #113558; /* Color azul oscuro para contraste en el fondo amarillo */
-    font-size: 1.25em; /* Letra más grande y notoria */
-    font-weight: 600; /* Letra semi-negrita */
+    color: #113558; 
+    font-size: 1.25em; 
+    font-weight: 600; 
     line-height: 1.5;
-    /* QUITAMOS LOS MÁRGENES DEL PÁRRAFO ESTÁNDAR para que el texto se centre en el cuadrado */
     margin: 0; 
 }
 
