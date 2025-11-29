@@ -1,9 +1,5 @@
-/* Estilo para el cuerpo (lo que sí te funciona) */
-body {
-  background-color: #c6dcff;
-}
-
-/* Usamos la clase para forzar la aplicación del color */
-.titulo-color {
-  color: #ffdf07;
-}
+body{
+  background: var(--bg);
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  color:#333;}
