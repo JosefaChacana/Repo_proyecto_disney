@@ -1,36 +1,28 @@
+
 body {
   font-family: Arial, sans-serif;
   background-color: #c6dcff;
-}
-h1 {
-  color: #ffdf07 ;
+  /* Color del texto (si usas el azul oscuro) */
+  color: #113558; 
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   color: #ffdf07;
-  /* Centrado del texto */
+  /* Alineación y espacio */
   text-align: center; 
-  /* Espacio extra encima para que no se pegue al borde superior */
   padding-top: 30px; 
+  /* Sombra de texto suave para resaltar (opcional) */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); 
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #c6dcff;
-  /* Define el color del texto principal para todo el cuerpo */
-  color: #113558;
-}
-
 
 .contenedor {
-  /* Fija un ancho máximo para el contenido (ej. 1000 píxeles) */
   max-width: 1000px; 
-  /* Centra el bloque de contenido en el centro de la página */
   margin: 0 auto; 
-  /* Añade un poco de relleno a los lados */
-  padding: 0 20px; 
-  /* Puedes darle un fondo blanco para que resalte del fondo azul (opcional) */
+  padding: 20px;
   background-color: white; 
-  /* Borde redondeado suave (opcional) */
-  border-radius: 5px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para levantarlo */
 }
+
