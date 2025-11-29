@@ -17,9 +17,6 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); 
 }
 
-
-
-/* --- ESTILO PARA PÁRRAFOS (<p>) --- */
 p {
     color: #333333; 
     font-size: 1.1em;
@@ -30,3 +27,12 @@ p {
     text-align: justify;
 }
 
+.contenedor-principal {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  background-color: white; 
+  border-radius: 10px;
+  /* Sombra para crear una diferencia visual clara y darle profundidad */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+}
