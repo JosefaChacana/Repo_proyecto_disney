@@ -1,3 +1,9 @@
+/* Estilo para el cuerpo (lo que sí te funciona) */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background-color: #c6dcff;
+}
+
+/* Usamos la clase para forzar la aplicación del color */
+.titulo-color {
+  color: #ffdf07;
+}
