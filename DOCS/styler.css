@@ -53,12 +53,6 @@ p {
     width: auto;
 }
 
-.titulo-bloque h1 {
-    color: #ffdf07; 
-    text-align: center;
-    margin: 0; 
-    font-size: 2.8em; 
-}
 
 .cuadrado p {
     color: #113558; /* Color azul oscuro para contraste en el fondo amarillo */
