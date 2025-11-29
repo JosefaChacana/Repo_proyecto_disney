@@ -28,22 +28,29 @@ p {
 }
 
 .contenedor-principal {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 20px; 
-  background-color:#c6dcff; 
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  /* CAMBIO CLAVE: Padding */
+  /* El orden es: arriba, derecha, abajo, izquierda */
+  /* Ponemos 0px arriba para que el banner se pegue al borde */
+  padding: 0 20px 20px 20px; 
+  
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .titulo-bloque {
     background-color: #1c5791;
     padding: 30px 20px; 
- 
+    /* ESTOS DOS SON CLAVE: Redondean las esquinas superiores */
     border-top-left-radius: 10px; 
     border-top-right-radius: 10px;
-    margin: 0 ; 
-    width: auto; /* Permite que el margen negativo funcione */
+    
+    /* Esto compensa el padding lateral del contenedor para que el color llene el espacio */
+    margin: 0 -20px; 
+    width: auto;
 }
 
 .titulo-bloque h1 {
