@@ -14,7 +14,7 @@ Finalmente se podrá ver la visualización de inversión-recaudación junto con 
 
 Decidimos usar un estilo narrativo que sea semiformal, con una idea fuerza de información, pero que también refleje la nostalgia y cariño que produce volver a encontrarse con películas de la infancia; un lenguaje característico de Disney.
 
-La redacción refuerza las visualizaciones debido a que el proyecto en general será una explicación a los gráficos visualizados. Pondremos un lenguaje más ameno para explicar datos difíciles de interpretar.
+La redacción refuerza las visualizaciones debido a que el proyecto en general será una explicación a los gráficos visualizados. Pondremos un lenguaje más ameno para explicar algunos datos difíciles de interpretar.
 
 ## Elementos visuales
 
