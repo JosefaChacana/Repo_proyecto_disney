@@ -51,9 +51,6 @@
     pointer-events: none; 
 }
 
-
-
-
 .sparkle {
     position: fixed; 
     width: 3px;
@@ -109,6 +106,7 @@ p {
     padding: 0 15px;
     text-align: justify;
 }
+
 
 .contenedor-principal {
     max-width: 1200px;
