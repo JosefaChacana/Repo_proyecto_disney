@@ -4,49 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disney Industry: la evolución de la magia</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        .titulo centrado {
-            width:22%;      /* *Importante:* Necesitas definir un ancho menor al 100% */
-            margin-left: auto;      /* Margen izquierdo automático */
-            margin-right: auto;         /* Margen derecho automático */
-            border: 1px solid red;     /* Línea roja para ver dónde está el bloque */
-            padding: 10px;
-            /* Y para centrar el texto DENTRO del bloque: */
-            text-align: center; 
-    }
-    </style>
-    <title>Disney Industry: la evolución de la magia</title>
-    <link rel="stylesheet" href="styler.css"> 
-</head>
- 
-    <style>
+      
+        
         body {
-            font-family: sans-serif;
-            background-color: #f0f0f0;
+            
+            font-family: 'Poppins', Arial, sans-serif; 
+            background-color: #E8F6FA; 
+            color: #113558;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
+
+        h1 {
+            
+            color: #ffdf07;
+            text-align: center;
+            padding-top: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        }
+        
+        h2 {
+            font-size: 1.8rem; 
+            margin-bottom: 20px; 
+            border-bottom: 1px solid #ddd; 
+            padding-bottom: 5px;
+        }
+
+        p {
+            color: #333333;
+            font-size: 1.1em;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+            text-align: justify;
+        }
+
         .contenedor-principal {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            
+            
+            overflow: hidden;
+            
+            padding: 0 20px 20px 20px; 
+
+            background-color: white; 
+            border-radius: 10px;
+            
+           
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+            transition: box-shadow 0.3s ease, transform 0.3s ease; 
         }
+
+       
+        .contenedor-principal:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
+        }
+
         .titulo-bloque {
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ccc;
-            margin-bottom: 20px;
+           
+            background-color: #1c5791;
+            padding: 30px 20px;
+
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            margin: 0 -20px; 
+            width: auto;
         }
+
+        .titulo-bloque h1 {
+           
+            color: #ffdf07; 
+            text-align: center;
+            margin: 0; 
+            font-size: 2.5em;
+        }
+
+        
         .cuadrado {
+            
+            max-width: 650px; 
+            margin: 40px auto; 
+            text-align: center; 
+            
             background-color: #aac5ef; 
             color: white;
             padding: 25px;
             border-radius: 8px;
-            text-align: center;
             font-size: 1.5rem;
             font-weight: bold;
-            margin: 30px 0;
         }
+        
+        .cuadrado p {
+           
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: white; 
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
         .seccion {
             margin-bottom: 40px;
             padding: 20px 0;
@@ -76,6 +142,7 @@
             }
         }
     </style>
+</head>
 <body>
     
     <div class="contenedor-principal">
@@ -92,14 +159,14 @@
             <p>¿Cuándo fue la última vez que viste una historia original de Disney?</p>
             
             <div id="opciones-respuesta" style="margin-top: 20px; font-size: 1rem;">
-               
+                
                 <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 1</button>
                 <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 2</button>
-                 <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 3</button>
+                <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 3</button>
             </div>
-             
+            
     </div>
- <section class="seccion seccion-jose">
+    <section class="seccion seccion-jose">
             <h2 style="font-size: 1.8rem; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;"> Clasificación de Películas (jose)</h2>
             
             <p id="texto-jose">
@@ -111,22 +178,21 @@
             </div>
 
             <h3 style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px;">Mapa Interactivo - Películas por Categoría y Año</h3>
-            <p>  texto para el mapa interactivo </p>
+            <p>  texto para el mapa interactivo </p>
             <div class="contenedor-mapa" id="mapa-interactivo">
                 [Espacio para el Mapa Interactivo (Tabla vertical por años)]
             </div>
         </section>
-         
+        
             <section class="seccion seccion-milla">
-            <h2 style="font-size: 1.8rem; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Análisis evolutivo del Ingreso-Recaudación <h2>
+            <h2 style="font-size: 1.8rem; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Análisis evolutivo del Ingreso-Recaudación </h2>
 
             <div class="seccion-milla-data">
-               <div class="contenedor-graficos">
+                <div class="contenedor-graficos">
     
-                 <div class="grafico grafico-inversion">
-                    <h2>Gráfico de Inversión</h2>
-                    </div>
-                <!-- INVERSIÓN -->
+                    <div class="grafico grafico-inversion">
+                        <h2>Gráfico de Inversión</h2>
+                        </div>
                 <div>
                     <h3 style="font-size: 1.4rem; margin-bottom: 10px;">(Gráfico inversión)</h3>
                     <p id="texto-milla-inversion">
@@ -139,10 +205,9 @@
                         [Espacio para el Gráfico 2 de Inversión de Milla]
                     </div>
                 </div>
-                 <div class="grafico grafico-recaudacion">
+                    <div class="grafico grafico-recaudacion">
                         <h2>Gráfico de Recaudación</h2>
                         </div>
-                <!-- RECAUDACIÓN -->
                 <div>
                     <h3 style="font-size: 1.4rem; margin-bottom: 10px;"> (Gráfico recaudación)</h3>
                     <p id="texto-milla-recaudacion"> 
@@ -154,17 +219,17 @@
                         [Espacio para el Gráfico 2 de Recaudación de Milla]
                     </div>
                 </div>
-                 </div>
+                </div>
                 <div> 
                 </div>
-              <h3 style="font-size: 1.4rem; margin-top: 30px; margin-bottom: 10px;">Top 3 Inversiones más altas </h3>
+                <h3 style="font-size: 1.4rem; margin-top: 30px; margin-bottom: 10px;">Top 3 Inversiones más altas </h3>
             <p>texto.</p>
             <div class="contenedor-galeria" id="galeria-destacada">
                 [Espacio para la Galería Destacada]
             </div>
         </section>
 
-  <section class="seccion seccion-cierre">
+    <section class="seccion seccion-cierre">
             <h2 style="font-size: 1.8rem; text-align: center; margin-bottom: 20px;">Cierre del Análisis</h2>
             <div class="cuadrado" style="background-color: #10b981; color: white;">
                 <p>Cierre y conclusiones finalfinales.</p>
