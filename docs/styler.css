@@ -154,3 +154,29 @@
             grid-template-columns: 1fr 1fr; 
         }
     }
+
+    /* ---------------------------------------------------- */
+/* --- CÓDIGO CRÍTICO PARA LA VISIBILIDAD DEL DESTELLO --- */
+/* ---------------------------------------------------- */
+.sparkle {
+    /* 🟢 HACE LA PARTÍCULA VISIBLE Y LA FIJA EN EL FONDO */
+    position: fixed; 
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.8); /* Blanco visible */
+    border-radius: 50%; /* Lo hace redondo */
+    pointer-events: none; /* Ignora clics, permite interactuar con el contenido */
+    box-shadow: 0 0 5px 1px rgba(175, 238, 238, 0.8); /* El efecto de brillo */
+    z-index: -1; /* Lo coloca detrás de todo el contenido */
+    
+    /* 🟢 APLICA LA ANIMACIÓN */
+    animation: flicker linear infinite;
+}
+
+/* ---------------------------------------------------- */
+/* --- KEYFRAMES PARA EL PARPADEO --- */
+/* ---------------------------------------------------- */
+@keyframes flicker {
+    0%, 100% { opacity: 0; } /* Invisible al inicio y al final del ciclo */
+    50% { opacity: 1; }      /* Visible a la mitad del ciclo */
+}

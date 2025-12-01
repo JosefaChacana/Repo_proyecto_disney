@@ -8,10 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-      
+       
+        .sparkle {
+            position: fixed; 
+            width: 3px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 50%;
+            pointer-events: none; 
+            box-shadow: 0 0 5px 1px rgba(175, 238, 238, 0.8); 
+            z-index: -1; 
+            animation: flicker linear infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
         
         body {
-            
             font-family: 'Poppins', Arial, sans-serif; 
             background-color: #E8F6FA; 
             color: #113558;
@@ -21,18 +36,21 @@
         }
 
         h1 {
-            
             color: #ffdf07;
             text-align: center;
             padding-top: 30px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         }
         
+      
         h2 {
             font-size: 1.8rem; 
-            margin-bottom: 20px; 
-            border-bottom: 1px solid #ddd; 
-            padding-bottom: 5px;
+            color: #1c5791; 
+            text-transform: uppercase; 
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ffdf07; 
+            margin-bottom: 25px; 
+            text-align: center; 
         }
 
         p {
@@ -48,53 +66,39 @@
         .contenedor-principal {
             max-width: 1200px;
             margin: 0 auto;
-            
-            
             overflow: hidden;
-            
             padding: 0 20px 20px 20px; 
-
             background-color: white; 
             border-radius: 10px;
-            
-           
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
             transition: box-shadow 0.3s ease, transform 0.3s ease; 
         }
 
-       
         .contenedor-principal:hover {
             transform: translateY(-5px); 
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
         }
 
         .titulo-bloque {
-           
             background-color: #1c5791;
             padding: 30px 20px;
-
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
-
             margin: 0 -20px; 
             width: auto;
         }
 
         .titulo-bloque h1 {
-           
             color: #ffdf07; 
             text-align: center;
             margin: 0; 
             font-size: 2.5em;
         }
 
-        
         .cuadrado {
-            
             max-width: 650px; 
             margin: 40px auto; 
             text-align: center; 
-            
             background-color: #aac5ef; 
             color: white;
             padding: 25px;
@@ -104,7 +108,6 @@
         }
         
         .cuadrado p {
-           
             font-size: 1.5rem; 
             font-weight: bold; 
             color: white; 
@@ -113,24 +116,46 @@
             text-align: center;
         }
         
+        
+        .opcion-btn {
+            background-color: #1c5791; 
+            color: white;
+            border: none;
+            padding: 12px 25px; 
+            border-radius: 25px; 
+            cursor: pointer;
+            margin: 5px 10px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            font-weight: 600;
+        }
+
+        .opcion-btn:hover {
+            background-color: #113558; 
+            transform: translateY(-2px); 
+        }
+        
         .seccion {
             margin-bottom: 40px;
             padding: 20px 0;
             border-top: 1px solid #eee;
         }
+        
+       
         .contenedor-grafico, .contenedor-galeria, .contenedor-mapa {
-            background-color: #f9f9f9;
-            border: 1px dashed #ccc;
+            background-color: #ffffff; 
+            border: 1px solid #e0e0e0; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
             padding: 30px;
             margin-top: 15px;
-            border-radius: 6px;
-            min-height: 100px; 
+            border-radius: 8px; 
+            min-height: 150px; 
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: #666;
         }
+        
         .seccion-milla-data {
             display: grid;
             grid-template-columns: 1fr;
@@ -160,14 +185,14 @@
             
             <div id="opciones-respuesta" style="margin-top: 20px; font-size: 1rem;">
                 
-                <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 1</button>
-                <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 2</button>
-                <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 3</button>
+                <button class="opcion-btn">Opción 1</button>
+                <button class="opcion-btn">Opción 2</button>
+                <button class="opcion-btn">Opción 3</button>
             </div>
             
     </div>
     <section class="seccion seccion-jose">
-            <h2 style="font-size: 1.8rem; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;"> Clasificación de Películas (jose)</h2>
+            <h2> Clasificación de Películas (jose)</h2>
             
             <p id="texto-jose">
                 Aquí va el texto de José sobre la clasificación de películas originales, remakes y live-actions.
@@ -185,7 +210,7 @@
         </section>
         
             <section class="seccion seccion-milla">
-            <h2 style="font-size: 1.8rem; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Análisis evolutivo del Ingreso-Recaudación </h2>
+            <h2>Análisis evolutivo del Ingreso-Recaudación </h2>
 
             <div class="seccion-milla-data">
                 <div class="contenedor-graficos">
@@ -230,7 +255,7 @@
         </section>
 
     <section class="seccion seccion-cierre">
-            <h2 style="font-size: 1.8rem; text-align: center; margin-bottom: 20px;">Cierre del Análisis</h2>
+            <h2>Cierre del Análisis</h2>
             <div class="cuadrado" style="background-color: #10b981; color: white;">
                 <p>Cierre y conclusiones finales.</p>
             </div>
@@ -238,6 +263,7 @@
         
     </div>
 
+    <script src="script.js"></script>
 
     </body>
 </html>
