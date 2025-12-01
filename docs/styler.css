@@ -1,101 +1,156 @@
-body {
-  /* 🟢 NUEVA FUENTE */
-  font-family: 'Poppins', Arial, sans-serif; 
-  /* 🔵 Fondo celeste */
-  background-color: #E8F6FA; 
-  color: #113558;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  color: #ffdf07;
-  text-align: center;
-  padding-top: 30px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-p {
-  color: #333333;
-  font-size: 1.1em;
-  line-height: 1.7;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 15px;
-  text-align: justify;
-}
-
-.contenedor-principal {
-  max-width: 1200px;
   
-  /* Centrado de la caja principal */
-  margin: 0 auto;
-  
-  /* 🔑 SOLUCIÓN FINAL PARA MARGENES COLAPSADOS */
-  overflow: hidden;
-  
-  padding: 0 20px 20px 20px;
+    body {
+        
+        font-family: 'Poppins', Arial, sans-serif; 
+        background-color: #E8F6FA; 
+        color: #113558;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
 
-  background-color: white; 
-  border-radius: 10px;
-  
-  /* 🟢 SOMBRA Y TRANSICIÓN MEJORADA */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
-  transition: box-shadow 0.3s ease, transform 0.3s ease; 
-}
-
-/* 🟢 EFECTO HOVER */
-.contenedor-principal:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
-}
-
-.titulo-bloque {
-  /* 🔵 Fondo azul */
-  background-color: #1c5791;
-  padding: 30px 20px;
-
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
-  /* Extiende el bloque azul para cubrir los bordes del contenedor */
-  margin: 0 -20px; 
-  width: auto;
-}
-
-.titulo-bloque h1 {
-  /* 🟡 Letras amarillas */
-  color: #ffdf07; 
-  text-align: center;
-  margin: 0; 
-  font-size: 2.5em;
-}
-
-/* --- ESTILOS DE LA PREGUNTA CENTRADA --- */
-
-.cuadrado {
-    /* 🔑 Centra el bloque .cuadrado */
-    max-width: 650px; 
-    margin: 40px auto; 
-    text-align: center; 
+    h1 {
+     
+        color: #ffdf07;
+        text-align: center;
+        padding-top: 30px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
     
-    /* Limpieza total de caja */
-    background-color: transparent; 
-    padding: 0; 
-    border: none; 
-    box-shadow: none; 
-}
-
-.cuadrado p {
-    /* Estilo de letra: Grande y Negrita */
-    color: #113558; 
-    font-size: 1.25em; 
-    font-weight: 600; 
-    line-height: 1.5;
     
-    /* Limpieza interna */
-    background-color: transparent;
-    border: none;
-    margin: 0; 
-    padding: 0;
-}
+    h2 {
+        font-size: 1.8rem; 
+        color: #1c5791; 
+        text-transform: uppercase; 
+        padding-bottom: 10px;
+        border-bottom: 3px solid #ffdf07; 
+        margin-bottom: 25px; 
+        text-align: center; 
+    }
+
+    p {
+        color: #333333;
+        font-size: 1.1em;
+        line-height: 1.7;
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 0 15px;
+        text-align: justify;
+    }
+
+    .contenedor-principal {
+        max-width: 1200px;
+        margin: 0 auto;
+        
+      
+        overflow: hidden; 
+        
+        padding: 0 20px 20px 20px; 
+
+        background-color: white; 
+        border-radius: 10px;
+        
+       
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+        transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    }
+
+    
+    .contenedor-principal:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
+    }
+
+    .titulo-bloque {
+       
+        background-color: #1c5791;
+        padding: 30px 20px;
+
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        margin: 0 -20px; 
+        width: auto;
+    }
+
+    .titulo-bloque h1 {
+        
+        color: #ffdf07; 
+        text-align: center;
+        margin: 0; 
+        font-size: 2.5em;
+    }
+
+    
+    .cuadrado {
+       
+        max-width: 650px; 
+        margin: 40px auto; 
+        text-align: center; 
+        
+        background-color: #aac5ef; 
+        color: white;
+        padding: 25px;
+        border-radius: 8px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .cuadrado p {
+        font-size: 1.5rem; 
+        font-weight: bold; 
+        color: white; 
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+  
+    .opcion-btn {
+        background-color: #1c5791; 
+        color: white;
+        border: none;
+        padding: 12px 25px; 
+        border-radius: 25px;
+        cursor: pointer;
+        margin: 5px 10px;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        font-weight: 600;
+    }
+
+    .opcion-btn:hover {
+        background-color: #113558; 
+        transform: translateY(-2px); 
+    }
+
+   
+    .seccion {
+        margin-bottom: 40px;
+        padding: 20px 0;
+        border-top: 1px solid #eee;
+    }
+    .contenedor-grafico, .contenedor-galeria, .contenedor-mapa {
+        background-color: #ffffff; 
+        border: 1px solid #e0e0e0; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+        padding: 30px;
+        margin-top: 15px;
+        border-radius: 8px; 
+        min-height: 150px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #666;
+    }
+    
+    .seccion-milla-data {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    @media (min-width: 768px) {
+        .seccion-milla-data {
+            grid-template-columns: 1fr 1fr; 
+        }
+    }
