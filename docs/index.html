@@ -8,15 +8,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
+        
+        #intro-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1c5791; 
+            z-index: 9999; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+
        
+        .logo-animado {
+           
+            color: #ffdf07; 
+            
+           
+            font-family: 'Poppins', Arial, sans-serif !important;
+            font-weight: 700 !important; 
+            
+            
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
+
+            
+            font-size: 3rem !important; 
+            animation: scale-up 1.5s ease-out forwards; 
+        }
+
+        @keyframes scale-up {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        
+        .fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+    
+    
         .sparkle {
             position: fixed; 
             width: 3px;
             height: 3px;
-            background-color: rgba(255, 255, 255, 0.8); 
+            
+            background-color: gold; 
             border-radius: 50%;
             pointer-events: none; 
-            box-shadow: 0 0 5px 1px rgba(175, 238, 238, 0.8); 
+            box-shadow: 0 0 5px 1px #ffcc00; 
             z-index: -1; 
             animation: flicker linear infinite;
         }
@@ -39,10 +84,10 @@
             color: #ffdf07;
             text-align: center;
             padding-top: 30px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+           
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); 
         }
         
-      
         h2 {
             font-size: 1.8rem; 
             color: #1c5791; 
@@ -116,7 +161,6 @@
             text-align: center;
         }
         
-        
         .opcion-btn {
             background-color: #1c5791; 
             color: white;
@@ -140,7 +184,6 @@
             border-top: 1px solid #eee;
         }
         
-       
         .contenedor-grafico, .contenedor-galeria, .contenedor-mapa {
             background-color: #ffffff; 
             border: 1px solid #e0e0e0; 
@@ -170,6 +213,10 @@
 </head>
 <body>
     
+    <div id="intro-animation">
+        <div class="logo-animado">La evolución de la magia</div>
+    </div>
+    
     <div class="contenedor-principal">
         
         <header class="titulo-bloque">
@@ -190,8 +237,8 @@
                 <button class="opcion-btn">Opción 3</button>
             </div>
             
-    </div>
-    <section class="seccion seccion-jose">
+        </div>
+        <section class="seccion seccion-jose">
             <h2> Clasificación de Películas (jose)</h2>
             
             <p id="texto-jose">
@@ -209,7 +256,7 @@
             </div>
         </section>
         
-            <section class="seccion seccion-milla">
+        <section class="seccion seccion-milla">
             <h2>Análisis evolutivo del Ingreso-Recaudación </h2>
 
             <div class="seccion-milla-data">
@@ -217,44 +264,45 @@
     
                     <div class="grafico grafico-inversion">
                         <h2>Gráfico de Inversión</h2>
-                        </div>
-                <div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 10px;">(Gráfico inversión)</h3>
-                    <p id="texto-milla-inversion">
-                        texto explicando el análisis sobre la Inversión.
-                    </p>
-                    <div class="contenedor-grafico" id="grafico-milla-inversion">
-                        [Espacio para el Gráfico 1 de Inversión de Milla]
                     </div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">(Gráfico inversión)</h3>
+                        <p id="texto-milla-inversion">
+                            texto explicando el análisis sobre la Inversión.
+                        </p>
                         <div class="contenedor-grafico" id="grafico-milla-inversion">
-                        [Espacio para el Gráfico 2 de Inversión de Milla]
+                            [Espacio para el Gráfico 1 de Inversión de Milla]
+                        </div>
+                        <div class="contenedor-grafico" id="grafico-milla-inversion">
+                            [Espacio para el Gráfico 2 de Inversión de Milla]
+                        </div>
                     </div>
-                </div>
                     <div class="grafico grafico-recaudacion">
                         <h2>Gráfico de Recaudación</h2>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 10px;"> (Gráfico recaudación)</h3>
+                        <p id="texto-milla-recaudacion"> 
+                            texto explicando el análisis sobre la Recaudación. </p>
+                        <div class="contenedor-grafico" id="grafico-milla-recaudacion">
+                            [Espacio para el Gráfico 1 de Recaudación de Milla]
                         </div>
-                <div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 10px;"> (Gráfico recaudación)</h3>
-                    <p id="texto-milla-recaudacion"> 
-                        texto explicando el análisis sobre la Recaudación. </p>
-                    <div class="contenedor-grafico" id="grafico-milla-recaudacion">
-                        [Espacio para el Gráfico 1 de Recaudación de Milla]
+                        <div class="contenedor-grafico" id="grafico-milla-recaudacion">
+                            [Espacio para el Gráfico 2 de Recaudación de Milla]
+                        </div>
                     </div>
-                    <div class="contenedor-grafico" id="grafico-milla-recaudacion">
-                        [Espacio para el Gráfico 2 de Recaudación de Milla]
-                    </div>
-                </div>
                 </div>
                 <div> 
                 </div>
                 <h3 style="font-size: 1.4rem; margin-top: 30px; margin-bottom: 10px;">Top 3 Inversiones más altas </h3>
-            <p>texto.</p>
-            <div class="contenedor-galeria" id="galeria-destacada">
-                [Espacio para la Galería Destacada]
+                <p>texto.</p>
+                <div class="contenedor-galeria" id="galeria-destacada">
+                    [Espacio para la Galería Destacada]
+                </div>
             </div>
         </section>
 
-    <section class="seccion seccion-cierre">
+        <section class="seccion seccion-cierre">
             <h2>Cierre del Análisis</h2>
             <div class="cuadrado" style="background-color: #10b981; color: white;">
                 <p>Cierre y conclusiones finales.</p>
@@ -263,5 +311,21 @@
         
     </div>
 
-    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const intro = document.getElementById('intro-animation');
+            const duration = 1000; 
+
+            setTimeout(function() {
+                intro.classList.add('fade-out');
+                setTimeout(function() {
+                    intro.style.display = 'none';
+                }, 1000); 
+            }, duration);
+        });
+    </script>
+    
+    <script src="scripts.js"></script>
+    
+</body>
 </html>
