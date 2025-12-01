@@ -4,24 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disney Industry: la evolución de la magia</title>
+    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styler.css"> 
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            cursor: none; /* Oculta el cursor del navegador para usar el personalizado */
+        }
+        
+        /* --- ESTILOS DE LA VARITA TINKERBELL (Polvo de Magia) --- */
+        #magic-cursor {
+            /* Representa el TIP/MANGO sutil (donde sale el polvo) */
+            width: 10px; 
+            height: 10px; 
+            border-radius: 50%;
+            background-color: #f0f8ff; /* Color blanco sutil para la punta */
+            border: 1px solid #ffcc00;
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none; /* CRÍTICO: Asegura que el cursor no interfiera con los clics */
+            z-index: 9999;
+            
+            /* Mantiene la inclinación y el ajuste de posición */
+            /* Se mueve un poco hacia arriba y a la izquierda para centrar la punta en el cursor */
+            transform: translate(-50%, -100%) rotate(-30deg); 
+            transition: transform 0.1s ease-out; 
+            
+            /* Brillo sutil para la punta */
+            box-shadow: 0 0 5px rgba(255, 204, 0, 0.7); 
+        }
+
+        /* Estilo para el mango o palo de la varita (::after) */
+        #magic-cursor::after {
+            content: '';
+            position: absolute;
+            top: 100%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            
+            width: 2px; /* Más delgado */
+            height: 35px; /* Largo del palo */
+            background-color: #d1b474; /* Color madera/oro tenue */
+            border-radius: 1px;
+            z-index: -1; 
+        }
+
+        /* --- ESTILOS PARA EL POLVO DE MAGIA (PARTÍCULAS) --- */
+        @keyframes sparkle-fade {
+            /* Vuela desde el origen y se desvanece */
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            100% { transform: translate(calc(var(--randX) * 1px), calc(var(--randY) * 1px)) scale(0); opacity: 0; }
+        }
+
+        .magic-particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background-color: #ffc; /* Amarillo claro/blanco */
+            border-radius: 50%;
+            box-shadow: 0 0 2px #fff;
+            pointer-events: none;
+            z-index: 10000;
+            animation: sparkle-fade 0.8s ease-out forwards;
+        }
+        /* --- FIN ESTILOS DE LA VARITA Y POLVO --- */
+
+        /* Estilo para centrar título (del código proporcionado) */
+        .titulo-centrado { 
+            /* Se ha ajustado el width para mejor visualización en móvil, y se eliminó el borde */
+            width:80%; 
+            margin-left: auto; 
+            margin-right: auto; 
+            padding: 10px;
+            text-align: center; 
+            /* Importante: Fija el tamaño de la fuente para el título principal */
+            font-size: 2.5rem; 
+            font-weight: bold;
+        }
+
+        .contenedor-principal {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .titulo-bloque {
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .cuadrado {
+            background-color: #aac5ef; 
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        .seccion {
+            margin-bottom: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #eee;
+        }
+        .contenedor-grafico, .contenedor-galeria, .contenedor-mapa {
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            padding: 30px;
+            margin-top: 15px;
+            border-radius: 6px;
+            min-height: 100px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #666;
+        }
+        .seccion-milla-data {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .seccion-milla-data {
+                grid-template-columns: 1fr 1fr; 
+            }
+        }
+    </style>
 </head>
 <body>
     
+    <!-- Elemento para el cursor de varita mágica (Brillo/Punta) -->
+    <div id="magic-cursor"></div>
+
     <div class="contenedor-principal">
         
         <header class="titulo-bloque">
-            <h1>Disney Industry: la evolución de la magia</h1>
+            <!-- Aplicando la clase de centrado del código que proporcionaste -->
+            <h1 class="titulo-centrado">Disney Industry: la evolución de la magia</h1>
         </header>
         
         <p>A lo largo de un siglo, la magia de Disney ha acompañado a generaciones enteras con historias que marcaron infancias, encendieron la imaginación y se volvieron parte de una memoria colectiva.</p>
 
         <p>Pero el estudio que alguna vez apostaba todo por crear nuevos mundos y personajes nunca antes vistos, hoy navega un escenario distinto: uno donde las franquicias conocidas, los remakes y las expansiones de universos se han convertido en su gran motor creativo.</p>
 
-        <div class="cuadrado">
+        <div class="cuadrado" id="pregunta-interactiva">
             <p>¿Cuándo fue la última vez que viste una historia original de Disney?</p>
+            
+            <div id="opciones-respuesta" style="margin-top: 20px; font-size: 1rem;">
+                
+                <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 1</button>
+                <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 2</button>
+                <button style="background-color: white; color: #3b82f6; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin: 5px;">Opción 3</button>
+            </div>
+            
         </div>
         
+        <section class="seccion seccion-jose">
+            <h2 style="font-size: 1.8rem; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;"> Clasificación de Películas (jose)</h2>
+            
+            <p id="texto-jose">
+                Aquí va el texto de José sobre la clasificación de películas originales, remakes y live-actions.
+            </p>
+            
+            <div class="contenedor-grafico" id="graficos-jose">
+                [Espacio para los Gráficos de José]
+            </div>
+
+            <h3 style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px;">Mapa Interactivo - Películas por Categoría y Año</h3>
+            <p>  texto para el mapa interactivo </p>
+            <div class="contenedor-mapa" id="mapa-interactivo">
+                [Espacio para el Mapa Interactivo (Tabla vertical por años)]
+            </div>
+        </section>
+            
+        <section class="seccion seccion-milla">
+            <h2 style="font-size: 1.8rem; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Análisis evolutivo del Ingreso-Recaudación </h2>
+
+            <div class="seccion-milla-data">
+                <div class="contenedor-graficos">
+    
+                    <div class="grafico grafico-inversion">
+                        <!-- Redundante, pero manteniendo la estructura del usuario -->
+                    </div>
+                    <!-- INVERSIÓN -->
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">(Gráfico inversión)</h3>
+                        <p id="texto-milla-inversion">
+                            texto explicando el análisis sobre la Inversión.
+                        </p>
+                        <div class="contenedor-grafico" id="grafico-milla-inversion-1">
+                            [Espacio para el Gráfico 1 de Inversión de Milla]
+                        </div>
+                        <div class="contenedor-grafico" id="grafico-milla-inversion-2">
+                            [Espacio para el Gráfico 2 de Inversión de Milla]
+                        </div>
+                    </div>
+                    
+                    <div class="grafico grafico-recaudacion">
+                        <!-- Redundante, pero manteniendo la estructura del usuario -->
+                    </div>
+                    <!-- RECAUDACIÓN -->
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 10px;"> (Gráfico recaudación)</h3>
+                        <p id="texto-milla-recaudacion"> 
+                            texto explicando el análisis sobre la Recaudación. </p>
+                        <div class="contenedor-grafico" id="grafico-milla-recaudacion-1">
+                            [Espacio para el Gráfico 1 de Recaudación de Milla]
+                        </div>
+                        <div class="contenedor-grafico" id="grafico-milla-recaudacion-2">
+                            [Espacio para el Gráfico 2 de Recaudación de Milla]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="font-size: 1.4rem; margin-top: 30px; margin-bottom: 10px;">Top 3 Inversiones más altas </h3>
+            <p>texto.</p>
+            <div class="contenedor-galeria" id="galeria-destacada">
+                [Espacio para la Galería Destacada]
+            </div>
+        </section>
+
+        <section class="seccion seccion-cierre">
+            <h2 style="font-size: 1.8rem; text-align: center; margin-bottom: 20px;">Cierre del Análisis</h2> 
+            <div class="cuadrado mx-auto" style="background-color: #bccef4; color: white; max-width: 600px;">
+                <p>Cierre de la presentación y conclusiones finales.</p>
+            </div>
+        </section>
+            
     </div>
     </body>
 </html>
