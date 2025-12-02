@@ -1,11 +1,12 @@
 
+        
 #intro-animation {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  
+    
     background-image: radial-gradient(circle at center, #2e71c0 0%, #1c5791 100%); 
     z-index: 9999; 
     display: flex;
@@ -17,11 +18,8 @@
 
 
 @keyframes shadow-flicker {
-    
     0% { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); } 
-    
     50% { text-shadow: 1px 1px 10px rgba(255, 223, 7, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
-   
     100% { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); }
 }
 
@@ -32,11 +30,9 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
     font-size: 3rem !important; 
     
-    
     animation: scale-up 1.5s ease-out forwards, 
-               shadow-flicker 0.3s infinite alternate; 
+                shadow-flicker 0.3s infinite alternate; 
 }
-
 
 
 @keyframes scale-up {
@@ -51,6 +47,7 @@
     pointer-events: none; 
 }
 
+
 .sparkle {
     position: fixed; 
     width: 3px;
@@ -59,7 +56,8 @@
     border-radius: 50%;
     pointer-events: none; 
     box-shadow: 0 0 5px 1px #ffcc00; 
-    z-index: -1; 
+    
+    z-index: 9998; 
     animation: flicker linear infinite;
 }
 
@@ -72,6 +70,7 @@
 
 
 body {
+    
     font-family: 'Poppins', Arial, sans-serif; 
     background-color: #E8F6FA; 
     color: #113558;
@@ -105,6 +104,7 @@ p {
     margin: 20px auto;
     padding: 0 15px;
     text-align: justify;
+    
 }
 
 
@@ -159,6 +159,7 @@ p {
     margin: 0;
     padding: 0;
     text-align: center;
+    
 }
 
 .opcion-btn {
