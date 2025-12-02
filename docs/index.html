@@ -9,7 +9,6 @@
     
     <style>
         
-        /* --- ESTILOS DE ANIMACIÓN DE INTRODUCCIÓN CORREGIDOS Y MEJORADOS --- */
         
         #intro-animation {
             position: fixed;
@@ -17,7 +16,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* Degradado radial para un fondo más mágico */
             background-image: radial-gradient(circle at center, #2e71c0 0%, #1c5791 100%); 
             z-index: 9999; 
             display: flex;
@@ -27,7 +25,7 @@
             transition: opacity 1s ease-out; 
         }
 
-        /* Animación de parpadeo de la sombra/brillo */
+        
         @keyframes shadow-flicker {
             0% { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); } 
             50% { text-shadow: 1px 1px 10px rgba(255, 223, 7, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
@@ -58,7 +56,7 @@
             pointer-events: none; 
         }
 
-        /* --- ESTILOS DE DESTELLOS CORREGIDOS (z-index) --- */
+        
 
         .sparkle {
             position: fixed; 
@@ -68,7 +66,7 @@
             border-radius: 50%;
             pointer-events: none; 
             box-shadow: 0 0 5px 1px #ffcc00; 
-            z-index: 9998; /* CORREGIDO: Para verse sobre el fondo azul */
+            z-index: 9998; 
             animation: flicker linear infinite;
         }
 
@@ -78,10 +76,10 @@
             50% { opacity: 1; }
         }
         
-        /* --- ESTILOS GENERALES Y TIPOGRAFÍAS --- */
+      
         
         body {
-            font-family: 'Poppins', Arial, sans-serif; /* Poppins por defecto */
+            font-family: 'Poppins', Arial, sans-serif; 
             background-color: #E8F6FA; 
             color: #113558;
             line-height: 1.6;
@@ -114,7 +112,7 @@
             margin: 20px auto;
             padding: 0 15px;
             text-align: justify;
-            /* 🟢 CORREGIDO: Se quita font-family para que use Poppins (del body) */
+            
         }
 
         .contenedor-principal {
@@ -168,7 +166,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            /* 🟢 CORREGIDO: Vuelve a usar Poppins (del body) */
+           
         }
         
         .opcion-btn {
@@ -300,12 +298,18 @@
                         <p id="texto-milla-inversion">
                             texto explicando el análisis sobre la Inversión.
                         </p>
-                        <div class="contenedor-grafico" id="grafico-milla-inversion">
-                            [Espacio para el Gráfico 1 de Inversión]
-                        </div>
-                        <div class="contenedor-grafico" id="grafico-milla-inversion">
-                            [Espacio para el Gráfico 2 de Inversión]
-                        </div>
+                        
+                 <div class="contenedor-grafico" id="graficos">
+                <img 
+                    src="imagenes/g3.jpeg" 
+                    alt="Gráfico de clasificación de películas de Disney por tipo"
+                    style="max-width: 1100px; height: auto; display: block; margin: 0 auto;"
+                >
+                </div>
+                    <p id="texto-milla-inversion">
+                            texto explicando el análisis sobre la Inversión.
+                        </p>
+
                     </div>
                     <div class="grafico grafico-recaudacion">
                         <h2>Gráfico de Recaudación</h2>
@@ -314,23 +318,33 @@
                         <h3 style="font-size: 1.4rem; margin-bottom: 10px;"> (Gráfico recaudación)</h3>
                         <p id="texto-milla-recaudacion"> 
                             texto explicando el análisis sobre la Recaudación. </p>
-                        <div class="contenedor-grafico" id="grafico-milla-recaudacion">
-                            [Espacio para el Gráfico 1 de Recaudación]
-                        </div>
-                        <div class="contenedor-grafico" id="grafico-milla-recaudacion">
-                            [Espacio para el Gráfico 2 de Recaudación]
-                        </div>
+                        <div class="contenedor-grafico" id="graficos">
+                <img 
+                    src="imagenes/g1.jpeg" 
+                    alt="Gráfico de clasificación de películas de Disney por tipo"
+                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
+                >
+                 </div>
+                        <div class="contenedor-grafico" id="graficos">
+                    <img 
+                    src="imagenes/g.jpeg" 
+                    alt="Gráfico de clasificación de películas de Disney por tipo"
+                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
+                >
+                   </div>
                     </div>
                 </div>
                 <div> 
                 </div>
                 <h3 style="font-size: 1.4rem; margin-top: 30px; margin-bottom: 10px;">Top 3 Inversiones más altas </h3>
-                <p>texto.</p>
-                <div class="contenedor-galeria" id="galeria-destacada">
+            
+        <div class="contenedor-galeria" id="galeria-destacada">
                     [Espacio para la Galería Destacada]
-                </div>
-            </div>
-        </section>
+         </div>
+        
+    </div>
+    
+</section>
 
         <section class="seccion seccion-cierre">
             <h2>Cierre del Análisis</h2>
