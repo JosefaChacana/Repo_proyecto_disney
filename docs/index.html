@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        
-        
+      
         #intro-animation {
             position: fixed;
             top: 0;
@@ -25,7 +24,6 @@
             transition: opacity 1s ease-out; 
         }
 
-        
         @keyframes shadow-flicker {
             0% { text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); } 
             50% { text-shadow: 1px 1px 10px rgba(255, 223, 7, 0.8), 0 0 5px rgba(0, 0, 0, 0.6); }
@@ -43,20 +41,16 @@
                         shadow-flicker 0.3s infinite alternate; 
         }
 
-
         @keyframes scale-up {
             0% { transform: scale(0.5); opacity: 0; }
             50% { transform: scale(1.1); opacity: 1; }
             100% { transform: scale(1); }
         }
 
-
         .fade-out {
             opacity: 0;
             pointer-events: none; 
         }
-
-        
 
         .sparkle {
             position: fixed; 
@@ -70,14 +64,11 @@
             animation: flicker linear infinite;
         }
 
-
         @keyframes flicker {
             0%, 100% { opacity: 0; }
             50% { opacity: 1; }
         }
-        
-      
-        
+
         body {
             font-family: 'Poppins', Arial, sans-serif; 
             background-color: #E8F6FA; 
@@ -93,7 +84,7 @@
             padding-top: 30px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         }
-        
+
         h2 {
             font-size: 1.8rem; 
             color: #1c5791; 
@@ -104,22 +95,28 @@
             text-align: center; 
         }
 
+        .subtitulo-seccion {
+            font-size: 1.5rem; 
+            margin-top: 30px; 
+            margin-bottom: 15px;
+            color: #1c5791;
+        }
+
         p {
             color: #333333;
             font-size: 1.1em;
             line-height: 1.7;
             max-width: 900px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 0; 
             text-align: justify;
-            
         }
 
         .contenedor-principal {
             max-width: 1200px;
             margin: 0 auto;
             overflow: hidden;
-            padding: 0 20px 20px 20px; 
+            padding: 30px 40px 40px 40px; 
             background-color: white; 
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
@@ -136,7 +133,7 @@
             padding: 30px 20px;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
-            margin: 0 -20px; 
+            margin: 0 -40px; 
             width: auto;
         }
 
@@ -158,7 +155,7 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
-        
+
         .cuadrado p {
             font-size: 1.5rem; 
             font-weight: bold; 
@@ -166,9 +163,8 @@
             margin: 0;
             padding: 0;
             text-align: center;
-           
         }
-        
+
         .opcion-btn {
             background-color: #1c5791; 
             color: white;
@@ -185,13 +181,13 @@
             background-color: #113558; 
             transform: translateY(-2px); 
         }
-        
+
         .seccion {
             margin-bottom: 40px;
             padding: 20px 0;
             border-top: 1px solid #eee;
         }
-        
+
         .contenedor-grafico, .contenedor-galeria, .contenedor-mapa {
             background-color: #ffffff; 
             border: 1px solid #e0e0e0; 
@@ -206,7 +202,7 @@
             text-align: center;
             color: #666;
         }
-        
+
         .seccion-milla-data {
             display: grid;
             grid-template-columns: 1fr;
@@ -214,7 +210,7 @@
         }
         @media (min-width: 768px) {
             .seccion-milla-data {
-                grid-template-columns: 1fr 1fr; 
+                grid-template-columns: 1fr; 
             }
         }
     </style>
@@ -247,23 +243,15 @@
             
         </div>
         <section class="seccion seccion-jose">
-            <h2> Clasificación de Películas</h2>
-    
+            <h2>Clasificación de Películas</h2>
 
-            <div class="contenedor-grafico" id="graficos">
-                <img 
-                    src="imagenes/a.png" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
-                >
-            </div>
-
-
+            
             <p id="texto-jose">
-                Aquí va el texto de José sobre la clasificación de películas originales, remakes y live-actions.
+                ¿Realmente Disney ha priorizado historias existentes en vez de crear material completamente nuevo?
             </p>
 
-            <div class="contenedor-grafico" id="graficos">
+            
+            <div class="contenedor-grafico" id="graficos-1">
                 <img 
                     src="imagenes/t.png" 
                     alt="Gráfico de clasificación de películas de Disney por tipo"
@@ -271,13 +259,38 @@
                 >
             </div>
             
-            
             <p id="texto-jose">
-                Aquí va el texto de José sobre la clasificación de películas originales, remakes y live-actions.
+                Para comenzar el análisis, se dispuso de un gráfico que agrupa todas las películas producidas por Walt Disney Pictures, 
+                separando las películas originales (es decir, que son una historia completamente nueva y sin antecedentes) de las que vienen de historias ya existentes.
             </p>
 
+            <p id="texto-jose">
+                Para comprender el gráfico se deben considerar las siguientes definiciones:
+            </p>
+            <ul> 
+                <li>Original: película que nace de una idea nueva, sin antecedentes ni tampoco historia cinematográfica.</li>
+                <li>Secuela: película que forma parte de la continuidad de una película anteriormente estrenada.</li>
+                <li>Precuela: película que forma parte de una historia o universo cinematográfico pero se sitúa en un periodo anterior al de la o las primeras películas del universo cinematográfico.</li>
+                <li>Reboot: es una película que forma parte de una historia ya creada pero como una nueva versión de esta, descartando la continuidad y trama previa.</li>
+                <li>Remake: nueva versión de una película ya existente, adaptándola a otro formato siendo fiel a la original.</li>
+                <li>Documental: película que narra eventos de la realidad con fines explicativos principalmente. </li>
+                <li>Spin-Off: una nueva película que forma parte de un acontecimiento o personaje de un universo cinematográfico, siguiendo su historia propia con una narrativa paralela.</li>
+            </ul>
 
-            <h3 style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px;">Mapa Interactivo - Películas por Categoría y Año</h3>
+            <div class="contenedor-grafico" id="graficos-2">
+                <img 
+                    src="imagenes/a.png" 
+                    alt="Gráfico de clasificación de películas de Disney por tipo"
+                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
+                >
+            </div>
+            
+            
+            <p id="texto-jose">
+                Se puede apreciar el dominio que se presenta de las películas originales por sobre los otros tipos exitentes. Estos gráficos corresponden a un análisis realizado sin contabilizar la adquisición de los filmes de las franquicias de Marvel y LucasFilm.
+            </p>
+
+            <h3 class="subtitulo-seccion">Mapa Interactivo - Películas por Categoría y Año</h3>
             <p> texto para el mapa interactivo </p>
             <div class="contenedor-mapa" id="mapa-interactivo">
                 [Espacio para el Mapa Interactivo (Tabla vertical por años)]
@@ -285,66 +298,55 @@
         </section>
         
         <section class="seccion seccion-milla">
-            <h2>Análisis evolutivo del Ingreso-Recaudación </h2>
+            <h2>Análisis evolutivo del Ingreso-Recaudación</h2>
 
             <div class="seccion-milla-data">
-                <div class="contenedor-graficos">
-    
-                    <div class="grafico grafico-inversion">
-                        <h2>Gráfico de Inversión</h2>
-                    </div>
-                    <div>
-                        <h3 style="font-size: 1.4rem; margin-bottom: 10px;">(Gráfico inversión)</h3>
-                        <p id="texto-milla-inversion">
-                            texto explicando el análisis sobre la Inversión.
-                        </p>
-                        
-                 <div class="contenedor-grafico" id="graficos">
-                <img 
-                    src="imagenes/g3.jpeg" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 1100px; height: auto; display: block; margin: 0 auto;"
-                >
-                </div>
+                
+                <div>
+                    <h3>Gráfico de Inversión</h3>
                     <p id="texto-milla-inversion">
-                            texto explicando el análisis sobre la Inversión.
-                        </p>
-
+                        Disney no solo ha cambiado la forma en que cuenta historias, sino también cómo invierte y cómo recupera esa inversión en la taquilla global. Y si se observa esa evolución, en un periodo de tres décadas (1989-2025), revela un patrón cada vez más ambicioso. 
+                    </p>
+                        
+                    <div class="contenedor-grafico" id="grafico-inversion-1">
+                        <img 
+                            src="imagenes/g3.jpeg" 
+                            alt="Gráfico de clasificación de películas de Disney por tipo"
+                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
+                        >
                     </div>
-                    <div class="grafico grafico-recaudacion">
-                        <h2>Gráfico de Recaudación</h2>
+                    <p id="texto-milla-inversion">
+                        La industria del ratón se mantuvo con una inversión estable durante los 90s y el comienzo de los 00s, donde comenzaba de a poco a crecer esa cifra, hasta que a partir del 2005, se comienzan a arriesgar con películas.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3>Gráfico de Recaudación</h3>
+                    <p id="texto-milla-recaudacion"> 
+                        Texto explicando el análisis sobre la Recaudación.
+                    </p>
+                    
+                    <div class="contenedor-grafico" id="grafico-recaudacion-1">
+                        <img 
+                            src="imagenes/g1.jpeg" 
+                            alt="Gráfico de clasificación de películas de Disney por tipo"
+                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
+                        >
                     </div>
-                    <div>
-                        <h3 style="font-size: 1.4rem; margin-bottom: 10px;"> (Gráfico recaudación)</h3>
-                        <p id="texto-milla-recaudacion"> 
-                            texto explicando el análisis sobre la Recaudación. </p>
-                        <div class="contenedor-grafico" id="graficos">
-                <img 
-                    src="imagenes/g1.jpeg" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
-                >
-                 </div>
-                        <div class="contenedor-grafico" id="graficos">
-                    <img 
-                    src="imagenes/g.jpeg" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
-                >
-                   </div>
+                    
+                    <div class="contenedor-grafico" id="grafico-recaudacion-2">
+                        <img 
+                            src="imagenes/g.jpeg" 
+                            alt="Gráfico de clasificación de películas de Disney por tipo"
+                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
+                        >
                     </div>
                 </div>
-                <div> 
-                </div>
-                <h3 style="font-size: 1.4rem; margin-top: 30px; margin-bottom: 10px;">Top 3 Inversiones más altas </h3>
+            </div>
             
-        <div class="contenedor-galeria" id="galeria-destacada">
-                    [Espacio para la Galería Destacada]
-         </div>
-        
-    </div>
-    
-</section>
+            <h3 class="subtitulo-seccion">Top 3 Inversiones más altas</h3>
+            
+        </section>
 
         <section class="seccion seccion-cierre">
             <h2>Cierre del Análisis</h2>
