@@ -27,3 +27,13 @@ Entonces cada tipo de producción ha ido variando según el contexto en el que s
 
 
 ## Tabla de autoría
+
+| Elemento | Millaray | Josefa |
+| :--- | :---: | :---: |
+| Inicio | x | |
+| Clasificación de películas |  | x|
+| Ingreso-Recaudación | x | |
+| Elementos gráficos |x | x |
+| Código HTML |x | x |
+| Código CSS | x| x |
+| Código JS | | x |
