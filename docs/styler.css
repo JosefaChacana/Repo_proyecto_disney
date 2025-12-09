@@ -32,15 +32,14 @@
     margin-top: -90px;
 }
 
-/* ⬇️ REGLA MODIFICADA para colocar elementos uno al lado del otro y ser Responsive ⬇️ */
 .contenedor-video {
     display: flex;
-    /* Distribuye el espacio entre y alrededor de los elementos, centrándolos */
+    
     justify-content: space-around;
-    /* Permite que los elementos bajen a la siguiente línea si no caben (para celulares) */
+   
     flex-wrap: wrap; 
-    /* Alinea verticalmente los elementos en el centro (si tienen diferente altura) */
+   
     align-items: center; 
     width: 100%; 
-    margin: 20px 0;
+    margin: 15px 0;
 }
