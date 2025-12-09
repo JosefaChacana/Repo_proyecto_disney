@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-      
+        
         #intro-animation {
             position: fixed;
             top: 0;
@@ -213,6 +213,159 @@
                 grid-template-columns: 1fr; 
             }
         }
+        
+        
+
+        .timeline-container {
+            width: 90%; 
+            max-width: 900px; 
+            margin: 50px auto;
+            position: relative;
+            padding: 20px 0;
+            background-color: white; 
+        }
+
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%; 
+            transform: translateX(-50%);
+            width: 2px; 
+            height: 100%;
+            background-color: #ffdf07; 
+            z-index: 0;
+        }
+
+        .timeline {
+            list-style: none; 
+            padding: 0;
+        }
+
+        .timeline-event {
+            position: relative;
+            width: 50%; 
+            padding: 10px 40px; 
+            margin-bottom: 30px;
+            box-sizing: border-box;
+        }
+
+        
+        .timeline-event:nth-child(odd) {
+            left: 0; 
+            text-align: right;
+        }
+
+        .timeline-event:nth-child(even) {
+            left: 50%; 
+            text-align: left;
+        }
+
+        
+        .timeline-event::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #1c5791; 
+            border: 3px solid white; 
+            top: 15px; 
+            z-index: 1; 
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+        }
+
+        
+        .timeline-event:nth-child(odd)::after {
+            right: -7.5px; 
+        }
+
+        
+        .timeline-event:nth-child(even)::after {
+            left: -7.5px; 
+        }
+
+       
+        .timeline-content {
+            background-color: #f0f8ff; 
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out; 
+        }
+
+        
+        .timeline-event:hover .timeline-content {
+            background-color: #fffacd; 
+            transform: scale(1.02); 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
+        }
+
+        .timeline-event:hover::after {
+            background-color: #ff9800; 
+            transform: scale(1.3);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: #ffdf07; 
+            background-color: #1c5791;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        
+        .timeline-summary {
+            cursor: pointer;
+            color: #1c5791; 
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .timeline-details.hidden {
+            display: none;
+        }
+
+        .timeline-details p {
+            font-size: 0.95rem;
+            color: #333;
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 1px dashed #ccc;
+            text-align: inherit !important; 
+        }
+
+        
+        @media (max-width: 768px) {
+            .timeline-container {
+                width: 95%; 
+            }
+            
+            .timeline-container::before {
+                left: 20px; 
+                transform: none;
+            }
+            
+            .timeline-event {
+                width: 100%;
+                left: 0 !important; 
+                padding-left: 60px; 
+                padding-right: 10px;
+                text-align: left !important;
+            }
+
+            .timeline-event::after {
+                left: 17.5px !important; 
+                right: auto !important;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -291,11 +444,62 @@
             </p>
 
             <h3 class="subtitulo-seccion">Mapa Interactivo - Películas por Categoría y Año</h3>
-            <p> texto para el mapa interactivo </p>
-            <div class="contenedor-mapa" id="mapa-interactivo">
-                [Espacio para el Mapa Interactivo (Tabla vertical por años)]
+            <p> ¡Explora los momentos clave de la historia de Disney y clasifica las películas por tipo! Haz clic en el título de un evento para ver los detalles y el tipo de película. </p>
+
+            <div class="timeline-container" id="mapa-interactivo">
+                <ul class="timeline">
+                    <li class="timeline-event">
+                        <div class="timeline-date">1928</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-summary">Steamboat Willie: El Nacimiento (Clic para detalles)</h3>
+                            <div class="timeline-details hidden">
+                                <p><strong>Tipo: Original.</strong> Aunque no fue la primera aparición del personaje, marcó el debut sonoro y público de Mickey Mouse, cambiando la historia de la animación. Fue una apuesta 100% original.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="timeline-event">
+                        <div class="timeline-date">1937</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-summary">Blancanieves y los Siete Enanitos (Clic para detalles)</h3>
+                            <div class="timeline-details hidden">
+                                <p><strong>Tipo: Original/Adaptación.</strong> Fue la primera película de largometraje animada en la historia del cine, un riesgo enorme y un triunfo de la creatividad.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="timeline-event">
+                        <div class="timeline-date">1995</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-summary">Toy Story (Clic para detalles)</h3>
+                            <div class="timeline-details hidden">
+                                <p><strong>Tipo: Original.</strong> La primera película de Pixar, una sociedad clave. Revolucionó la animación 3D y demostró la rentabilidad de las historias originales con un alto componente tecnológico.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="timeline-event">
+                        <div class="timeline-date">2010</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-summary">Alicia en el País de las Maravillas (Clic para detalles)</h3>
+                            <div class="timeline-details hidden">
+                                <p><strong>Tipo: Remake Live-Action.</strong> Marca el inicio de la era moderna de los *Live-Action* de alto presupuesto, enfocándose en revisitar historias exitosas en un nuevo formato.</p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="timeline-event">
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-summary">El Rey León (Clic para detalles)</h3>
+                            <div class="timeline-details hidden">
+                                <p><strong>Tipo: Remake Live-Action.</strong> Uno de los remakes más taquilleros, confirmando la estrategia de priorizar propiedades intelectuales conocidas para asegurar grandes ingresos globales.</p>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
             </div>
-        </section>
+            </section>
         
         <section class="seccion seccion-milla">
             <h2>Análisis evolutivo del Ingreso-Recaudación</h2>
@@ -305,7 +509,7 @@
                 <div>
                     <h3>Gráfico de Inversión</h3>
                     <p id="texto-milla-inversion">
-                     Disney no solo ha cambiado la forma en que cuenta historias, sino también la forma en cómo invierte y cómo recupera esa inversión en la taquilla global. Y al observar esa evolución a lo largo de tres décadas (1989 - 2025), se revela un patrón claro en cómo han cambiado sus estrategias y resultados. 
+                    Disney no solo ha cambiado la forma en que cuenta historias, sino también la forma en cómo invierte y cómo recupera esa inversión en la taquilla global. Y al observar esa evolución a lo largo de tres décadas (1989 - 2025), se revela un patrón claro en cómo han cambiado sus estrategias y resultados. 
                     </p>
                         
                     <div class="contenedor-grafico" id="grafico-inversion-1">
@@ -381,7 +585,7 @@
         });
     </script>
     
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>

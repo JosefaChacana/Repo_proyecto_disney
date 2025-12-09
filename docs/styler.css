@@ -203,74 +203,155 @@ p {
     }
 }
 
+/* --- INICIO: ESTILOS PARA LÍNEA DE TIEMPO INTERACTIVA --- */
 
 .timeline-container {
+    width: 90%; 
+    max-width: 900px; 
+    margin: 50px auto;
     position: relative;
-    max-width: 800px;
-    margin: 40px auto;
     padding: 20px 0;
+    /* No se especifica background aquí, asumiendo el fondo blanco del contenedor principal */
 }
 
-.timeline-line {
+/* La línea vertical central */
+.timeline-container::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #aac5ef;
-    z-index: 1;
-    transform: translateY(-50%);
+    top: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 2px; 
+    height: 100%;
+    background-color: #ffdf07; /* Dorado Disney */
+    z-index: 0;
 }
 
-.timeline-years {
+.timeline {
+    list-style: none; 
+    padding: 0;
+}
+
+.timeline-event {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
+    width: 50%; 
+    padding: 10px 40px; 
+    margin-bottom: 30px;
+    box-sizing: border-box;
 }
 
-.year-node {
-    background-color: white;
-    border: 3px solid #1c5791;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-weight: bold;
-    color: #1c5791;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Alternar eventos a la izquierda y derecha */
+.timeline-event:nth-child(odd) {
+    left: 0; 
+    text-align: right;
 }
 
-.year-node:hover, .year-node.active {
-    background-color: #ffdf07;
-    border-color: #113558;
-    transform: scale(1.1);
-    color: #113558;
-}
-
-.tabla-peliculas {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    background: #ffffff;
-}
-
-.tabla-peliculas th, .tabla-peliculas td {
-    padding: 12px;
+.timeline-event:nth-child(even) {
+    left: 50%; 
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-.tabla-peliculas th {
+/* Círculo en la línea (punto de evento) */
+.timeline-event::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #1c5791; 
+    border: 3px solid white; 
+    top: 15px; 
+    z-index: 1; 
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+/* Posición del círculo para eventos impares (izquierda) */
+.timeline-event:nth-child(odd)::after {
+    right: -7.5px; 
+}
+
+/* Posición del círculo para eventos pares (derecha) */
+.timeline-event:nth-child(even)::after {
+    left: -7.5px; 
+}
+
+/* Contenido del Evento */
+.timeline-content {
+    background-color: #f0f8ff; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Efecto Hover (Interactividad 1) */
+.timeline-event:hover .timeline-content {
+    background-color: #fffacd; 
+    transform: scale(1.02); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
+}
+
+.timeline-event:hover::after {
+    background-color: #ff9800; 
+    transform: scale(1.3);
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: #ffdf07; 
     background-color: #1c5791;
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
-.tag-original { background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
-.tag-remake { background: #f59e0b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
-.tag-secuela { background: #3b82f6; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+/* Título cliqueable (Interactividad 2) */
+.timeline-summary {
+    cursor: pointer;
+    color: #1c5791; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+/* Detalles ocultos (Interactividad 2) */
+.timeline-details.hidden {
+    display: none;
+}
+
+.timeline-details p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px dashed #ccc;
+    text-align: inherit !important; 
+}
+
+/* Responsivo para móviles: Una sola columna */
+@media (max-width: 768px) {
+    .timeline-container {
+        width: 95%; 
+    }
+    
+    .timeline-container::before {
+        left: 20px; 
+        transform: none;
+    }
+    
+    .timeline-event {
+        width: 100%;
+        left: 0 !important; 
+        padding-left: 60px; 
+        padding-right: 10px;
+        text-align: left !important;
+    }
+
+    .timeline-event::after {
+        left: 17.5px !important; 
+        right: auto !important;
+    }
+}
+/* --- FIN: ESTILOS PARA LÍNEA DE TIEMPO INTERACTIVA --- */
