@@ -9,6 +9,47 @@
     
     <style>
         
+        /* Estilo del menú de navegación fijo */
+        .navigation-menu {
+            position: fixed; /* Hace que el menú se quede pegado a la vista */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente oscuro */
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #ffcc00; /* Borde de color dorado/amarillo */
+        }
+
+        .navigation-menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navigation-menu a:hover {
+            background-color: #ffcc00; /* Fondo amarillo al pasar el mouse */
+            color: #000; /* Texto oscuro */
+        }
+        
+        /* Ajuste del body para compensar el menú fijo */
+        body {
+            /* Se añade un padding superior para que el contenido no quede oculto bajo el menú fijo */
+            padding-top: 70px; 
+            font-family: 'Poppins', Arial, sans-serif; 
+            background-color: #E8F6FA; 
+            color: #113558;
+            line-height: 1.6;
+            margin: 0;
+        }
+
         #intro-animation {
             position: fixed;
             top: 0;
@@ -69,14 +110,6 @@
             50% { opacity: 1; }
         }
 
-        body {
-            font-family: 'Poppins', Arial, sans-serif; 
-            background-color: #E8F6FA; 
-            color: #113558;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
 
         h1 {
             color: #ffdf07;
@@ -93,7 +126,15 @@
             border-bottom: 3px solid #ffdf07; 
             margin-bottom: 25px; 
             text-align: center; 
+            padding-top: 20px; /* Añadido para dar espacio después del salto de ancla */
         }
+        
+        /* Estilo para los títulos anclados, para que no queden justo bajo el menú fijo */
+        h2:target, .subtitulo-seccion:target {
+            padding-top: 90px;
+            margin-top: -90px;
+        }
+
 
         .subtitulo-seccion {
             font-size: 1.5rem; 
@@ -286,7 +327,7 @@
             left: -7.5px; 
         }
 
-       
+        
         .timeline-content {
             background-color: #f0f8ff; 
             padding: 15px;
@@ -343,6 +384,18 @@
 
         
         @media (max-width: 768px) {
+            body {
+                padding-top: 120px; 
+            }
+            .navigation-menu {
+                padding: 10px 0;
+                /* El menú puede ocupar dos líneas, por eso el padding-top del body es mayor */
+            }
+            .navigation-menu a {
+                margin: 5px 10px;
+                display: block; /* Hace que los botones se apilen en pantallas pequeñas */
+            }
+
             .timeline-container {
                 width: 95%; 
             }
@@ -373,7 +426,13 @@
     <div id="intro-animation">
         <div class="logo-animado">La evolución de la magia</div>
     </div>
-    
+
+    <nav class="navigation-menu">
+        <a href="#seccion-clasificacion">Clasificación</a>
+        <a href="#seccion-linea-tiempo">Línea de Tiempo</a>
+        <a href="#seccion-analisis-evolutivo">Análisis Económico</a>
+        <a href="#seccion-cierre">Conclusión</a>
+    </nav>
     <div class="contenedor-principal">
         
         <header class="titulo-bloque">
@@ -395,7 +454,8 @@
             </div>
             
         </div>
-        <section class="seccion seccion-jose">
+        
+        <section class="seccion seccion-jose" id="seccion-clasificacion">
             <h2>Clasificación de Películas</h2>
 
             
@@ -442,8 +502,11 @@
             <p id="texto-jose">
                 Se puede apreciar el dominio que se presenta de las películas originales por sobre los otros tipos exitentes. Estos gráficos corresponden a un análisis realizado sin contabilizar la adquisición de los filmes de las franquicias de Marvel y LucasFilm. En este escenario, las producciones originales de Disney arrasan y se encuentran muy por sobre los otros tipos.
             </p>
+        </section>
 
-            <h3 class="subtitulo-seccion">Mapa Interactivo - Películas por Categoría y Año</h3>
+
+        <section class="seccion" id="seccion-linea-tiempo">
+            <h2 class="subtitulo-seccion">Mapa Interactivo - Películas por Categoría y Año</h2>
             <p> ¡Explora los momentos clave de la historia de Disney y clasifica las películas por tipo! Haz clic en el título de un evento para ver los detalles y el tipo de película. </p>
 
             <div class="timeline-container" id="mapa-interactivo">
@@ -497,11 +560,11 @@
                             </div>
                         </div>
                     </li>
-                    </ul>
+                </ul>
             </div>
-            </section>
+        </section>
         
-        <section class="seccion seccion-milla">
+        <section class="seccion seccion-milla" id="seccion-analisis-evolutivo">
             <h2>Análisis evolutivo del Ingreso-Recaudación</h2>
 
             <div class="seccion-milla-data">
@@ -562,7 +625,7 @@
             
         </section>
 
-        <section class="seccion seccion-cierre">
+        <section class="seccion seccion-cierre" id="seccion-cierre">
             <h2>Cierre del Análisis</h2>
             <div class="cuadrado" style="background-color: #10b981; color: white;">
                 <p>Cierre y conclusiones.</p>
@@ -572,6 +635,7 @@
     </div>
 
     <script>
+        // Este script ahora solo maneja la animación de inicio básica, el resto está en scripts.js
         document.addEventListener("DOMContentLoaded", function() {
             const intro = document.getElementById('intro-animation');
             const duration = 1000; 
@@ -585,7 +649,7 @@
         });
     </script>
     
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
     
 </body>
 </html>

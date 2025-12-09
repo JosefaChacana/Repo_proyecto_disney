@@ -1,3 +1,34 @@
+
+.navigation-menu {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente oscuro */
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #ffcc00; 
+}
+
+.navigation-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navigation-menu a:hover {
+    background-color: #ffcc00; 
+    color: #000; 
+}
+
+
 #intro-animation {
     position: fixed;
     top: 0;
@@ -59,12 +90,13 @@
 }
 
 body {
+    
+    padding-top: 70px; 
     font-family: 'Poppins', Arial, sans-serif; 
     background-color: #E8F6FA; 
     color: #113558;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
 }
 
 h1 {
@@ -82,6 +114,14 @@ h2 {
     border-bottom: 3px solid #ffdf07; 
     margin-bottom: 25px; 
     text-align: center; 
+   
+    padding-top: 20px; 
+}
+
+
+h2:target, .subtitulo-seccion:target {
+    padding-top: 90px;
+    margin-top: -90px;
 }
 
 .subtitulo-seccion {
@@ -203,7 +243,7 @@ p {
     }
 }
 
-/* --- INICIO: ESTILOS PARA LÍNEA DE TIEMPO INTERACTIVA --- */
+
 
 .timeline-container {
     width: 90%; 
@@ -211,10 +251,8 @@ p {
     margin: 50px auto;
     position: relative;
     padding: 20px 0;
-    /* No se especifica background aquí, asumiendo el fondo blanco del contenedor principal */
 }
 
-/* La línea vertical central */
 .timeline-container::before {
     content: '';
     position: absolute;
@@ -223,7 +261,7 @@ p {
     transform: translateX(-50%);
     width: 2px; 
     height: 100%;
-    background-color: #ffdf07; /* Dorado Disney */
+    background-color: #ffdf07; 
     z-index: 0;
 }
 
@@ -240,7 +278,7 @@ p {
     box-sizing: border-box;
 }
 
-/* Alternar eventos a la izquierda y derecha */
+
 .timeline-event:nth-child(odd) {
     left: 0; 
     text-align: right;
@@ -251,7 +289,7 @@ p {
     text-align: left;
 }
 
-/* Círculo en la línea (punto de evento) */
+
 .timeline-event::after {
     content: '';
     position: absolute;
@@ -265,17 +303,17 @@ p {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
-/* Posición del círculo para eventos impares (izquierda) */
+
 .timeline-event:nth-child(odd)::after {
     right: -7.5px; 
 }
 
-/* Posición del círculo para eventos pares (derecha) */
+
 .timeline-event:nth-child(even)::after {
     left: -7.5px; 
 }
 
-/* Contenido del Evento */
+
 .timeline-content {
     background-color: #f0f8ff; 
     padding: 15px;
@@ -284,7 +322,7 @@ p {
     transition: all 0.3s ease-in-out; 
 }
 
-/* Efecto Hover (Interactividad 1) */
+
 .timeline-event:hover .timeline-content {
     background-color: #fffacd; 
     transform: scale(1.02); 
@@ -306,7 +344,7 @@ p {
     margin-bottom: 5px;
 }
 
-/* Título cliqueable (Interactividad 2) */
+
 .timeline-summary {
     cursor: pointer;
     color: #1c5791; 
@@ -316,7 +354,7 @@ p {
     padding: 0;
 }
 
-/* Detalles ocultos (Interactividad 2) */
+
 .timeline-details.hidden {
     display: none;
 }
@@ -330,8 +368,19 @@ p {
     text-align: inherit !important; 
 }
 
-/* Responsivo para móviles: Una sola columna */
-@media (max-width: 768px) {
+    @media (max-width: 768px) {
+ 
+    body {
+        padding-top: 120px; 
+    }
+    .navigation-menu {
+        padding: 10px 0;
+    }
+    .navigation-menu a {
+        margin: 5px 10px;
+        display: block; /* Hace que los botones se apilen en pantallas pequeñas */
+    }
+    
     .timeline-container {
         width: 95%; 
     }
@@ -354,4 +403,3 @@ p {
         right: auto !important;
     }
 }
-/* --- FIN: ESTILOS PARA LÍNEA DE TIEMPO INTERACTIVA --- */
