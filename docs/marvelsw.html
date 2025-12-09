@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-bf874aad8086a282b580c1426bcfe7a5"},
+  "mark": {"type": "area"},
+  "encoding": {
+    "color": {"field": "categoria", "title": "Categoría", "type": "nominal"},
+    "tooltip": [
+      {"field": "AÑO", "type": "quantitative"},
+      {"field": "categoria", "type": "nominal"},
+      {"field": "cantidad", "type": "quantitative"}
+    ],
+    "x": {"field": "AÑO", "title": "Año", "type": "ordinal"},
+    "y": {
+      "field": "cantidad",
+      "stack": "zero",
+      "title": "Cantidad de películas",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "title": "Comparación de películas: Original vs Historia existente",
+  "width": 800,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-bf874aad8086a282b580c1426bcfe7a5": [
+      {"AÑO": 1995, "categoria": "Historia existente", "cantidad": 2},
+      {"AÑO": 1995, "categoria": "Original", "cantidad": 9},
+      {"AÑO": 1996, "categoria": "Historia existente", "cantidad": 5},
+      {"AÑO": 1996, "categoria": "Original", "cantidad": 3},
+      {"AÑO": 1997, "categoria": "Historia existente", "cantidad": 5},
+      {"AÑO": 1997, "categoria": "Original", "cantidad": 4},
+      {"AÑO": 1998, "categoria": "Historia existente", "cantidad": 6},
+      {"AÑO": 1998, "categoria": "Original", "cantidad": 4},
+      {"AÑO": 1999, "categoria": "Historia existente", "cantidad": 6},
+      {"AÑO": 1999, "categoria": "Original", "cantidad": 3},
+      {"AÑO": 2000, "categoria": "Historia existente", "cantidad": 7},
+      {"AÑO": 2000, "categoria": "Original", "cantidad": 4},
+      {"AÑO": 2001, "categoria": "Historia existente", "cantidad": 4},
+      {"AÑO": 2001, "categoria": "Original", "cantidad": 6},
+      {"AÑO": 2002, "categoria": "Historia existente", "cantidad": 5},
+      {"AÑO": 2002, "categoria": "Original", "cantidad": 6},
+      {"AÑO": 2003, "categoria": "Historia existente", "cantidad": 9},
+      {"AÑO": 2003, "categoria": "Original", "cantidad": 6},
+      {"AÑO": 2004, "categoria": "Historia existente", "cantidad": 9},
+      {"AÑO": 2004, "categoria": "Original", "cantidad": 5},
+      {"AÑO": 2005, "categoria": "Historia existente", "cantidad": 8},
+      {"AÑO": 2005, "categoria": "Original", "cantidad": 6},
+      {"AÑO": 2006, "categoria": "Historia existente", "cantidad": 8},
+      {"AÑO": 2006, "categoria": "Original", "cantidad": 6},
+      {"AÑO": 2007, "categoria": "Historia existente", "cantidad": 4},
+      {"AÑO": 2007, "categoria": "Original", "cantidad": 5},
+      {"AÑO": 2008, "categoria": "Historia existente", "cantidad": 6},
+      {"AÑO": 2008, "categoria": "Original", "cantidad": 8},
+      {"AÑO": 2009, "categoria": "Historia existente", "cantidad": 7},
+      {"AÑO": 2009, "categoria": "Original", "cantidad": 9},
+      {"AÑO": 2010, "categoria": "Historia existente", "cantidad": 7},
+      {"AÑO": 2010, "categoria": "Original", "cantidad": 6},
+      {"AÑO": 2011, "categoria": "Historia existente", "cantidad": 5},
+      {"AÑO": 2011, "categoria": "Original", "cantidad": 3},
+      {"AÑO": 2012, "categoria": "Historia existente", "cantidad": 3},
+      {"AÑO": 2012, "categoria": "Original", "cantidad": 6},
+      {"AÑO": 2013, "categoria": "Historia existente", "cantidad": 6},
+      {"AÑO": 2013, "categoria": "Original", "cantidad": 3},
+      {"AÑO": 2014, "categoria": "Historia existente", "cantidad": 6},
+      {"AÑO": 2014, "categoria": "Original", "cantidad": 5},
+      {"AÑO": 2015, "categoria": "Historia existente", "cantidad": 5},
+      {"AÑO": 2015, "categoria": "Original", "cantidad": 5},
+      {"AÑO": 2016, "categoria": "Historia existente", "cantidad": 6},
+      {"AÑO": 2016, "categoria": "Original", "cantidad": 9},
+      {"AÑO": 2017, "categoria": "Historia existente", "cantidad": 10},
+      {"AÑO": 2017, "categoria": "Original", "cantidad": 2},
+      {"AÑO": 2018, "categoria": "Historia existente", "cantidad": 7},
+      {"AÑO": 2018, "categoria": "Original", "cantidad": 3},
+      {"AÑO": 2019, "categoria": "Historia existente", "cantidad": 11},
+      {"AÑO": 2019, "categoria": "Original", "cantidad": 2},
+      {"AÑO": 2020, "categoria": "Historia existente", "cantidad": 2},
+      {"AÑO": 2020, "categoria": "Original", "cantidad": 12},
+      {"AÑO": 2021, "categoria": "Historia existente", "cantidad": 2},
+      {"AÑO": 2021, "categoria": "Original", "cantidad": 8},
+      {"AÑO": 2022, "categoria": "Historia existente", "cantidad": 11},
+      {"AÑO": 2022, "categoria": "Original", "cantidad": 4},
+      {"AÑO": 2023, "categoria": "Historia existente", "cantidad": 5},
+      {"AÑO": 2023, "categoria": "Original", "cantidad": 3},
+      {"AÑO": 2024, "categoria": "Historia existente", "cantidad": 4},
+      {"AÑO": 2025, "categoria": "Historia existente", "cantidad": 7},
+      {"AÑO": 2025, "categoria": "Original", "cantidad": 2}
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
