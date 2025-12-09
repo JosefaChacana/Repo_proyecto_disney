@@ -10,6 +10,16 @@
     <style>
         
         
+        .logo-fijo {
+            position: fixed; 
+            top: 10px;       
+            left: 15px;      
+            width: 50px;      
+            height: auto;     
+            z-index: 10001;   
+        }
+        
+
         .navigation-menu {
             position: fixed; 
             top: 0;
@@ -41,7 +51,7 @@
         
         
         body {
-           
+            
             padding-top: 70px; 
             font-family: 'Poppins', Arial, sans-serif; 
             background-color: #E8F6FA; 
@@ -126,7 +136,7 @@
             border-bottom: 3px solid #ffdf07; 
             margin-bottom: 25px; 
             text-align: center; 
-            padding-top: 20px; /* Añadido para dar espacio después del salto de ancla */
+            padding-top: 20px; 
         }
         
         #seccion-linea-tiempo:target, h2:target, .subtitulo-seccion:target {
@@ -254,7 +264,6 @@
             }
         }
         
-        /* --- ESTILOS DE LÍNEA DE TIEMPO --- */
 
         .timeline-container {
             width: 90%; 
@@ -381,6 +390,16 @@
             text-align: inherit !important; 
         }
 
+        .contenedor-video {
+            display: flex;
+            justify-content: space-around; 
+            flex-wrap: wrap;
+            align-items: center; 
+            width: 100%; 
+            margin: 20px 0;
+        }
+        
+
         
         @media (max-width: 768px) {
             
@@ -416,11 +435,17 @@
                 left: 17.5px !important; 
                 right: auto !important;
             }
+
+            .logo-fijo {
+                width: 40px; 
+            }
         }
         
     </style>
 </head>
 <body>
+    
+    <img src="logo.png" alt="Logo Disney" class="logo-fijo">
     
     <div id="intro-animation">
         <div class="logo-animado">La evolución de la magia</div>
@@ -456,10 +481,10 @@
 
 
         <p>
-    <a href="https://thewaltdisneycompany.com/about/" target="_blank">Disney - Leadership, History, Corporate Social Responsibility</a>)
-    The Walt Disney Company es hoy uno de los gigantes del entretenimiento mundial, con casi US$200 mil millones en activos, 
-    y una fuerte presencia en los estudios de cine y plataformas digitales. 
-    Además, ha expandido su imperio aún más con sus adquisiciones como Pixar, Marvel y Lucasfilm. En definitiva, lo que Disney decide producir tiene efectos reales en el ecosistema audiovisual global. </p>
+            (<a href="https://thewaltdisneycompany.com/about/" target="_blank">Disney - Leadership, History, Corporate Social Responsibility</a>)
+            The Walt Disney Company es hoy uno de los gigantes del entretenimiento mundial, con casi US$200 mil millones en activos, 
+            y una fuerte presencia en los estudios de cine y plataformas digitales. 
+            Además, ha expandido su imperio aún más con sus adquisiciones como Pixar, Marvel y Lucasfilm. En definitiva, lo que Disney decide producir tiene efectos reales en el ecosistema audiovisual global. </p>
 
 
         <h2>Estrenos recientes en Chile</h2>
@@ -468,8 +493,10 @@
             en taquilla a nivel mundial, con una recaudación global de USD 35 millones durante su primer fin de semana en cines.
             Este reciente hecho refuerza la pregunta central de nuestro análisis: ¿Está Disney dejando atrás la creación de nuevas y originales historias para priorizar franquicias ya establecidas?
         </p> 
-        <div class="contenedor-video"><iframe width="520" height="300" src="https://www.youtube.com/embed/4_KaABhCPPk?si=pALUwcocicmLRws0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="520" height="300" src="https://www.youtube.com/embed/waf9snfaUFw?si=q_fy5ItPh5j4sLtz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="contenedor-video">
+            <iframe width="520" height="300" src="https://www.youtube.com/embed/4_KaABhCPPk?si=pALUwcocicmLRws0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="520" height="300" src="https://www.youtube.com/embed/waf9snfaUFw?si=q_fy5ItPh5j4sLtz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         
         <section class="seccion seccion-jose" id="seccion-clasificacion">
             <h2>Clasificación de Películas</h2>
@@ -539,84 +566,4 @@
                 <div>
                     <h3>Gráfico de Inversión</h3>
                     <p id="texto-milla-inversion">
-                    Disney no solo ha cambiado la forma en que cuenta historias, sino también la forma en cómo invierte y cómo recupera esa inversión en la taquilla global. Y al observar esa evolución a lo largo de tres décadas (1989 - 2025), se revela un patrón claro en cómo han cambiado sus estrategias y resultados. 
-                    </p>
-                        
-                    <div class="contenedor-grafico" id="grafico-inversion-1">
-                        <img 
-                            src="imagenes/g3.jpeg" 
-                            alt="Gráfico de clasificación de películas de Disney por tipo"
-                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
-                        >
-                    </div>
-                    <p id="texto-milla-inversion">
-                    La industria del ratón se mantuvo con una inversión relativamente estable desde 1989 hasta mediados de los 90s, con cifras que oscilaban entre los $10M y $40M USD. Fue una era marcada por el “Disney clásico”, donde predominaban las historias originales y una animación tradicional.
-                    A partir del 95, y especialmente desde los 2000 en adelante, la inversión comenzó a crecer de manera sostenida año tras año.
-                    Desde 2005 en adelante, Disney empezó a arriesgar más con ciertas producciones y la inversión superó con frecuencia los $120M, e incluso llegó a los $230M USD, mientras que la producción de secuelas comienza a ser mucho más común.
-                    En la última década (2015-2025), la inversión suele moverse entre los $150M y $250M USD. Es también, la etapa donde emergen con fuerza la producción de Live-Actions y sus inversiones se conviven con el resto, sin embargo, hay algunas que representan apuestas arriesgadas por parte del estudio, alcanzando cifras de $360M.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3>Gráfico de Recaudación</h3>
-                    <p id="texto-milla-recaudacion"> 
-                    A lo largo del tiempo, Disney ha mantenido ganancias sostenidas y constantes. Sus películas originales suelen recaudar entre los $40M y los $300M USD,con algunas excepciones que superan los $650M. Pese a que la producción de títulos originales nunca, la aparición de las secuelas, especialmente desde 1995, ha sido clave para el éxito en taquilla, moviéndose generalmente entre los $100M y $400M UDS.
-                    En la última década (2015-2025) la tendencia se vuelve aún más evidente. Las producciones de secuelas y Live-Actions lideran ampliamente la taquilla con las cifras más altas, partiendo desde los $550M e incluso alcanzando los $1.700M USD, marcando una brecha cada vez mayor frente a la recaudación de las películas originales actuales. 
-
-                    </p>
-                    
-                    <div class="contenedor-grafico" id="grafico-recaudacion-1">
-                        <img 
-                            src="imagenes/g1.jpeg" 
-                            alt="Gráfico de clasificación de películas de Disney por tipo"
-                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
-                        >
-                    </div>
-                    
-                    <div class="contenedor-grafico" id="grafico-recaudacion-2">
-                        <img 
-                            src="imagenes/g.jpeg" 
-                            alt="Gráfico de clasificación de películas de Disney por tipo"
-                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
-                        >
-                    </div>
-                    <p id="texto-milla-recaudacion"> 
-                    Disney dejó de ser simplemente un estudio de animación para convertirse en un fabricante de éxitos globales…
-                    Las películas originales son las más numerosas a lo largo del tiempo, esto quiere decir que la industria sí ha mantenido la presencia creativa. Sin embargo, cuando Disney necesita un “golpe seguro” invierte en secuelas o Live-Actions, ya que les suele otorgar un “éxito seguro” en la recaudación. 
-
-                    </p>
-                </div>
-            </div>
-            
-            <h3 class="subtitulo-seccion">Top 3 Inversiones más altas</h3>
-            
-        </section>
-
-        <section class="seccion seccion-cierre" id="seccion-cierre">
-            <h2>Cierre del Análisis</h2>
-            <div class="cuadrado" style="background-color: #10b981; color: white;">
-                <p>Cierre y conclusiones.</p>
-            </div>
-        </section>
-        
-    </div>
-
-    <script>
-    
-        document.addEventListener("DOMContentLoaded", function() {
-            const intro = document.getElementById('intro-animation');
-            const duration = 1000; 
-
-            setTimeout(function() {
-                intro.classList.add('fade-out');
-                setTimeout(function() {
-                    intro.style.display = 'none';
-                }, 1000); 
-            }, duration);
-        });
-    </script>
-    
-    <script src="script.js"></script>
-    
-</body>
-</html>
+                    Disney no solo ha cambiado la forma en que cuenta historias, sino también la forma en cómo invierte y cómo recupera esa inversión en la taquilla global. Y al observar esa evolución a lo largo de tres décadas (
