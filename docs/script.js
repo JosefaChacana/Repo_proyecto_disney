@@ -7,7 +7,6 @@ async function loadCSVData(filePath, delimiter) {
     
     const text = await response.text();
     
-    // El split y el filtro son correctos
     const rows = text.trim().split(/\r\n|\n/).filter(line => line.length > 0);
     if (rows.length === 0) return { data: [] };
 
@@ -40,7 +39,7 @@ async function loadCSVData(filePath, delimiter) {
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Lógica de la animación de introducción (Sin cambios) ---
+    
     const intro = document.getElementById('intro-animation');
     const durationFadeOut = 1000; 
     
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000); 
         }, durationFadeOut);
     }
-    // --- Fin lógica de la animación de introducción ---
+    
     
     
     const timelineContainer = document.querySelector('.timeline');
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     async function cargarPeliculas() {
         
-        // ✅ MODIFICACIÓN CLAVE 3: Nombre de archivo correcto
         const CSV_FILE_NAME = "data.csv"; 
         
         try {
@@ -95,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const peliculas = peliculasData.data;
 
-            
-            // La lógica de ordenamiento está correcta
+
+        
             peliculas.sort((a, b) => parseInt(a['AÑO']) - parseInt(b['AÑO']));
 
             peliculas.forEach(pelicula => {
