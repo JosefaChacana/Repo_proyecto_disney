@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-5a7533164638f4f842e3c639d8b9820c"},
+  "mark": {"type": "circle", "opacity": 0.8, "size": 100},
+  "encoding": {
+    "color": {
+      "field": "Tipo_Produccion_Detalle",
+      "scale": {
+        "domain": ["Secuela/Precuela", "Live-Action", "Original"],
+        "range": ["#D41C16", "#ffdf07", "#1c5791"]
+      },
+      "title": "Tipo de Producción",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "ï»¿TÃ­tulo en espaÃ±ol", "title": "Título", "type": "nominal"},
+      {
+        "field": "Año_Estreno",
+        "format": "0f",
+        "title": "Año",
+        "type": "quantitative"
+      },
+      {"field": "Tipo_Produccion_Detalle", "title": "Tipo", "type": "nominal"},
+      {
+        "field": "Inversión_Numerica",
+        "format": "$,.0f",
+        "title": "Inversión",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "axis": {
+        "labelAngle": -45,
+        "values": [1989, 1994, 1999, 2004, 2009, 2014, 2019, 2024]
+      },
+      "field": "Año_Estreno",
+      "title": "Año de Estreno",
+      "type": "ordinal"
+    },
+    "y": {
+      "axis": {
+        "format": "~s",
+        "labelExpr": "datum.value >= 1000000 ? format(datum.value / 1000000, ',.0f') + 'M' : format(datum.value, '$.0f')"
+      },
+      "field": "Inversión_Numerica",
+      "scale": {"domain": [0, 472500000]},
+      "title": "Inversión Total (USD)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "params": [
+    {
+      "name": "param_9",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
+    }
+  ],
+  "title": "Inversión por Año de Estreno y Tipo de Producción (Disney)",
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-5a7533164638f4f842e3c639d8b9820c": [
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La sirenita",
+        "TÃ­tulo original": "The Little Mermaid",
+        "Fecha de estreno": 1989,
+        "InversiÃ³n": "40000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 40000000,
+        "Año_Estreno": 1989,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "PatoAventuras - La pelÃ­cula: El tesoro de la lÃ¡mpara perdida",
+        "TÃ­tulo original": "DuckTales the Movie: Treasure of the Lost Lamp",
+        "Fecha de estreno": 1990,
+        "InversiÃ³n": "\r\n20000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 20000000,
+        "Año_Estreno": 1990,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Bernardo y Bianca en Cangurolandia / Los rescatadores en Cangurolandia",
+        "TÃ­tulo original": "The Rescuers Down Under",
+        "Fecha de estreno": 1990,
+        "InversiÃ³n": "27000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 27000000,
+        "Año_Estreno": 1990,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Colmillo Blanco",
+        "TÃ­tulo original": "White Fang",
+        "Fecha de estreno": 1991,
+        "InversiÃ³n": "14000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 14000000,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "NÃ¡ufragos",
+        "TÃ­tulo original": "Shipwrecked",
+        "Fecha de estreno": 1991,
+        "InversiÃ³n": "8700000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 8700000,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Rocketeer",
+        "TÃ­tulo original": "The Rocketeer",
+        "Fecha de estreno": 1991,
+        "InversiÃ³n": "\r\n35000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La bella y la bestia",
+        "TÃ­tulo original": "Beauty and the Beast",
+        "Fecha de estreno": 1991,
+        "InversiÃ³n": "25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La pandilla",
+        "TÃ­tulo original": "Newsies",
+        "Fecha de estreno": 1992,
+        "InversiÃ³n": "\r\n15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "CariÃ±o, he agrandado al niÃ±o / Querida, agrandÃ© al bebÃ©",
+        "TÃ­tulo original": "Honey, I Blew Up the Kid",
+        "Fecha de estreno": 1992,
+        "InversiÃ³n": "\r\n40000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 40000000,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Somos los mejores / Los campeones",
+        "TÃ­tulo original": "The Mighty Ducks",
+        "Fecha de estreno": 1992,
+        "InversiÃ³n": "14000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 14000000,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "AladdÃ­n",
+        "TÃ­tulo original": "Aladdin",
+        "Fecha de estreno": 1992,
+        "InversiÃ³n": "28000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 28000000,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los Muppets: Una historia de Navidad / Los TeleÃ±ecos en Cuento de Navidad",
+        "TÃ­tulo original": "The Muppets Christhmas Carol",
+        "Fecha de estreno": 1992,
+        "InversiÃ³n": "12000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 12000000,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Las aventuras de Huckleberry Finn",
+        "TÃ­tulo original": "The Adventures of Huck Finn",
+        "Fecha de estreno": 1993,
+        "InversiÃ³n": "6500000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 6500000,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Abracadabra / El retorno de las brujas",
+        "TÃ­tulo original": "Hocus Pocus",
+        "Fecha de estreno": 1993,
+        "InversiÃ³n": "\r\n28000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 28000000,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Jamaica bajo cero / Elegidos para el triunfo",
+        "TÃ­tulo original": "Cool Runnings",
+        "Fecha de estreno": 1993,
+        "InversiÃ³n": "\r\n17000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 17000000,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los tres mosqueteros",
+        "TÃ­tulo original": "The Three Musketeers",
+        "Fecha de estreno": 1993,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El extraÃ±o mundo de Jack / Pesadilla antes de Navidad",
+        "TÃ­tulo original": "The Nightmare Before Christmas",
+        "Fecha de estreno": 1993,
+        "InversiÃ³n": "18000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 18000000,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Cheque en blanco",
+        "TÃ­tulo original": "Blank Check",
+        "Fecha de estreno": 1994,
+        "InversiÃ³n": "\r\n13000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 13000000,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El retorno de Jafar",
+        "TÃ­tulo original": "The Return of Jafar",
+        "Fecha de estreno": 1994,
+        "InversiÃ³n": "3500000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 3500000,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El rey leÃ³n",
+        "TÃ­tulo original": "The Lion King",
+        "Fecha de estreno": 1994,
+        "InversiÃ³n": "45000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 45000000,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Angels in the Outfield",
+        "TÃ­tulo original": "Angels in the Outfield",
+        "Fecha de estreno": 1994,
+        "InversiÃ³n": "\r\n31000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 31000000,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Squanto: A Warrior's Tale",
+        "TÃ­tulo original": "Squanto: A Warrior's Tale",
+        "Fecha de estreno": 1994,
+        "InversiÃ³n": "19200000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 19200000,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Santa ClÃ¡usula / Â¡Vaya Santa Claus!",
+        "TÃ­tulo original": "The Santa Clause",
+        "Fecha de estreno": 1994,
+        "InversiÃ³n": "22000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 22000000,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El libro de la selva: la aventura continÃºa",
+        "TÃ­tulo original": "The Jungle Book",
+        "Fecha de estreno": 1994,
+        "InversiÃ³n": "30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Man of the House",
+        "TÃ­tulo original": "Man of the House",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "\r\n22000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 22000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La leyenda de Pecos Bill",
+        "TÃ­tulo original": "Tall Tale",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "\r\n32000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 32000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Goofy, la pelÃ­cula / Goofy e hijo",
+        "TÃ­tulo original": "A Goofy Movie",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "18000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 18000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Pocahontas",
+        "TÃ­tulo original": "Pocahontas",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "\r\n55000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 55000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "OperaciÃ³n elefante",
+        "TÃ­tulo original": "Operation Dumbo Drop",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "24000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 24000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Aventuras en la corte del Rey Arturo / Un niÃ±o en la corte del Rey Arturo",
+        "TÃ­tulo original": "A Kid in King Arthur's Court",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El gran equipo",
+        "TÃ­tulo original": "The Big Green",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "\r\n12000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 12000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Toy Story",
+        "TÃ­tulo original": "Toy Story",
+        "Fecha de estreno": 1995,
+        "InversiÃ³n": "30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los Muppets en la isla del tesoro / Los TeleÃ±ecos en la Isla del Tesoro",
+        "TÃ­tulo original": "Muppet Treasure Island",
+        "Fecha de estreno": 1996,
+        "InversiÃ³n": "\r\n31000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 31000000,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "James y el melocotÃ³n gigante/ Jim y el durazno gigante",
+        "TÃ­tulo original": "James and the Giant Peach",
+        "Fecha de estreno": 1996,
+        "InversiÃ³n": "\r\n38000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 38000000,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El jorobado de Notre Dame",
+        "TÃ­tulo original": "The Hunchback of Notre Dame",
+        "Fecha de estreno": 1996,
+        "InversiÃ³n": "\r\n100000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 100000000,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "First Kid",
+        "TÃ­tulo original": "First Kid",
+        "Fecha de estreno": 1996,
+        "InversiÃ³n": "\r\n15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "101 dÃ¡lmatas: Â¡Ahora la magia es real!Â / 101 dÃ¡lmatas: Â¡MÃ¡s vivos que nunca!",
+        "TÃ­tulo original": "101 Dalmatians",
+        "Fecha de estreno": 1996,
+        "InversiÃ³n": "\r\n75000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 75000000,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Jungle 2 Jungle",
+        "TÃ­tulo original": "Jungle 2 Jungle",
+        "Fecha de estreno": 1997,
+        "InversiÃ³n": "32000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 32000000,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "HÃ©rcules",
+        "TÃ­tulo original": "HÃ©rcules",
+        "Fecha de estreno": 1997,
+        "InversiÃ³n": "85000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 85000000,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "George de la selva / George de la jungla",
+        "TÃ­tulo original": "George of the Jungle",
+        "Fecha de estreno": 1997,
+        "InversiÃ³n": "\r\n55000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 55000000,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Air Bud",
+        "TÃ­tulo original": "Air Bud",
+        "Fecha de estreno": 1997,
+        "InversiÃ³n": "\r\n3000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 3000000,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "RocketMan / El astronauta",
+        "TÃ­tulo original": "RocketMan",
+        "Fecha de estreno": 1997,
+        "InversiÃ³n": "\r\n16000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 16000000,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Flubber",
+        "TÃ­tulo original": "Flubber",
+        "Fecha de estreno": 1997,
+        "InversiÃ³n": "\r\n80000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 80000000,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Mr. Magoo",
+        "TÃ­tulo original": "Mr. Magoo",
+        "Fecha de estreno": 1997,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Vaya par de locos / Locura en el campamento",
+        "TÃ­tulo original": "Meet the Deedles",
+        "Fecha de estreno": 1998,
+        "InversiÃ³n": "\r\n24000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 24000000,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "MulÃ¡n",
+        "TÃ­tulo original": "Mulan",
+        "Fecha de estreno": 1998,
+        "InversiÃ³n": "\r\n90000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 90000000,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Juego de Gemelas / TÃº a Londres y yo a California",
+        "TÃ­tulo original": "The Parent Trap",
+        "Fecha de estreno": 1998,
+        "InversiÃ³n": "\r\n15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "I'll Be Home for Christmas",
+        "TÃ­tulo original": "I'll Be Home for Christmas",
+        "Fecha de estreno": 1998,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Bichos: Una aventura en miniatura",
+        "TÃ­tulo original": "A Bug's Life",
+        "Fecha de estreno": 1998,
+        "InversiÃ³n": "120000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 120000000,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Mi Gran Amigo Joe",
+        "TÃ­tulo original": "Migthy Joe Young",
+        "Fecha de estreno": 1998,
+        "InversiÃ³n": "\r\n90000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 90000000,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Mi marciano favorito",
+        "TÃ­tulo original": "My Favorite Martian",
+        "Fecha de estreno": 1999,
+        "InversiÃ³n": "\r\n65000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 65000000,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Doug: La pelÃ­cula / Doug: Su 1Âª pelÃ­cula",
+        "TÃ­tulo original": "Doug's 1st Movie",
+        "Fecha de estreno": 1999,
+        "InversiÃ³n": "\r\n5000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 5000000,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "TarzÃ¡n",
+        "TÃ­tulo original": "Tarzan",
+        "Fecha de estreno": 1999,
+        "InversiÃ³n": "\r\n130000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 130000000,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Inspector Gadget",
+        "TÃ­tulo original": "Inspector Gadget",
+        "Fecha de estreno": 1999,
+        "InversiÃ³n": "\r\n90000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 90000000,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "The Straight Story",
+        "TÃ­tulo original": "The Straight Story",
+        "Fecha de estreno": 1999,
+        "InversiÃ³n": "\r\n10000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 10000000,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Toy Story 2",
+        "TÃ­tulo original": "Toy Story 2",
+        "Fecha de estreno": 1999,
+        "InversiÃ³n": "\r\n90000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 90000000,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "FantasÃ­a 2000",
+        "TÃ­tulo original": "Fantasia 2000",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "\r\n85000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 85000000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La pelÃ­cula de Tigger",
+        "TÃ­tulo original": "The Tigger Movie",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "\r\n15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Aventura elefantÃ¡stica",
+        "TÃ­tulo original": "Whispers: An Elephant's Tale",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "4000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 4000000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Dinosaurio",
+        "TÃ­tulo original": "Dinosaur",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "\r\n127500000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 127500000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El chico / Mi encuentro conmigo",
+        "TÃ­tulo original": "The Kid",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "\r\n65000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 65000000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Duelo de TitanesÂ /Â Grito de Titanes",
+        "TÃ­tulo original": "Remember the Titans",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "102 DÃ¡lmatas",
+        "TÃ­tulo original": "102 Dalmatians",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "\r\n85000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 85000000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Las locuras del emperador / El emperador y sus locuras",
+        "TÃ­tulo original": "The Emperor's New Groove",
+        "Fecha de estreno": 2000,
+        "InversiÃ³n": "\r\n100000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 100000000,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "LlegÃ³ el recreo / La banda del patio - La pelÃ­cula",
+        "TÃ­tulo original": "Recess: School's Out",
+        "Fecha de estreno": 2001,
+        "InversiÃ³n": "\r\n23000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 23000000,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Atlantis: El imperio perdido",
+        "TÃ­tulo original": "Atlantis: The Lost Empire",
+        "Fecha de estreno": 2001,
+        "InversiÃ³n": "\r\n90000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 90000000,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El diario de la princesa / Princesa por sorpresa",
+        "TÃ­tulo original": "The Princess Diaries",
+        "Fecha de estreno": 2001,
+        "InversiÃ³n": "26000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 26000000,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Max Keeble's Big Movie",
+        "TÃ­tulo original": "Max Keeble's Big Movie",
+        "Fecha de estreno": 2001,
+        "InversiÃ³n": "\r\n25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "The Other Side of Heaven",
+        "TÃ­tulo original": "The Other Side of Heaven",
+        "Fecha de estreno": 2001,
+        "InversiÃ³n": "7000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 7000000,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Monsters, Inc. / Monstruos S.A.",
+        "TÃ­tulo original": "Monsters, Inc.",
+        "Fecha de estreno": 2001,
+        "InversiÃ³n": "115000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 115000000,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "FrÃ­o de perros / Aventuras en Alaska",
+        "TÃ­tulo original": "Snow Dogs",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "\r\n33000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 33000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Peter Pan: El regreso al paÃ­s de Nunca JamÃ¡s / Peter Pan en regreso al paÃ­s de Nunca JamÃ¡s",
+        "TÃ­tulo original": "Return to Never Land",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "20000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 20000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El novato",
+        "TÃ­tulo original": "The Rookie",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "22000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 22000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Lilo & Stitch",
+        "TÃ­tulo original": "Lilo & Stitch",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "\r\n80000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 80000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "The Country Bears",
+        "TÃ­tulo original": "The Country Bears",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "\r\n35000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tuck Everlasting",
+        "TÃ­tulo original": "Tuck Everlasting",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "\r\n15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Santa ClÃ¡usula 2 / Santa Claus 2",
+        "TÃ­tulo original": "The Santa Clause 2",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "\r\n65000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 65000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El planeta del tesoro",
+        "TÃ­tulo original": "Treasure Planet",
+        "Fecha de estreno": 2002,
+        "InversiÃ³n": "\r\n140000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 140000000,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El libro de la selva 2",
+        "TÃ­tulo original": "The Jungle Book 2",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "20000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 20000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La Gran PelÃ­cula de Piglet",
+        "TÃ­tulo original": "Piglet's Big Movie",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "\r\n46000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 46000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los fantasmas del Titanic",
+        "TÃ­tulo original": "Ghosts of the Abyss",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "13000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 13000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El misterio de los Excavadores",
+        "TÃ­tulo original": "Holes",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "20000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 20000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Buscando a Nemo",
+        "TÃ­tulo original": "Finding Nemo",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "\r\n94000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 94000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Piratas del Caribe: La maldiciÃ³n de la Perla Negra / Piratas del Caribe: La maldiciÃ³n del Perla Negra",
+        "TÃ­tulo original": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "\r\n140000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 140000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Un viernes de locos / Ponte en mi lugar",
+        "TÃ­tulo original": "Freaky Friday",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "\r\n26000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 26000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Lizzie Superstar / Lizzie McGuire: Estrella Pop",
+        "TÃ­tulo original": "The Lizzie McGuire Movie",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "\r\n17000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 17000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tierra de osos / Hermano oso",
+        "TÃ­tulo original": "Brother Bear",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "46000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 46000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La MansiÃ³n EncantadaÂ /Â La MansiÃ³n Embrujada",
+        "TÃ­tulo original": "The Haunted Mansion",
+        "Fecha de estreno": 2003,
+        "InversiÃ³n": "\r\n90000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 90000000,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El rey leÃ³n 3: Â¡Hakuna Matata!",
+        "TÃ­tulo original": "The Lion King 1 1/2",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "10000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 10000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Teacher's Pet / Este perro es un crack",
+        "TÃ­tulo original": "Teacher's Pet",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "10000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 10000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Miracle",
+        "TÃ­tulo original": "Miracle",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "\r\n28000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 28000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Confesiones de una tÃ­pica adolescente / Quiero ser superfamosa",
+        "TÃ­tulo original": "Confessions of a Teenage Drama Queen",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Vacas Vaqueras / Zafarrancho en el rancho",
+        "TÃ­tulo original": "Home on the Range",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "\r\n110000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 110000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El Diario De La Princesa 2 / Princesa por sorpresa 2",
+        "TÃ­tulo original": "The Princess Diaries 2: Royal Engagement",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "45000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 45000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los IncreÃ­bles",
+        "TÃ­tulo original": "The Incredibles",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "92000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 92000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La bÃºsqueda / La leyenda del tesoro perdido",
+        "TÃ­tulo original": "National Treasure",
+        "Fecha de estreno": 2004,
+        "InversiÃ³n": "100000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 100000000,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Winnie Pooh y el pequeÃ±o efelante / La pelÃ­cula de HÃ©ffalump",
+        "TÃ­tulo original": "Pooh's Heffalump Movie",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "20000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 20000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Una niÃ±era a prueba de balasÂ /Â NiÃ±era a prueba de balas",
+        "TÃ­tulo original": "The Pacifier",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "\r\n56000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 56000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "SoÃ±ando, soÃ±ando triunfÃ© patinandoÂ /Â SueÃ±os sobre hielo",
+        "TÃ­tulo original": "Ice Princess",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "\r\n25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Herbie: A TopeÂ /Â Herbie a toda marcha",
+        "TÃ­tulo original": "Herbie: Fully Loaded",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "50000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Sky High: Una escuela de altos vuelosÂ /Â SÃºper Escuela de HÃ©roes",
+        "TÃ­tulo original": "Sky High",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "\r\n35000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El juego que hizo historia",
+        "TÃ­tulo original": "The Greatest Game Ever Played",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Chicken Little",
+        "TÃ­tulo original": "Chicken Little",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Las crÃ³nicas de Narnia: el leÃ³n, la bruja y el armarioÂ /Â Las crÃ³nicas de Narnia: el leÃ³n, la bruja y el ropero",
+        "TÃ­tulo original": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "Fecha de estreno": 2005,
+        "InversiÃ³n": "\r\n180000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 180000000,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Camino a la gloria",
+        "TÃ­tulo original": "Glory Road",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Roving Mars",
+        "TÃ­tulo original": "Roving Mars",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "\r\n1000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 1000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Rescate en la AntÃ¡rtidaÂ /Â Bajo cero",
+        "TÃ­tulo original": "Eight Below",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "\r\n40000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 40000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Un PapÃ¡ con Pocas Pulgas / CariÃ±o, estoy hecho un perro",
+        "TÃ­tulo original": "The Shaggy Dog",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "\r\n50000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "SalvajeÂ /Â Vida salvaje",
+        "TÃ­tulo original": "The Wild",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "\r\n80000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 80000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "CarsÂ /Â Cars: Una aventura sobre ruedas",
+        "TÃ­tulo original": "Cars",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "120000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 120000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El zorro y el sabueso 2 / Tod y Toby 2",
+        "TÃ­tulo original": "The Fox and the Hound 2",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "24000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 24000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Piratas del Caribe: El cofre del hombre muerto / Piratas de Caribe: El Cofre de la Muerte",
+        "TÃ­tulo original": "Pirates of the Caribbean: Dead Man's Chest",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "\r\n225000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 225000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Buddy, Familia al recate / Air Buddies",
+        "TÃ­tulo original": "Air Buddies",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "9000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 9000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Invencible",
+        "TÃ­tulo original": "Invincible",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Santa ClÃ¡usula 3 / Santa Claus 3: Por una navidad sin frÃ­o",
+        "TÃ­tulo original": "The Santa Clause 3: The Escape Clause",
+        "Fecha de estreno": 2006,
+        "InversiÃ³n": "12000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 12000000,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La Cenicienta 3: Un giro en el tiempo / Cenicienta: Â¿QuÃ© pasarÃ­a sÃ­...?",
+        "TÃ­tulo original": "Cinderella III: A Twist in Time",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "8000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 8000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La Familia del Futuro / Descubriendo a los Robinson",
+        "TÃ­tulo original": "Meet The Robinsons",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Piratas del Caribe: en el fin del mundo",
+        "TÃ­tulo original": "Pirates of the Caribbean: At World's End",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "300000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 300000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Ratatouille",
+        "TÃ­tulo original": "Ratatouille",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "SuperdogÂ /Â Supercan",
+        "TÃ­tulo original": "Underdog",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "\r\n25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Entrenando a papÃ¡ / PapÃ¡ por sorpresa",
+        "TÃ­tulo original": "The Game Plan",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "22000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 22000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Encantada / Encantada: la historia de Giselle",
+        "TÃ­tulo original": "Enchanted",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "85000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 85000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La bÃºsqueda 2: El diario secretoÂ /Â La Leyenda del Tesoro Perdido 2: El Libro de los Secretos",
+        "TÃ­tulo original": "National Treasure: Book of Secrets",
+        "Fecha de estreno": 2007,
+        "InversiÃ³n": "\r\n130000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 130000000,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Hannah Montana & Miley Cyrus en Concierto: Lo Mejor de Ambos Mundos",
+        "TÃ­tulo original": "Hannah Montana & Miley Cyrus: Best of Both Worlds Concert",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "\r\n7000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 7000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Loco Viaje al CampusÂ /Â Un viaje de aquellos",
+        "TÃ­tulo original": "College Road Trip",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "\r\n25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Las crÃ³nicas de Narnia: el prÃ­ncipe Caspian",
+        "TÃ­tulo original": "The Chronicles of Narnia: Prince Caspian",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "\r\n225000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 225000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "WALLÂ·E",
+        "TÃ­tulo original": "WALL-E",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "180000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 180000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Campanilla / Tinker Bell",
+        "TÃ­tulo original": "Tinker Bell",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "50000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Una Chihuahua de Beverly Hills/ Un Chihuahua de Beverly Hills",
+        "TÃ­tulo original": "Beverly Hills Chihuahua",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "\r\n20000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 20000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Cuentos que no son cuentosÂ /Â MÃ¡s allÃ¡ de los SueÃ±os",
+        "TÃ­tulo original": "Bedtime Stories",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "\r\n80000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 80000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "High School Musical 3: Fin de Curso/ High School Musical 3: La GradauciÃ³n",
+        "TÃ­tulo original": "High School Musical 3: Senior Year",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "\r\n11000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 11000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Bolt: Un Perro fuera de serie",
+        "TÃ­tulo original": "Bolt",
+        "Fecha de estreno": 2008,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La MontaÃ±a Embrujada",
+        "TÃ­tulo original": "Race to Witch Mountain",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "\r\n50000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Hannah Montana: La pelÃ­cula",
+        "TÃ­tulo original": "Hannah Montana: The Movie",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La Tierra",
+        "TÃ­tulo original": "Earth",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "\r\n47000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 47000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Up: Una Aventura de Altura",
+        "TÃ­tulo original": "Up",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Fuerza GÂ /Â G-Force: Licencia para espiar",
+        "TÃ­tulo original": "G-Force",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "The Book of Masters",
+        "TÃ­tulo original": "The Book of Masters",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "\r\n8000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 8000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los Fantasmas de Scrooge / Cuento de navidad",
+        "TÃ­tulo original": "A Christmas Carol",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Par de colmilludos / Dos canguros muy maduros",
+        "TÃ­tulo original": "Old Dogs",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "\r\n35000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tinker Bell y el tesoro perdido / Campanilla y el tesoro perdido",
+        "TÃ­tulo original": "Tinker Bell and the Lost Treasure",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "30000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La princesa y el sapo / Tiana y el sapo",
+        "TÃ­tulo original": "The Princess and the Frog",
+        "Fecha de estreno": 2009,
+        "InversiÃ³n": "105000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 105000000,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tinker Bell: Hadas al rescate / Campanilla y el gran rescate",
+        "TÃ­tulo original": "Tinker Bell and the Great Fairy Rescue",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "35000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Alicia en el paÃ­s de las maravillas",
+        "TÃ­tulo original": "Alice in Wonderland",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "OcÃ©anos",
+        "TÃ­tulo original": "Oceans",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "\r\n80000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 80000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El prÃ­ncipe de Persia: Las arenas del tiempo",
+        "TÃ­tulo original": "Prince of Persia: The Sands of Time",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "150",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Toy Story 3",
+        "TÃ­tulo original": "Toy Story 3",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "\n200000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El aprendiz de brujo",
+        "TÃ­tulo original": "The Sorcerer's Apprentice",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "CampeÃ³n / Secretariat",
+        "TÃ­tulo original": "Secretariat",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "\r\n35000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Enredados",
+        "TÃ­tulo original": "Tangled",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "\n260000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 260000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tron: El legado / Tron: Legacy",
+        "TÃ­tulo original": "Tron: Legacy",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Anaganaga O Dheerudu",
+        "TÃ­tulo original": "Anaganaga O Dheerudu",
+        "Fecha de estreno": 2010,
+        "InversiÃ³n": "\r\n3800000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 3800000,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Marte necesita mamÃ¡s",
+        "TÃ­tulo original": "Mars Needs Moms",
+        "Fecha de estreno": 2011,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Felinos de Ãfrica",
+        "TÃ­tulo original": "African Cats",
+        "Fecha de estreno": 2011,
+        "InversiÃ³n": "\r\n5000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 5000000,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Fin de curso",
+        "TÃ­tulo original": "Prom",
+        "Fecha de estreno": 2011,
+        "InversiÃ³n": "8000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 8000000,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Piratas del Caribe: Navegando en aguas misteriosas / Piratas del Caribe:En mareas misteriosas",
+        "TÃ­tulo original": "Pirates of the Caribbean: On Stranger Tides",
+        "Fecha de estreno": 2011,
+        "InversiÃ³n": "\n410600000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 410600000,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Cars 2",
+        "TÃ­tulo original": "Cars 2",
+        "Fecha de estreno": 2011,
+        "InversiÃ³n": "\r\n200000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Winnie the Pooh",
+        "TÃ­tulo original": "Winnie the Pooh",
+        "Fecha de estreno": 2011,
+        "InversiÃ³n": "\r\n30000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 30000000,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los Muppets",
+        "TÃ­tulo original": "The Muppets",
+        "Fecha de estreno": 2011,
+        "InversiÃ³n": "\r\n45000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 45000000,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "John Carter",
+        "TÃ­tulo original": "John Carter of Mars",
+        "Fecha de estreno": 2012,
+        "InversiÃ³n": "\r\n306600000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 306600000,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "ChimpancÃ©s",
+        "TÃ­tulo original": "Chimpanzee",
+        "Fecha de estreno": 2012,
+        "InversiÃ³n": "\r\n5000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 5000000,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Valiente / Indomable",
+        "TÃ­tulo original": "Brave",
+        "Fecha de estreno": 2012,
+        "InversiÃ³n": "185000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 185000000,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La extraÃ±a vida de Timothy Green",
+        "TÃ­tulo original": "The Odd Life of Timothy Green",
+        "Fecha de estreno": 2012,
+        "InversiÃ³n": "\r\n25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Frankenweenie",
+        "TÃ­tulo original": "Frankenweenie",
+        "Fecha de estreno": 2012,
+        "InversiÃ³n": "\r\n39000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 39000000,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Ralph el demoledor / Â¡Rompe Ralph!",
+        "TÃ­tulo original": "Wreck-It-Ralph",
+        "Fecha de estreno": 2012,
+        "InversiÃ³n": "\r\n165000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 165000000,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tinker Bell y el secreto de las hadas / Campanilla y el secreto de las hadas",
+        "TÃ­tulo original": "Secret of the Wings",
+        "Fecha de estreno": 2012,
+        "InversiÃ³n": "35000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Oz, el poderoso / Oz: Un mundo de fantasÃ­a",
+        "TÃ­tulo original": "Oz: The Great and Powerful",
+        "Fecha de estreno": 2013,
+        "InversiÃ³n": "\r\n200000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Monsters University / Monstruos University",
+        "TÃ­tulo original": "Monsters University",
+        "Fecha de estreno": 2013,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Precuela",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El llanero solitario",
+        "TÃ­tulo original": "The Lone Ranger",
+        "Fecha de estreno": 2013,
+        "InversiÃ³n": "\r\n225000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 225000000,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Aviones",
+        "TÃ­tulo original": "Planes",
+        "Fecha de estreno": 2013,
+        "InversiÃ³n": "\r\n50000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Frozen: Una Aventura Congelada / Frozen: El reino de hielo",
+        "TÃ­tulo original": "Frozen",
+        "Fecha de estreno": 2013,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El sueÃ±o de Walt / Al encuentro de Mr. Banks",
+        "TÃ­tulo original": "Saving Mr. Banks",
+        "Fecha de estreno": 2013,
+        "InversiÃ³n": "35000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 35000000,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Muppets 2: Los mÃ¡s buscados / El tour de los Muppets",
+        "TÃ­tulo original": "Muppets Most Wanted",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "\r\n51000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 51000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Osos",
+        "TÃ­tulo original": "Bears",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "\r\n5000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 5000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Un golpe de talento",
+        "TÃ­tulo original": "Million Dollar Arm",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "MalÃ©fica",
+        "TÃ­tulo original": "Maleficent",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "\r\n180000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 180000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Aviones 2: Equipo de Rescate / Aviones: Equipo de Rescate",
+        "TÃ­tulo original": "Planes: Fire & Rescue",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "\r\n50000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Grandes HÃ©roes / Big Hero 6",
+        "TÃ­tulo original": "Big Hero 6",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "\r\n165000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 165000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Alexander y un dÃ­a terrible, horrible, malo... Â¡muy malo! / Alexander y el dÃ­a terrible, horrible, espantoso, horroroso",
+        "TÃ­tulo original": "Alexander and the Terrible, Horrible, No Good, Very Bad Day",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "\r\n28000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 28000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "En el bosque / Into the Woods",
+        "TÃ­tulo original": "Into the Woods",
+        "Fecha de estreno": 2014,
+        "InversiÃ³n": "\r\n50000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "McFarland, sin lÃ­mites",
+        "TÃ­tulo original": "McFarland, USA",
+        "Fecha de estreno": 2015,
+        "InversiÃ³n": "25000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 25000000,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La Cenicienta",
+        "TÃ­tulo original": "Cinderella",
+        "Fecha de estreno": 2015,
+        "InversiÃ³n": "\r\n95000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 95000000,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El Reino de los Monos",
+        "TÃ­tulo original": "Monkey Kingdom",
+        "Fecha de estreno": 2015,
+        "InversiÃ³n": "\r\n5000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 5000000,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tomorrowland: El mundo del maÃ±ana",
+        "TÃ­tulo original": "Tomorrowland",
+        "Fecha de estreno": 2015,
+        "InversiÃ³n": "\r\n180000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 180000000,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Intensa-Mente / Del RevÃ©s",
+        "TÃ­tulo original": "Inside Out",
+        "Fecha de estreno": 2015,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Un Gran Dinosaurio / El viaje de Arlo",
+        "TÃ­tulo original": "The Good Dinosaur",
+        "Fecha de estreno": 2015,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Horas contadas / La hora decisiva",
+        "TÃ­tulo original": "The Finest Hours",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "70000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 70000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Zootopia / ZootrÃ³polis",
+        "TÃ­tulo original": "Zootopia",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El libro de la selva",
+        "TÃ­tulo original": "The Jungle Book",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Alicia a traves del espejo",
+        "TÃ­tulo original": "Alice Through the Looking Glass",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "\r\n170000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 170000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Tini: El gran cambio de Violetta",
+        "TÃ­tulo original": "Tini: El Gran Cambio De Violetta",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "17000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 17000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El buen amigo gigante / Mi gran amigo el gigante",
+        "TÃ­tulo original": "The BFG",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "140000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 140000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Buscando a Dory",
+        "TÃ­tulo original": "Finding Dory",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Precuela",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Mi amigo el dragÃ³n / Peter y el dragÃ³n",
+        "TÃ­tulo original": "Pete's Dragon",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "\r\n65000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 65000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Reina de Katwe",
+        "TÃ­tulo original": "Queen of Katwe",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "\r\n15000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 15000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Moana: Un mar de aventuras / Vaiana",
+        "TÃ­tulo original": "Moana",
+        "Fecha de estreno": 2016,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La bella y la bestia",
+        "TÃ­tulo original": "Beauty and the Beast",
+        "Fecha de estreno": 2017,
+        "InversiÃ³n": "160000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 160000000,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Nacidos en China",
+        "TÃ­tulo original": "Born in China",
+        "Fecha de estreno": 2017,
+        "InversiÃ³n": "\r\n5000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 5000000,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Piratas del Caribe: La venganza de Salazar",
+        "TÃ­tulo original": "Pirates of the Caribbean: Dead Men Tell No Tales",
+        "Fecha de estreno": 2017,
+        "InversiÃ³n": "\r\n230000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 230000000,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Cars 3",
+        "TÃ­tulo original": "Cars 3",
+        "Fecha de estreno": 2017,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Coco",
+        "TÃ­tulo original": "Coco",
+        "Fecha de estreno": 2017,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Un viaje en el tiempo / Un pliegue en el tiempo",
+        "TÃ­tulo original": "A Wrinkle in Time",
+        "Fecha de estreno": 2018,
+        "InversiÃ³n": "\r\n100000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 100000000,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Los IncreÃ­bles 2",
+        "TÃ­tulo original": "Incredibles 2",
+        "Fecha de estreno": 2018,
+        "InversiÃ³n": "\r\n200000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Christopher Robin",
+        "TÃ­tulo original": "Christopher Robin",
+        "Fecha de estreno": 2018,
+        "InversiÃ³n": "\r\n75000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 75000000,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El Cascanueces y los cuatro reinos",
+        "TÃ­tulo original": "The Nutcracker and the Four Realms",
+        "Fecha de estreno": 2018,
+        "InversiÃ³n": "\r\n120000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 120000000,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Wi-Fi Ralph / Ralph Rompe Internet",
+        "TÃ­tulo original": "Ralph Breaks the Internet",
+        "Fecha de estreno": 2018,
+        "InversiÃ³n": "\r\n175000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El Regreso de Mary Poppins",
+        "TÃ­tulo original": "Mary Poppins Returns",
+        "Fecha de estreno": 2018,
+        "InversiÃ³n": "\r\n130000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 130000000,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Dumbo",
+        "TÃ­tulo original": "Dumbo",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "170000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 170000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "AladdÃ­n",
+        "TÃ­tulo original": "Aladdin",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "183000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 183000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Toy Story 4",
+        "TÃ­tulo original": "Toy Story 4",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "\r\n200000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "El Rey LeÃ³n",
+        "TÃ­tulo original": "The Lion King",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "\r\n250000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 250000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "MalÃ©fica: DueÃ±a del Mal / MalÃ©fica: Maestra del Mal",
+        "TÃ­tulo original": "Maleficent: Mistress of Evil",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "\r\n185000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 185000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La Dama y el Vagabundo",
+        "TÃ­tulo original": "Lady and the Tramp",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "\r\n60000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 60000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Frozen II",
+        "TÃ­tulo original": "Frozen II",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Togo",
+        "TÃ­tulo original": "Togo",
+        "Fecha de estreno": 2019,
+        "InversiÃ³n": "\r\n40000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 40000000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Las aventuras de Timmy Fracaso / DeSastre y Total: Agencia de detectives nÂº 1",
+        "TÃ­tulo original": "Timmy Failure: Mistakes Were Made",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "45000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 45000000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Unidos / Onward",
+        "TÃ­tulo original": "Onward",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "175000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Magic Camp: Campamento MÃ¡gico",
+        "TÃ­tulo original": "Magic Camp",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "24000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 24000000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Artemis Fowl: El Mundo SubterrÃ¡neo",
+        "TÃ­tulo original": "Artemis Fowl",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "\r\n125000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 125000000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Hamilton",
+        "TÃ­tulo original": "Hamilton",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "\r\n12500000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 12500000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "MulÃ¡n",
+        "TÃ­tulo original": "Mulan",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "\r\n200000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Belleza Negra",
+        "TÃ­tulo original": "Black Beauty",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "24000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 24000000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Soul",
+        "TÃ­tulo original": "Soul",
+        "Fecha de estreno": 2020,
+        "InversiÃ³n": "\r\n150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Cruella",
+        "TÃ­tulo original": "Cruella",
+        "Fecha de estreno": 2021,
+        "InversiÃ³n": "100000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 100000000,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Jungle Cruise",
+        "TÃ­tulo original": "Jungle Cruise",
+        "Fecha de estreno": 2021,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Encanto",
+        "TÃ­tulo original": "Encanto",
+        "Fecha de estreno": 2021,
+        "InversiÃ³n": "50000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 50000000,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La era de hielo: Las aventuras de Buck / Ice Age: Las Aventuras de Buck",
+        "TÃ­tulo original": "The Ice Age Adventures of Buck Wild",
+        "Fecha de estreno": 2022,
+        "InversiÃ³n": "63000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 63000000,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Red",
+        "TÃ­tulo original": "Turning Red",
+        "Fecha de estreno": 2022,
+        "InversiÃ³n": "175000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 175000000,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Chip y Dale al rescate / Chip y Chop: los guardianes rescatadores",
+        "TÃ­tulo original": "Chip 'n' Dale: Rescue Rangers",
+        "Fecha de estreno": 2022,
+        "InversiÃ³n": "70000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 70000000,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Lightyear",
+        "TÃ­tulo original": "Lightyear",
+        "Fecha de estreno": 2022,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Precuela",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Pinocho",
+        "TÃ­tulo original": "Pinocchio",
+        "Fecha de estreno": 2022,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Abracadabra 2 ",
+        "TÃ­tulo original": "Hocus Pocus 2",
+        "Fecha de estreno": 2022,
+        "InversiÃ³n": "100000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 100000000,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Un Mundo ExtraÃ±o / Mundo extraÃ±o",
+        "TÃ­tulo original": "Strange World",
+        "Fecha de estreno": 2022,
+        "InversiÃ³n": "120000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 120000000,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "La Sirenita",
+        "TÃ­tulo original": "The Little Mermaid",
+        "Fecha de estreno": 2023,
+        "InversiÃ³n": "355100000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 355100000,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Elementos / Elemental",
+        "TÃ­tulo original": "Elemental",
+        "Fecha de estreno": 2023,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "MansiÃ³n Embrujada / MansiÃ³n Encantada",
+        "TÃ­tulo original": "Haunted Mansion",
+        "Fecha de estreno": 2023,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Wish: El poder de los deseos",
+        "TÃ­tulo original": "Wish",
+        "Fecha de estreno": 2023,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Intensa-Mente 2 / Del revÃ©s 2",
+        "TÃ­tulo original": "Inside Out 2",
+        "Fecha de estreno": 2024,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2024,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Mufasa: El Rey LeÃ³n",
+        "TÃ­tulo original": "Mufasa: The Lion King",
+        "Fecha de estreno": 2024,
+        "InversiÃ³n": "200000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 200000000,
+        "Año_Estreno": 2024,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Blanca Nieves / Blancanieves",
+        "TÃ­tulo original": "Snow White",
+        "Fecha de estreno": 2025,
+        "InversiÃ³n": "250000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 250000000,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Lilo y Stitch (Live Action)",
+        "TÃ­tulo original": "Lilo & Stitch",
+        "Fecha de estreno": 2025,
+        "InversiÃ³n": "100000000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Inversión_Numerica": 100000000,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Elio",
+        "TÃ­tulo original": "Elio",
+        "Fecha de estreno": 2025,
+        "InversiÃ³n": "150000000",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Inversión_Numerica": 150000000,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "ï»¿TÃ­tulo en espaÃ±ol": "Otro viernes de locos 2",
+        "TÃ­tulo original": "Freakier Friday 2",
+        "Fecha de estreno": 2025,
+        "InversiÃ³n": "42000000",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Inversión_Numerica": 42000000,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
