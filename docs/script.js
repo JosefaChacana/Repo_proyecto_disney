@@ -1,26 +1,68 @@
+// ===============================================
+// FUNCIÓN PARA CARGAR Y ANALIZAR EL CSV
+// ===============================================
+
+async function loadCSVData(filePath, delimiter) {
+    const response = await fetch(filePath);
+    
+    // Si la respuesta no es exitosa (ej. 404 Not Found), lanzamos un error
+    if (!response.ok) {
+        throw new Error(`Error al obtener el archivo: ${filePath} (Estado: ${response.status})`);
+    }
+    
+    const text = await response.text();
+    
+    // Simple parser manual para CSV con punto y coma
+    // Utilizamos una expresión regular para manejar saltos de línea tanto \r\n como \n
+    const rows = text.trim().split(/\r\n|\n/);
+    if (rows.length === 0) return { data: [] };
+
+    // La primera fila son los encabezados
+    const headers = rows[0].split(delimiter).map(header => header.trim());
+    const data = [];
+    
+    // Procesar el resto de las filas
+    for (let i = 1; i < rows.length; i++) {
+        const values = rows[i].split(delimiter);
+        
+        // Ignoramos filas incompletas o vacías
+        if (values.length !== headers.length) {
+            continue;
+        }
+        
+        const rowObject = {};
+        headers.forEach((header, index) => {
+            // Guardamos el valor en el objeto, usando el encabezado como clave
+            rowObject[header] = values[index].trim();
+        });
+        data.push(rowObject);
+    }
+    
+    // Retornamos los datos en el formato que espera el resto de tu código
+    return { data: data }; 
+}
+
+
+// ===============================================
+// CÓDIGO PRINCIPAL DEL PROYECTO
+// ===============================================
 document.addEventListener('DOMContentLoaded', () => {
     
-    // ===============================================
-    // 1. LÓGICA DE ANIMACIÓN DE INTRODUCCIÓN Y CHISPAS
-    // ===============================================
-    
+    // --- Lógica de la Animación de Introducción y Chispas ---
     const intro = document.getElementById('intro-animation');
-    const durationFadeOut = 1000; // Duración para el inicio del fade-out
+    const durationFadeOut = 1000; 
     
     const NUM_SPARKLES = 50; 
     const introContainer = document.getElementById('intro-animation'); 
 
-    // Crea las chispas (sparkles) para la animación de inicio
     if (introContainer) {
         for (let i = 0; i < NUM_SPARKLES; i++) {
             const sparkle = document.createElement('div');
             sparkle.classList.add('sparkle');
 
-            // Posiciona las chispas de forma aleatoria en la pantalla
             sparkle.style.left = Math.random() * 100 + 'vw';
             sparkle.style.top = Math.random() * 100 + 'vh';
             
-            // Asigna duraciones y retrasos aleatorios para el efecto 'flicker'
             const duration = Math.random() * 3 + 1; 
             const delay = Math.random() * 4; 
 
@@ -31,12 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // Aplica el efecto fade-out a la pantalla de introducción y luego la oculta
     if (intro) {
-        // Añade la clase 'fade-out' después de 1 segundo (durationFadeOut)
         setTimeout(function() {
             intro.classList.add('fade-out');
-            // Oculta el elemento completamente después de que termine la transición (1000ms en el CSS)
             setTimeout(function() {
                 intro.style.display = 'none';
             }, 1000); 
@@ -44,45 +83,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     
-    // ===============================================
-    // 2. LÓGICA DE CARGA Y RENDERIZADO DE LA LÍNEA DE TIEMPO
-    // ===============================================
     
     const timelineContainer = document.querySelector('.timeline');
     
     
     async function cargarPeliculas() {
-        // *** RUTA CORREGIDA ***
-        const CSV_FILE_NAME = "Base_marvel_starwars.csv";
+        // *** CORRECCIÓN CRÍTICA: Nombre del archivo CSV con ESPACIO ***
+        const CSV_FILE_NAME = "Base_marvel_starwars.csv"; 
+        // -----------------------------------------------------------------
         
         try {
             
-            // Intenta cargar los datos del CSV. Se asume que get_tabular_data está disponible.
-            const peliculasData = await get_tabular_data({"file_name": CSV_FILE_NAME, "delimiter": ";"});
+            // Usamos la función loadCSVData para leer el archivo CSV
+            const peliculasData = await loadCSVData(CSV_FILE_NAME, ";");
             
             
             if (!timelineContainer) return;
             
-            // Limpiamos el contenedor antes de añadir los elementos
             timelineContainer.innerHTML = '';
             
             const peliculas = peliculasData.data;
 
             
-            // Ordenamos las películas por el año (columna 'AÑO') de forma ascendente
+            // Aseguramos que 'AÑO' sea tratado como número para ordenar
             peliculas.sort((a, b) => parseInt(a['AÑO']) - parseInt(b['AÑO']));
 
             peliculas.forEach(pelicula => {
                 const titulo = pelicula['TÍTULO'];
-                const tipo = pelicula['CONTENIDO']; // Original, Secuela, Spin-Off, etc.
+                const tipo = pelicula['CONTENIDO']; 
                 const anio = pelicula['AÑO'];
-                const tipo_contenido = pelicula['TIPO']; // Animada, Imagen real, Documental, etc.
+                const tipo_contenido = pelicula['TIPO']; 
                 
-                // Creamos el elemento de la línea de tiempo (<li>)
+                // Creamos el elemento de la línea de tiempo
                 const eventLi = document.createElement('li');
                 eventLi.classList.add('timeline-event');
                 
-                // Generamos el HTML del evento, incluyendo la estructura para el clic
+                // Creamos el contenido
                 eventLi.innerHTML = `
                     <div class="timeline-date">${anio}</div>
                     <div class="timeline-content">
@@ -93,51 +129,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 
-                // Añadimos el evento al contenedor de la línea de tiempo
+                // Añadimos el evento al contenedor
                 timelineContainer.appendChild(eventLi);
             });
 
-            // Una vez cargados todos los elementos, adjuntamos la función de clic
+            // Una vez cargados los elementos, adjuntamos la interactividad (clic)
             adjuntarInteractividadClic();
 
         } catch (error) {
             console.error("Error al cargar la base de datos de películas:", error);
-            // Muestra un mensaje de error visible al usuario si falla la carga
+            // Mostrar un mensaje de error más específico
             if (timelineContainer) {
-                timelineContainer.innerHTML = '<p style="color:red; text-align:center;">Error al cargar la base de datos. Asegúrate de que el archivo CSV sea accesible.</p>';
+                timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV esté en la misma carpeta.</p>`;
             }
         }
     }
 
-    // ===============================================
-    // 3. FUNCIÓN DE INTERACTIVIDAD DE CLIC
-    // ===============================================
-
-    // Función que adjunta el evento de clic a todos los títulos de los eventos
+    // Función que adjunta la interactividad a los elementos recién creados
     function adjuntarInteractividadClic() {
         const summaries = document.querySelectorAll('.timeline-summary');
 
         summaries.forEach(summary => {
             summary.addEventListener('click', () => {
-                // Seleccionamos el div de detalles que está justo después del título
                 const details = summary.nextElementSibling;
-                // Alternamos la clase 'hidden' para mostrar/ocultar los detalles
                 details.classList.toggle('hidden');
 
-                // Actualizamos el texto del resumen para indicar la acción (mostrar/ocultar)
                 const currentText = summary.textContent;
                 if (details.classList.contains('hidden')) {
-                    // Si se oculta
                     summary.textContent = currentText.replace('(Ocultar)', '(Clic para detalles)');
                 } else {
-                    // Si se muestra
                     summary.textContent = currentText.replace('(Clic para detalles)', '(Ocultar)');
                 }
             });
         });
     }
 
-    // Inicia el proceso de carga de datos y creación de la línea de tiempo
+    // Llama a la función principal para iniciar la carga de datos
     cargarPeliculas();
 
 });
