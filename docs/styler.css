@@ -1,4 +1,3 @@
-
 .navigation-menu {
     position: fixed;
     top: 0;
@@ -32,4 +31,9 @@
     padding-top: 90px;
     margin-top: -90px;
 }
-
+.contenedor-video {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    margin: 20px 0;
+}
