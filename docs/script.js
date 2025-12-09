@@ -1,54 +1,46 @@
-// ===============================================
-// FUNCIÓN PARA CARGAR Y ANALIZAR EL CSV
-// ===============================================
-
 async function loadCSVData(filePath, delimiter) {
     const response = await fetch(filePath);
     
-    // Si la respuesta no es exitosa (ej. 404 Not Found), lanzamos un error
+    
     if (!response.ok) {
         throw new Error(`Error al obtener el archivo: ${filePath} (Estado: ${response.status})`);
     }
     
     const text = await response.text();
     
-    // Simple parser manual para CSV con punto y coma
-    // Utilizamos una expresión regular para manejar saltos de línea tanto \r\n como \n
-    const rows = text.trim().split(/\r\n|\n/);
+    
+    const rows = text.trim().split(/\r\n|\n/).filter(line => line.length > 0);
     if (rows.length === 0) return { data: [] };
 
-    // La primera fila son los encabezados
+    
     const headers = rows[0].split(delimiter).map(header => header.trim());
     const data = [];
     
-    // Procesar el resto de las filas
+    
     for (let i = 1; i < rows.length; i++) {
         const values = rows[i].split(delimiter);
         
-        // Ignoramos filas incompletas o vacías
+        
         if (values.length !== headers.length) {
+            console.warn(`Saltando fila ${i}: columnas inconsistentes.`);
             continue;
         }
         
         const rowObject = {};
         headers.forEach((header, index) => {
-            // Guardamos el valor en el objeto, usando el encabezado como clave
             rowObject[header] = values[index].trim();
         });
         data.push(rowObject);
     }
     
-    // Retornamos los datos en el formato que espera el resto de tu código
     return { data: data }; 
 }
 
 
-// ===============================================
-// CÓDIGO PRINCIPAL DEL PROYECTO
-// ===============================================
+
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Lógica de la Animación de Introducción y Chispas ---
+    
     const intro = document.getElementById('intro-animation');
     const durationFadeOut = 1000; 
     
@@ -88,13 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     async function cargarPeliculas() {
-        // *** CORRECCIÓN CRÍTICA: Nombre del archivo CSV con ESPACIO ***
-        const CSV_FILE_NAME = "Base_marvel_starwars.csv"; 
-        // -----------------------------------------------------------------
+        
+        const CSV_FILE_NAME = "data.csv";
         
         try {
             
-            // Usamos la función loadCSVData para leer el archivo CSV
+            
             const peliculasData = await loadCSVData(CSV_FILE_NAME, ";");
             
             
@@ -105,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const peliculas = peliculasData.data;
 
             
-            // Aseguramos que 'AÑO' sea tratado como número para ordenar
+           
             peliculas.sort((a, b) => parseInt(a['AÑO']) - parseInt(b['AÑO']));
 
             peliculas.forEach(pelicula => {
@@ -114,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const anio = pelicula['AÑO'];
                 const tipo_contenido = pelicula['TIPO']; 
                 
-                // Creamos el elemento de la línea de tiempo
+               
                 const eventLi = document.createElement('li');
                 eventLi.classList.add('timeline-event');
                 
-                // Creamos el contenido
+               
                 eventLi.innerHTML = `
                     <div class="timeline-date">${anio}</div>
                     <div class="timeline-content">
@@ -129,23 +120,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 
-                // Añadimos el evento al contenedor
+               
                 timelineContainer.appendChild(eventLi);
             });
 
-            // Una vez cargados los elementos, adjuntamos la interactividad (clic)
+            
             adjuntarInteractividadClic();
 
         } catch (error) {
             console.error("Error al cargar la base de datos de películas:", error);
-            // Mostrar un mensaje de error más específico
+           
             if (timelineContainer) {
                 timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV esté en la misma carpeta.</p>`;
             }
         }
     }
 
-    // Función que adjunta la interactividad a los elementos recién creados
     function adjuntarInteractividadClic() {
         const summaries = document.querySelectorAll('.timeline-summary');
 
@@ -164,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Llama a la función principal para iniciar la carga de datos
+    
     cargarPeliculas();
 
 });
