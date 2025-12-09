@@ -1,0 +1,2670 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-7c558fca23baeea995e66b37037dad8e"},
+  "mark": {"type": "circle", "opacity": 0.8, "size": 100},
+  "encoding": {
+    "color": {
+      "field": "Tipo_Produccion_Detalle",
+      "scale": {
+        "domain": ["Secuela/Precuela", "Live-Action", "Original"],
+        "range": ["#D41C16", "#ffdf07", "#1c5791"]
+      },
+      "title": "Tipo de Producción",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Título en español", "title": "Título", "type": "nominal"},
+      {
+        "field": "Año_Estreno",
+        "format": "0f",
+        "title": "Año",
+        "type": "quantitative"
+      },
+      {"field": "Tipo_Produccion_Detalle", "title": "Tipo", "type": "nominal"},
+      {
+        "field": "Recaudaicón_Numerica",
+        "format": "$,.0f",
+        "title": "Recaudación",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "axis": {
+        "labelAngle": -45,
+        "values": [1989, 1994, 1999, 2004, 2009, 2014, 2019, 2024]
+      },
+      "field": "Año_Estreno",
+      "title": "Año de Estreno",
+      "type": "ordinal"
+    },
+    "y": {
+      "axis": {
+        "format": "~s",
+        "labelExpr": "datum.value >= 1000000 ? format(datum.value / 1000000, ',.0f') + 'M' : format(datum.value, '$.0f')"
+      },
+      "field": "Recaudaicón_Numerica",
+      "scale": {"domain": [0, 472500000]},
+      "title": "Recaudación Total (USD)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "params": [
+    {
+      "name": "param_36",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
+    }
+  ],
+  "title": "Recaudación por Año de Estreno y Tipo de Producción (Disney)",
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-7c558fca23baeea995e66b37037dad8e": [
+      {
+        "Título en español": "La sirenita",
+        "Título original": "The Little Mermaid",
+        "Fecha de estreno": 1989,
+        "$ Recaudación": "223726012",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 223726012,
+        "Año_Estreno": 1989,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "PatoAventuras - La película: El tesoro de la lámpara perdida",
+        "Título original": "DuckTales the Movie: Treasure of the Lost Lamp",
+        "Fecha de estreno": 1990,
+        "$ Recaudación": "\n36107823",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 36107823,
+        "Año_Estreno": 1990,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Bernardo y Bianca en Cangurolandia / Los rescatadores en Cangurolandia",
+        "Título original": "The Rescuers Down Under",
+        "Fecha de estreno": 1990,
+        "$ Recaudación": "55796728",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 55796728,
+        "Año_Estreno": 1990,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Colmillo Blanco",
+        "Título original": "White Fang",
+        "Fecha de estreno": 1991,
+        "$ Recaudación": "69540672",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 69540672,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La fuerza del valor",
+        "Título original": "Wild Hearts Can't Be Broken",
+        "Fecha de estreno": 1991,
+        "$ Recaudación": "\n14617333",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 14617333,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Rocketeer",
+        "Título original": "The Rocketeer",
+        "Fecha de estreno": 1991,
+        "$ Recaudación": "\n93256673",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 93256673,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La bella y la bestia",
+        "Título original": "Beauty and the Beast",
+        "Fecha de estreno": 1991,
+        "$ Recaudación": "363017667",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 363017667,
+        "Año_Estreno": 1991,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La pandilla",
+        "Título original": "Newsies",
+        "Fecha de estreno": 1992,
+        "$ Recaudación": "\n5497481",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 5497481,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Cariño, he agrandado al niño / Querida, agrandé al bebé",
+        "Título original": "Honey, I Blew Up the Kid",
+        "Fecha de estreno": 1992,
+        "$ Recaudación": "119162518",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 119162518,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Somos los mejores / Los campeones",
+        "Título original": "The Mighty Ducks",
+        "Fecha de estreno": 1992,
+        "$ Recaudación": "103120810",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 103120810,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Aladdín",
+        "Título original": "Aladdin",
+        "Fecha de estreno": 1992,
+        "$ Recaudación": "441969178",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 441969178,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los Muppets: Una historia de Navidad / Los Teleñecos en Cuento de Navidad",
+        "Título original": "The Muppets Christhmas Carol",
+        "Fecha de estreno": 1992,
+        "$ Recaudación": "55417615",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 55417615,
+        "Año_Estreno": 1992,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Homeward Bound: The Incredible Journey",
+        "Título original": "Homeward Bound: The Incredible Journey",
+        "Fecha de estreno": 1993,
+        "$ Recaudación": "85182343",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 85182343,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "A Far Off Place",
+        "Título original": "A Far Off Place",
+        "Fecha de estreno": 1993,
+        "$ Recaudación": "26248558",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 26248558,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Las aventuras de Huckleberry Finn",
+        "Título original": "The Adventures of Huck Finn",
+        "Fecha de estreno": 1993,
+        "$ Recaudación": "49080505",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 49080505,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Abracadabra / El retorno de las brujas",
+        "Título original": "Hocus Pocus",
+        "Fecha de estreno": 1993,
+        "$ Recaudación": "80147079",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 80147079,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Jamaica bajo cero / Elegidos para el triunfo",
+        "Título original": "Cool Runnings",
+        "Fecha de estreno": 1993,
+        "$ Recaudación": "\n140392731",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 140392731,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los tres mosqueteros",
+        "Título original": "The Three Musketeers",
+        "Fecha de estreno": 1993,
+        "$ Recaudación": "\n109310377",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 109310377,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El extraño mundo de Jack / Pesadilla antes de Navidad",
+        "Título original": "The Nightmare Before Christmas",
+        "Fecha de estreno": 1993,
+        "$ Recaudación": "\n100026637",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 100026637,
+        "Año_Estreno": 1993,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Voluntad de hierro",
+        "Título original": "Iron Will",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "\n42610902",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 42610902,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Cheque en blanco",
+        "Título original": "Blank Check",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "\n63170804",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 63170804,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Vuelven los mejores / Los Campeones 2",
+        "Título original": "D2: The Mighty Ducks",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "94226333",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 94226333,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Colmillo Blanco 2",
+        "Título original": "White Fang 2: The Myth of the White Wolf",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "\n18083994",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 18083994,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "El rey león",
+        "Título original": "The Lion King",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "761640898",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 761640898,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Angels in the Outfield",
+        "Título original": "Angels in the Outfield",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "103798152",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 103798152,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Squanto: A Warrior's Tale",
+        "Título original": "Squanto: A Warrior's Tale",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "6858345",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 6858345,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Santa Cláusula / ¡Vaya Santa Claus!",
+        "Título original": "The Santa Clause",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "298369717",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 298369717,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El libro de la selva: la aventura continúa",
+        "Título original": "The Jungle Book",
+        "Fecha de estreno": 1994,
+        "$ Recaudación": "\n88930321",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 88930321,
+        "Año_Estreno": 1994,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Pesos pesados",
+        "Título original": "Heavyweights",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "\n34245779",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 34245779,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Man of the House",
+        "Título original": "Man of the House",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "77573459",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 77573459,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La leyenda de Pecos Bill",
+        "Título original": "Tall Tale",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "\n15983331",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 15983331,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Goofy, la película / Goofy e hijo",
+        "Título original": "A Goofy Movie",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "68479579",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 68479579,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Pocahontas",
+        "Título original": "Pocahontas",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "\n274370957",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 274370957,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Operación elefante",
+        "Título original": "Operation Dumbo Drop",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "\n47809421",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 47809421,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Aventuras en la corte del Rey Arturo / Un niño en la corte del Rey Arturo",
+        "Título original": "A Kid in King Arthur's Court",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "25981285",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 25981285,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El gran equipo",
+        "Título original": "The Big Green",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "34372339",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 34372339,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Toy Story",
+        "Título original": "Toy Story",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "370409631",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 370409631,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tom and Huck",
+        "Título original": "Tom and Huck",
+        "Fecha de estreno": 1995,
+        "$ Recaudación": "\n45911517",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 45911517,
+        "Año_Estreno": 1995,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los Muppets en la isla del tesoro / Los Teleñecos en la Isla del Tesoro",
+        "Título original": "Muppet Treasure Island",
+        "Fecha de estreno": 1996,
+        "$ Recaudación": "65470567",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 65470567,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Volviendo a casa 2: perdidos en San Francisco",
+        "Título original": "Homeward Bound II: Lost in San Francisco",
+        "Fecha de estreno": 1996,
+        "$ Recaudación": "62384706",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 62384706,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "James y el melocotón gigante/ Jim y el durazno gigante",
+        "Título original": "James and the Giant Peach",
+        "Fecha de estreno": 1996,
+        "$ Recaudación": "\n55159783",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 55159783,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El jorobado de Notre Dame",
+        "Título original": "The Hunchback of Notre Dame",
+        "Fecha de estreno": 1996,
+        "$ Recaudación": "\n190988799",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 190988799,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "First Kid",
+        "Título original": "First Kid",
+        "Fecha de estreno": 1996,
+        "$ Recaudación": "50465108",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 50465108,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El regreso de los mejores / Los campeones 3",
+        "Título original": "D3: The Migthy Ducks",
+        "Fecha de estreno": 1996,
+        "$ Recaudación": "\n43713554",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 43713554,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "101 dálmatas: ¡Ahora la magia es real! / 101 dálmatas: ¡Más vivos que nunca!",
+        "Título original": "101 Dalmatians",
+        "Fecha de estreno": 1996,
+        "$ Recaudación": "258728898",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 258728898,
+        "Año_Estreno": 1996,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Un gato del FBI",
+        "Título original": "That Darn Cat",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "\n33613158",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 33613158,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Jungle 2 Jungle",
+        "Título original": "Jungle 2 Jungle",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "\n110058379",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 110058379,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Hércules",
+        "Título original": "Hércules",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "\n182029412",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 182029412,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "George de la selva / George de la jungla",
+        "Título original": "George of the Jungle",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "193326632",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 193326632,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Air Bud",
+        "Título original": "Air Bud",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "45266588",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 45266588,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "RocketMan / El astronauta",
+        "Título original": "RocketMan",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "\n28371890",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 28371890,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Flubber",
+        "Título original": "Flubber",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "170406423",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 170406423,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Mr. Magoo",
+        "Título original": "Mr. Magoo",
+        "Fecha de estreno": 1997,
+        "$ Recaudación": "\n39145784",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 39145784,
+        "Año_Estreno": 1997,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Vaya par de locos / Locura en el campamento",
+        "Título original": "Meet the Deedles",
+        "Fecha de estreno": 1998,
+        "$ Recaudación": "7829877",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 7829877,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Mulán",
+        "Título original": "Mulan",
+        "Fecha de estreno": 1998,
+        "$ Recaudación": "216807832",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 216807832,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Juego de Gemelas / Tú a Londres y yo a California",
+        "Título original": "The Parent Trap",
+        "Fecha de estreno": 1998,
+        "$ Recaudación": "\n119185667",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 119185667,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "I'll Be Home for Christmas",
+        "Título original": "I'll Be Home for Christmas",
+        "Fecha de estreno": 1998,
+        "$ Recaudación": "\n21941840",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 21941840,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Bichos: Una aventura en miniatura",
+        "Título original": "A Bug's Life",
+        "Fecha de estreno": 1998,
+        "$ Recaudación": "\n288981698",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 288981698,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Mi Gran Amigo Joe",
+        "Título original": "Migthy Joe Young",
+        "Fecha de estreno": 1998,
+        "$ Recaudación": "87906042",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 87906042,
+        "Año_Estreno": 1998,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Mi marciano favorito",
+        "Título original": "My Favorite Martian",
+        "Fecha de estreno": 1999,
+        "$ Recaudación": "\n61150849",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 61150849,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Doug: La película / Doug: Su 1ª película",
+        "Título original": "Doug's 1st Movie",
+        "Fecha de estreno": 1999,
+        "$ Recaudación": "32228598",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 32228598,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Endurance",
+        "Título original": "Endurance",
+        "Fecha de estreno": 1999,
+        "$ Recaudación": "380218",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 380218,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tarzán",
+        "Título original": "Tarzan",
+        "Fecha de estreno": 1999,
+        "$ Recaudación": "\n283900254",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 283900254,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Inspector Gadget",
+        "Título original": "Inspector Gadget",
+        "Fecha de estreno": 1999,
+        "$ Recaudación": "161610341",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 161610341,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "The Straight Story",
+        "Título original": "The Straight Story",
+        "Fecha de estreno": 1999,
+        "$ Recaudación": "10111144",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 10111144,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Toy Story 2",
+        "Título original": "Toy Story 2",
+        "Fecha de estreno": 1999,
+        "$ Recaudación": "404450426",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 404450426,
+        "Año_Estreno": 1999,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Fantasía 2000",
+        "Título original": "Fantasia 2000",
+        "Fecha de estreno": 2000,
+        "$ Recaudación": "14238144",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 14238144,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La película de Tigger",
+        "Título original": "The Tigger Movie",
+        "Fecha de estreno": 2000,
+        "$ Recaudación": "71228678",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 71228678,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Dinosaurio",
+        "Título original": "Dinosaur",
+        "Fecha de estreno": 2000,
+        "$ Recaudación": "215438985",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 215438985,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El chico / Mi encuentro conmigo",
+        "Título original": "The Kid",
+        "Fecha de estreno": 2000,
+        "$ Recaudación": "110,317,580",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 110317580,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Duelo de Titanes / Grito de Titanes",
+        "Título original": "Remember the Titans",
+        "Fecha de estreno": 2000,
+        "$ Recaudación": "180742479",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 180742479,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "102 Dálmatas",
+        "Título original": "102 Dalmatians",
+        "Fecha de estreno": 2000,
+        "$ Recaudación": "104055039",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 104055039,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Las locuras del emperador / El emperador y sus locuras",
+        "Título original": "The Emperor's New Groove",
+        "Fecha de estreno": 2000,
+        "$ Recaudación": "136789252",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 136789252,
+        "Año_Estreno": 2000,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Llegó el recreo / La banda del patio - La película",
+        "Título original": "Recess: School's Out",
+        "Fecha de estreno": 2001,
+        "$ Recaudación": "\n54656124",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 54656124,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Atlantis: El imperio perdido",
+        "Título original": "Atlantis: The Lost Empire",
+        "Fecha de estreno": 2001,
+        "$ Recaudación": "125188122",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 125188122,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El diario de la princesa / Princesa por sorpresa",
+        "Título original": "The Princess Diaries",
+        "Fecha de estreno": 2001,
+        "$ Recaudación": "161218928",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 161218928,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Max Keeble's Big Movie",
+        "Título original": "Max Keeble's Big Movie",
+        "Fecha de estreno": 2001,
+        "$ Recaudación": "25749730",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 25749730,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "The Other Side of Heaven",
+        "Título original": "The Other Side of Heaven",
+        "Fecha de estreno": 2001,
+        "$ Recaudación": "4760014",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 4760014,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Monsters, Inc. / Monstruos S.A.",
+        "Título original": "Monsters, Inc.",
+        "Fecha de estreno": 2001,
+        "$ Recaudación": "416073179",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 416073179,
+        "Año_Estreno": 2001,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Frío de perros / Aventuras en Alaska",
+        "Título original": "Snow Dogs",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "117745317",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 117745317,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Peter Pan: El regreso al país de Nunca Jamás / Peter Pan en regreso al país de Nunca Jamás",
+        "Título original": "Return to Never Land",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "\n70269715",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 70269715,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "El novato",
+        "Título original": "The Rookie",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "109691666",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 109691666,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Lilo & Stitch",
+        "Título original": "Lilo & Stitch",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "211506702",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 211506702,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "The Country Bears",
+        "Título original": "The Country Bears",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "\n24650121",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 24650121,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tuck Everlasting",
+        "Título original": "Tuck Everlasting",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "\n27789959",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 27789959,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Santa Cláusula 2 / Santa Claus 2",
+        "Título original": "The Santa Clause 2",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "201959095",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 201959095,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "El planeta del tesoro",
+        "Título original": "Treasure Planet",
+        "Fecha de estreno": 2002,
+        "$ Recaudación": "\n55189145",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 55189145,
+        "Año_Estreno": 2002,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El libro de la selva 2",
+        "Título original": "The Jungle Book 2",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "\n66966883",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 66966883,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "La Gran Película de Piglet",
+        "Título original": "Piglet's Big Movie",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "\n32298812",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 32298812,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los fantasmas del Titanic",
+        "Título original": "Ghosts of the Abyss",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "23803108",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 23803108,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El misterio de los Excavadores",
+        "Título original": "Holes",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "\n94203395",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 94203395,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Buscando a Nemo",
+        "Título original": "Finding Nemo",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "518148559",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 518148559,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Piratas del Caribe: La maldición de la Perla Negra / Piratas del Caribe: La maldición del Perla Negra",
+        "Título original": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "426967926",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 426967926,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Un viernes de locos / Ponte en mi lugar",
+        "Título original": "Freaky Friday",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "\n154090360",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 154090360,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Lizzie Superstar / Lizzie McGuire: Estrella Pop",
+        "Título original": "The Lizzie McGuire Movie",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "59743191",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 59743191,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tierra de osos / Hermano oso",
+        "Título original": "Brother Bear",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "\n119218333",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 119218333,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La Mansión Encantada / La Mansión Embrujada",
+        "Título original": "The Haunted Mansion",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "105775678",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 105775678,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El joven corcel negro / Shetan, el caballo del desierto",
+        "Título original": "The Young Black Stallion",
+        "Fecha de estreno": 2003,
+        "$ Recaudación": "\n9254344",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 9254344,
+        "Año_Estreno": 2003,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El rey león 3: ¡Hakuna Matata!",
+        "Título original": "The Lion King 1 1/2",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "1465",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 1465,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Teacher's Pet / Este perro es un crack",
+        "Título original": "Teacher's Pet",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "8812764",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 8812764,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Miracle",
+        "Título original": "Miracle",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "\n87392478",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 87392478,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Confesiones de una típica adolescente / Quiero ser superfamosa",
+        "Título original": "Confessions of a Teenage Drama Queen",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "39816568",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 39816568,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Vacas Vaqueras / Zafarrancho en el rancho",
+        "Título original": "Home on the Range",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "67910166",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 67910166,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Sacred Planet",
+        "Título original": "Sacred Planet",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "1108356",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 1108356,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "America's Heart and Soul",
+        "Título original": "America's Heart and Soul",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "426246",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 426246,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El Diario De La Princesa 2 / Princesa por sorpresa 2",
+        "Título original": "The Princess Diaries 2: Royal Engagement",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "\n129164207",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 129164207,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Los Increíbles",
+        "Título original": "The Incredibles",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "354488708",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 354488708,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La búsqueda / La leyenda del tesoro perdido",
+        "Título original": "National Treasure",
+        "Fecha de estreno": 2004,
+        "$ Recaudación": "\n234069353",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 234069353,
+        "Año_Estreno": 2004,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Aliens of the Deep / Misterios del océano",
+        "Título original": "Aliens of the Deep",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "12775590\n",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 12775590,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Winnie Pooh y el pequeño efelante / La película de Héffalump",
+        "Título original": "Pooh's Heffalump Movie",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "\n23801835",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 23801835,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Una niñera a prueba de balas / Niñera a prueba de balas",
+        "Título original": "The Pacifier",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "\n148619029",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 148619029,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Soñando, soñando triunfé patinando / Sueños sobre hielo",
+        "Título original": "Ice Princess",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "32064685",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 32064685,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Herbie: A Tope / Herbie a toda marcha",
+        "Título original": "Herbie: Fully Loaded",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "86812798",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 86812798,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Sky High: Una escuela de altos vuelos / Súper Escuela de Héroes",
+        "Título original": "Sky High",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "\n84088854",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 84088854,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El juego que hizo historia",
+        "Título original": "The Greatest Game Ever Played",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "20162672",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 20162672,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Chicken Little",
+        "Título original": "Chicken Little",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "\n177954661",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 177954661,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Las crónicas de Narnia: el león, la bruja y el armario / Las crónicas de Narnia: el león, la bruja y el ropero",
+        "Título original": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "Fecha de estreno": 2005,
+        "$ Recaudación": "\n381557539",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 381557539,
+        "Año_Estreno": 2005,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Camino a la gloria",
+        "Título original": "Glory Road",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "\n54888236",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 54888236,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Roving Mars",
+        "Título original": "Roving Mars",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "12948025",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 12948025,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Rescate en la Antártida / Bajo cero",
+        "Título original": "Eight Below",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "105037235",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 105037235,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Un Papá con Pocas Pulgas / Cariño, estoy hecho un perro",
+        "Título original": "The Shaggy Dog",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "\n78667428",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 78667428,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Salvaje / Vida salvaje",
+        "Título original": "The Wild",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "\n48114115",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 48114115,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Cars / Cars: Una aventura sobre ruedas",
+        "Título original": "Cars",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "\n314140384",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 314140384,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Piratas del Caribe: El cofre del hombre muerto / Piratas de Caribe: El Cofre de la Muerte",
+        "Título original": "Pirates of the Caribbean: Dead Man's Chest",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "544817142",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 544817142,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Invencible",
+        "Título original": "Invincible",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "\n74398864",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 74398864,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Santa Cláusula 3 / Santa Claus 3: Por una navidad sin frío",
+        "Título original": "The Santa Clause 3: The Escape Clause",
+        "Fecha de estreno": 2006,
+        "$ Recaudación": "108694869",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 108694869,
+        "Año_Estreno": 2006,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "La Familia del Futuro / Descubriendo a los Robinson",
+        "Título original": "Meet The Robinsons",
+        "Fecha de estreno": 2007,
+        "$ Recaudación": "169,333,034",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 169333034,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Piratas del Caribe: en el fin del mundo",
+        "Título original": "Pirates of the Caribbean: At World's End",
+        "Fecha de estreno": 2007,
+        "$ Recaudación": "379129960",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 379129960,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Ratatouille",
+        "Título original": "Ratatouille",
+        "Fecha de estreno": 2007,
+        "$ Recaudación": "\n252955933",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 252955933,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Superdog / Supercan",
+        "Título original": "Underdog",
+        "Fecha de estreno": 2007,
+        "$ Recaudación": "\n53619462",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 53619462,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Entrenando a papá / Papá por sorpresa",
+        "Título original": "The Game Plan",
+        "Fecha de estreno": 2007,
+        "$ Recaudación": "\n111010758",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 111010758,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Encantada / Encantada: la historia de Giselle",
+        "Título original": "Enchanted",
+        "Fecha de estreno": 2007,
+        "$ Recaudación": "\n156074310",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 156074310,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La búsqueda 2: El diario secreto / La Leyenda del Tesoro Perdido 2: El Libro de los Secretos",
+        "Título original": "National Treasure: Book of Secrets",
+        "Fecha de estreno": 2007,
+        "$ Recaudación": "267003525",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 267003525,
+        "Año_Estreno": 2007,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Hannah Montana & Miley Cyrus en Concierto: Lo Mejor de Ambos Mundos",
+        "Título original": "Hannah Montana & Miley Cyrus: Best of Both Worlds Concert",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "\n76646993",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 76646993,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Loco Viaje al Campus / Un viaje de aquellos",
+        "Título original": "College Road Trip",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "\n53550960",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 53550960,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Las crónicas de Narnia: el príncipe Caspian",
+        "Título original": "The Chronicles of Narnia: Prince Caspian",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "166277038",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 166277038,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "WALL·E",
+        "Título original": "WALL-E",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "\n262771918",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 262771918,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Campanilla / Tinker Bell",
+        "Título original": "Tinker Bell",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "9208064",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 9208064,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Una Chihuahua de Beverly Hills/ Un Chihuahua de Beverly Hills",
+        "Título original": "Beverly Hills Chihuahua",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "110932022",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 110932022,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Cuentos que no son cuentos / Más allá de los Sueños",
+        "Título original": "Bedtime Stories",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "128039679",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 128039679,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Morning Light",
+        "Título original": "Morning Light",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": " 275776\n",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 275776,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "High School Musical 3: Fin de Curso/ High School Musical 3: La Gradaución",
+        "Título original": "High School Musical 3: Senior Year",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "\n106308538",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 106308538,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Bolt: Un Perro fuera de serie",
+        "Título original": "Bolt",
+        "Fecha de estreno": 2008,
+        "$ Recaudación": "\n133702498",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 133702498,
+        "Año_Estreno": 2008,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Jonas Brothers en concierto 3D",
+        "Título original": "Jonas Brothers: The 3D Concert Experience",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "23,186,9605",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 231869605,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La Montaña Embrujada",
+        "Título original": "Race to Witch Mountain",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "\n75501997",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 75501997,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Hannah Montana: La película",
+        "Título original": "Hannah Montana: The Movie",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "\n89443640",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 89443640,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La Tierra",
+        "Título original": "Earth",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "\n35981010",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 35981010,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los muchachos: la historia de los hermanos Sherman",
+        "Título original": "The Boys: The Sherman Brother's Story",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "55513",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 55513,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Trail of the Panda",
+        "Título original": "Trail of the Panda",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "68697",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 68697,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Up: Una Aventura de Altura",
+        "Título original": "Up",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "329336681",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 329336681,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Kika Superbruja y el Libro de Hechizos",
+        "Título original": "Hexe Lilli",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "16276155",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 16276155,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Fuerza G / G-Force: Licencia para espiar",
+        "Título original": "G-Force",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "\n134246932",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 134246932,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Walt y el grupo",
+        "Título original": "Walt & El Grupo",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "20521",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 20521,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "The Book of Masters",
+        "Título original": "The Book of Masters",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "11284598",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 11284598,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los Fantasmas de Scrooge / Cuento de navidad",
+        "Título original": "A Christmas Carol",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "\n154927105",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 154927105,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Par de colmilludos / Dos canguros muy maduros",
+        "Título original": "Old Dogs",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "\n55503929",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 55503929,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tinker Bell y el tesoro perdido / Campanilla y el tesoro perdido",
+        "Título original": "Tinker Bell and the Lost Treasure",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "8582265",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 8582265,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "La princesa y el sapo / Tiana y el sapo",
+        "Título original": "The Princess and the Frog",
+        "Fecha de estreno": 2009,
+        "$ Recaudación": "116316457",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 116316457,
+        "Año_Estreno": 2009,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tinker Bell: Hadas al rescate / Campanilla y el gran rescate",
+        "Título original": "Tinker Bell and the Great Fairy Rescue",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "10872752",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 10872752,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Alicia en el país de las maravillas",
+        "Título original": "Alice in Wonderland",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "\n357063499",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 357063499,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Océanos",
+        "Título original": "Oceans",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "20751600",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 20751600,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El príncipe de Persia: Las arenas del tiempo",
+        "Título original": "Prince of Persia: The Sands of Time",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "96971361",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 96971361,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Toy Story 3",
+        "Título original": "Toy Story 3",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "\n443408255",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 443408255,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "El aprendiz de brujo",
+        "Título original": "The Sorcerer's Apprentice",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "\n67473105",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 67473105,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El misterio del los flamencos",
+        "Título original": "The Crimson Wing: Mystery of the Flamingos",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "1783519",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 1783519,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Campeón / Secretariat",
+        "Título original": "Secretariat",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "63781920",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 63781920,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Enredados",
+        "Título original": "Tangled",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "\n214388548",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 214388548,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tron: El legado / Tron: Legacy",
+        "Título original": "Tron: Legacy",
+        "Fecha de estreno": 2010,
+        "$ Recaudación": "\n183619259",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 183619259,
+        "Año_Estreno": 2010,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Marte necesita mamás",
+        "Título original": "Mars Needs Moms",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "\n22741603",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 22741603,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Zokkomon",
+        "Título original": "Zokkomon",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "3",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 3,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Felinos de África",
+        "Título original": "African Cats",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "16401551",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 16401551,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Fin de curso",
+        "Título original": "Prom",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "\n10768946",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 10768946,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Piratas del Caribe: Navegando en aguas misteriosas / Piratas del Caribe:En mareas misteriosas",
+        "Título original": "Pirates of the Caribbean: On Stranger Tides",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "256263359",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 256263359,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Cars 2",
+        "Título original": "Cars 2",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "\n203522177",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 203522177,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Winnie the Pooh",
+        "Título original": "Winnie the Pooh",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "\n28375869",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 28375869,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los Muppets",
+        "Título original": "The Muppets",
+        "Fecha de estreno": 2011,
+        "$ Recaudación": "94189503",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 94189503,
+        "Año_Estreno": 2011,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "John Carter",
+        "Título original": "John Carter of Mars",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "\n77372445",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 77372445,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Chimpancés",
+        "Título original": "Chimpanzee",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "\n30675725",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 30675725,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Arjun: El príncipe guerrero",
+        "Título original": "Arjun: The Warrior Prince",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "10,017",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 10017,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Valiente / Indomable",
+        "Título original": "Brave",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "\n251292441",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 251292441,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La extraña vida de Timothy Green",
+        "Título original": "The Odd Life of Timothy Green",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "\n54914942",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 54914942,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Frankenweenie",
+        "Título original": "Frankenweenie",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "37363513",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 37363513,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Ralph el demoledor / ¡Rompe Ralph!",
+        "Título original": "Wreck-It-Ralph",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "\n200354959",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 200354959,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tinker Bell y el secreto de las hadas / Campanilla y el secreto de las hadas",
+        "Título original": "Secret of the Wings",
+        "Fecha de estreno": 2012,
+        "$ Recaudación": "627,018",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 627018,
+        "Año_Estreno": 2012,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Oz, el poderoso / Oz: Un mundo de fantasía",
+        "Título original": "Oz: The Great and Powerful",
+        "Fecha de estreno": 2013,
+        "$ Recaudación": "493311825",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 493311825,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Alas de vida",
+        "Título original": "Wings of Life",
+        "Fecha de estreno": 2013,
+        "$ Recaudación": "192467",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 192467,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Monsters University / Monstruos University",
+        "Título original": "Monsters University",
+        "Fecha de estreno": 2013,
+        "$ Recaudación": "\n278395641",
+        "Original / Secuela - Precuela / Live-Action": "Precuela",
+        "Recaudaicón_Numerica": 278395641,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "El llanero solitario",
+        "Título original": "The Lone Ranger",
+        "Fecha de estreno": 2013,
+        "$ Recaudación": "\n92597388",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 92597388,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Aviones",
+        "Título original": "Planes",
+        "Fecha de estreno": 2013,
+        "$ Recaudación": "\n93614037",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 93614037,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Frozen: Una Aventura Congelada / Frozen: El reino de hielo",
+        "Título original": "Frozen",
+        "Fecha de estreno": 2013,
+        "$ Recaudación": "\n414997174",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 414997174,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El sueño de Walt / Al encuentro de Mr. Banks",
+        "Título original": "Saving Mr. Banks",
+        "Fecha de estreno": 2013,
+        "$ Recaudación": "\n86249969",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 86249969,
+        "Año_Estreno": 2013,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Muppets 2: Los más buscados / El tour de los Muppets",
+        "Título original": "Muppets Most Wanted",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "\n52807594",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 52807594,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Osos",
+        "Título original": "Bears",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "\n18346024",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 18346024,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Un golpe de talento",
+        "Título original": "Million Dollar Arm",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "\n37607865",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 37607865,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Maléfica",
+        "Título original": "Maleficent",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "\n249089809",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 249089809,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Aviones 2: Equipo de Rescate / Aviones: Equipo de Rescate",
+        "Título original": "Planes: Fire & Rescue",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "61040349",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 61040349,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Tinker Bell: Hadas y piratas / Campanilla: Hadas y piratas",
+        "Título original": "The Pirate Fairy",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "63998725",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 63998725,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Grandes Héroes / Big Hero 6",
+        "Título original": "Big Hero 6",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "229249222",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 229249222,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Alexander y un día terrible, horrible, malo... ¡muy malo! / Alexander y el día terrible, horrible, espantoso, horroroso",
+        "Título original": "Alexander and the Terrible, Horrible, No Good, Very Bad Day",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "\n69055550",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 69055550,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "En el bosque / Into the Woods",
+        "Título original": "Into the Woods",
+        "Fecha de estreno": 2014,
+        "$ Recaudación": "\n130894237",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 130894237,
+        "Año_Estreno": 2014,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "McFarland, sin límites",
+        "Título original": "McFarland, USA",
+        "Fecha de estreno": 2015,
+        "$ Recaudación": "\n44480275",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 44480275,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La Cenicienta",
+        "Título original": "Cinderella",
+        "Fecha de estreno": 2015,
+        "$ Recaudación": "201151353",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 201151353,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "El Reino de los Monos",
+        "Título original": "Monkey Kingdom",
+        "Fecha de estreno": 2015,
+        "$ Recaudación": "\n16432322",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 16432322,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Tomorrowland: El mundo del mañana",
+        "Título original": "Tomorrowland",
+        "Fecha de estreno": 2015,
+        "$ Recaudación": "\n93436322",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 93436322,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Intensa-Mente / Del Revés",
+        "Título original": "Inside Out",
+        "Fecha de estreno": 2015,
+        "$ Recaudación": "\n356461711",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 356461711,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Un Gran Dinosaurio / El viaje de Arlo",
+        "Título original": "The Good Dinosaur",
+        "Fecha de estreno": 2015,
+        "$ Recaudación": "123087120",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 123087120,
+        "Año_Estreno": 2015,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Horas contadas / La hora decisiva",
+        "Título original": "The Finest Hours",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "\n27569558",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 27569558,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Zootopia / Zootrópolis",
+        "Título original": "Zootopia",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "\n341268248",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 341268248,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "El libro de la selva",
+        "Título original": "The Jungle Book",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "\n364001123",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 364001123,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Alicia a través del espejo",
+        "Título original": "Alice Through the Looking Glass",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "77042381",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 77042381,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Tini: El gran cambio de Violetta",
+        "Título original": "Tini: El Gran Cambio De Violetta",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "17000172",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 17000172,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Buscando a Dory",
+        "Título original": "Finding Dory",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "\n486295561",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 486295561,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Mi amigo el dragón / Peter y el dragón",
+        "Título original": "Pete's Dragon",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "55483770",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 55483770,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Reina de Katwe",
+        "Título original": "Queen of Katwe",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "\n8874389",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 8874389,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Moana: Un mar de aventuras / Vaiana",
+        "Título original": "Moana",
+        "Fecha de estreno": 2016,
+        "$ Recaudación": "\n246082029",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 246082029,
+        "Año_Estreno": 2016,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La bella y la bestia",
+        "Título original": "Beauty and the Beast",
+        "Fecha de estreno": 2017,
+        "$ Recaudación": "1266,115964",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 1266115964,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "La marcha de los pingüinos 2",
+        "Título original": "L'Empereur",
+        "Fecha de estreno": 2017,
+        "$ Recaudación": "2323262",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 2323262,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Piratas del Caribe: La venganza de Salazar",
+        "Título original": "Pirates of the Caribbean: Dead Men Tell No Tales",
+        "Fecha de estreno": 2017,
+        "$ Recaudación": "795,922,298",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 795922298,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Cars 3",
+        "Título original": "Cars 3",
+        "Fecha de estreno": 2017,
+        "$ Recaudación": " 383,930,656",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 383930656,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Jagga Jasoos",
+        "Título original": "Jagga Jasoos",
+        "Fecha de estreno": 2017,
+        "$ Recaudación": "1154862",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 1154862,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Coco",
+        "Título original": "Coco",
+        "Fecha de estreno": 2017,
+        "$ Recaudación": "814641172",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 814641172,
+        "Año_Estreno": 2017,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Un viaje en el tiempo / Un pliegue en el tiempo",
+        "Título original": "A Wrinkle in Time",
+        "Fecha de estreno": 2018,
+        "$ Recaudación": "132675864",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 132675864,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Los Increíbles 2",
+        "Título original": "Incredibles 2",
+        "Fecha de estreno": 2018,
+        "$ Recaudación": "1,243225667",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 1243225667,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Christopher Robin",
+        "Título original": "Christopher Robin",
+        "Fecha de estreno": 2018,
+        "$ Recaudación": "197744825",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 197744825,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "El Cascanueces y los cuatro reinos",
+        "Título original": "The Nutcracker and the Four Realms",
+        "Fecha de estreno": 2018,
+        "$ Recaudación": "173961069",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 173961069,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Wi-Fi Ralph / Ralph Rompe Internet",
+        "Título original": "Ralph Breaks the Internet",
+        "Fecha de estreno": 2018,
+        "$ Recaudación": "529323962",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 529323962,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "El Regreso de Mary Poppins",
+        "Título original": "Mary Poppins Returns",
+        "Fecha de estreno": 2018,
+        "$ Recaudación": "362529106",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 362529106,
+        "Año_Estreno": 2018,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Dumbo",
+        "Título original": "Dumbo",
+        "Fecha de estreno": 2019,
+        "$ Recaudación": "353284621",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 353284621,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Pingüinos",
+        "Título original": "Penguins",
+        "Fecha de estreno": 2019,
+        "$ Recaudación": "7699452",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 7699452,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Aladdín",
+        "Título original": "Aladdin",
+        "Fecha de estreno": 2019,
+        "$ Recaudación": "1054304000",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 1054304000,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Toy Story 4",
+        "Título original": "Toy Story 4",
+        "Fecha de estreno": 2019,
+        "$ Recaudación": "1073841394",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 1073841394,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "El Rey León",
+        "Título original": "The Lion King",
+        "Fecha de estreno": 2019,
+        "$ Recaudación": "1662020819",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 1662020819,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Maléfica: Dueña del Mal / Maléfica: Maestra del Mal",
+        "Título original": "Maleficent: Mistress of Evil",
+        "Fecha de estreno": 2019,
+        "$ Recaudación": "491730089",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 491730089,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Frozen II",
+        "Título original": "Frozen II",
+        "Fecha de estreno": 2019,
+        "$ Recaudación": "1453683476",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 1453683476,
+        "Año_Estreno": 2019,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Unidos / Onward",
+        "Título original": "Onward",
+        "Fecha de estreno": 2020,
+        "$ Recaudación": "141888276",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 141888276,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Phineas y Ferb, la película: Candace contra el Universo",
+        "Título original": "Phineas and Ferb the Movie: Candace Against the Universe",
+        "Fecha de estreno": 2020,
+        "$ Recaudación": "5689121",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 5689121,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Mulán",
+        "Título original": "Mulan",
+        "Fecha de estreno": 2020,
+        "$ Recaudación": "69965374",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 69965374,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Soul",
+        "Título original": "Soul",
+        "Fecha de estreno": 2020,
+        "$ Recaudación": "121977511",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 121977511,
+        "Año_Estreno": 2020,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Raya y el Último Dragón",
+        "Título original": "Raya and the Last Dragon",
+        "Fecha de estreno": 2021,
+        "$ Recaudación": "130423032",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 130423032,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Cruella",
+        "Título original": "Cruella",
+        "Fecha de estreno": 2021,
+        "$ Recaudación": "233503234",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 233503234,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Luca",
+        "Título original": "Luca",
+        "Fecha de estreno": 2021,
+        "$ Recaudación": "51074773",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 51074773,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Jungle Cruise",
+        "Título original": "Jungle Cruise",
+        "Fecha de estreno": 2021,
+        "$ Recaudación": "220889446",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 220889446,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Encanto",
+        "Título original": "Encanto",
+        "Fecha de estreno": 2021,
+        "$ Recaudación": "261292688",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 261292688,
+        "Año_Estreno": 2021,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Red",
+        "Título original": "Turning Red",
+        "Fecha de estreno": 2022,
+        "$ Recaudación": "21813358",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 21813358,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Chip y Dale al rescate / Chip y Chop: los guardianes rescatadores",
+        "Título original": "Chip 'n' Dale: Rescue Rangers",
+        "Fecha de estreno": 2022,
+        "$ Recaudación": "62319",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 62319,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Lightyear",
+        "Título original": "Lightyear",
+        "Fecha de estreno": 2022,
+        "$ Recaudación": "226425420",
+        "Original / Secuela - Precuela / Live-Action": "Precuela",
+        "Recaudaicón_Numerica": 226425420,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Pinocho",
+        "Título original": "Pinocchio",
+        "Fecha de estreno": 2022,
+        "$ Recaudación": "33731",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 33731,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Un Mundo Extraño / Mundo extraño",
+        "Título original": "Strange World",
+        "Fecha de estreno": 2022,
+        "$ Recaudación": "73621640",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 73621640,
+        "Año_Estreno": 2022,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "La Sirenita",
+        "Título original": "The Little Mermaid",
+        "Fecha de estreno": 2023,
+        "$ Recaudación": "569626289",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 569626289,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Elementos / Elemental",
+        "Título original": "Elemental",
+        "Fecha de estreno": 2023,
+        "$ Recaudación": "496444308",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 496444308,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Mansión Embrujada / Mansión Encantada",
+        "Título original": "Haunted Mansion",
+        "Fecha de estreno": 2023,
+        "$ Recaudación": "117449790",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 117449790,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Wish: El poder de los deseos",
+        "Título original": "Wish",
+        "Fecha de estreno": 2023,
+        "$ Recaudación": "254997360",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 254997360,
+        "Año_Estreno": 2023,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Intensa-Mente 2 / Del revés 2",
+        "Título original": "Inside Out 2",
+        "Fecha de estreno": 2024,
+        "$ Recaudación": "1698863816",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 1698863816,
+        "Año_Estreno": 2024,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Moana 2 / Vaiana 2",
+        "Título original": "Moana 2",
+        "Fecha de estreno": 2024,
+        "$ Recaudación": "1059242164",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 1059242164,
+        "Año_Estreno": 2024,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      },
+      {
+        "Título en español": "Mufasa: El Rey León",
+        "Título original": "Mufasa: The Lion King",
+        "Fecha de estreno": 2024,
+        "$ Recaudación": "722631756",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 722631756,
+        "Año_Estreno": 2024,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Blanca Nieves / Blancanieves",
+        "Título original": "Snow White",
+        "Fecha de estreno": 2025,
+        "$ Recaudación": "205679463",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 205679463,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Lilo y Stitch",
+        "Título original": "Lilo & Stitch",
+        "Fecha de estreno": 2025,
+        "$ Recaudación": "1036701218",
+        "Original / Secuela - Precuela / Live-Action": "Live-Action",
+        "Recaudaicón_Numerica": 1036701218,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Live-Action"
+      },
+      {
+        "Título en español": "Elio",
+        "Título original": "Elio",
+        "Fecha de estreno": 2025,
+        "$ Recaudación": "154075778",
+        "Original / Secuela - Precuela / Live-Action": "Original",
+        "Recaudaicón_Numerica": 154075778,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Original"
+      },
+      {
+        "Título en español": "Otro viernes de locos 2",
+        "Título original": "Freakier Friday 2",
+        "Fecha de estreno": 2025,
+        "$ Recaudación": "149925788",
+        "Original / Secuela - Precuela / Live-Action": "Secuela",
+        "Recaudaicón_Numerica": 149925788,
+        "Año_Estreno": 2025,
+        "Tipo_Produccion_Detalle": "Secuela/Precuela"
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
