@@ -1,14 +1,13 @@
 async function loadCSVData(filePath, delimiter) {
     const response = await fetch(filePath);
     
-    
     if (!response.ok) {
         throw new Error(`Error al obtener el archivo: ${filePath} (Estado: ${response.status})`);
     }
     
     const text = await response.text();
     
-    
+    // El split y el filtro son correctos
     const rows = text.trim().split(/\r\n|\n/).filter(line => line.length > 0);
     if (rows.length === 0) return { data: [] };
 
@@ -19,18 +18,19 @@ async function loadCSVData(filePath, delimiter) {
     
     for (let i = 1; i < rows.length; i++) {
         const values = rows[i].split(delimiter);
-        
-        
-        if (values.length !== headers.length) {
-            console.warn(`Saltando fila ${i}: columnas inconsistentes.`);
-            continue;
-        }
-        
+
         const rowObject = {};
         headers.forEach((header, index) => {
-            rowObject[header] = values[index].trim();
+      
+            rowObject[header] = values[index] ? values[index].trim() : ''; 
         });
-        data.push(rowObject);
+        
+    
+        if (rowObject['TÍTULO'] && rowObject['AÑO'] && rowObject['TÍTULO'].length > 0) {
+            data.push(rowObject);
+        } else {
+            console.warn(`Saltando fila ${i}: datos clave (Título/Año) faltantes o vacíos.`);
+        }
     }
     
     return { data: data }; 
@@ -40,7 +40,7 @@ async function loadCSVData(filePath, delimiter) {
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    
+    // --- Lógica de la animación de introducción (Sin cambios) ---
     const intro = document.getElementById('intro-animation');
     const durationFadeOut = 1000; 
     
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000); 
         }, durationFadeOut);
     }
-    
+    // --- Fin lógica de la animación de introducción ---
     
     
     const timelineContainer = document.querySelector('.timeline');
@@ -81,10 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     async function cargarPeliculas() {
         
-        const CSV_FILE_NAME = "data.csv";
+        // ✅ MODIFICACIÓN CLAVE 3: Nombre de archivo correcto
+        const CSV_FILE_NAME = "data.csv"; 
         
         try {
-            
             
             const peliculasData = await loadCSVData(CSV_FILE_NAME, ";");
             
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const peliculas = peliculasData.data;
 
             
-           
+            // La lógica de ordenamiento está correcta
             peliculas.sort((a, b) => parseInt(a['AÑO']) - parseInt(b['AÑO']));
 
             peliculas.forEach(pelicula => {
@@ -105,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const anio = pelicula['AÑO'];
                 const tipo_contenido = pelicula['TIPO']; 
                 
-               
+                
                 const eventLi = document.createElement('li');
                 eventLi.classList.add('timeline-event');
                 
-               
+                
                 eventLi.innerHTML = `
                     <div class="timeline-date">${anio}</div>
                     <div class="timeline-content">
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 
-               
+                
                 timelineContainer.appendChild(eventLi);
             });
 
@@ -129,9 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error("Error al cargar la base de datos de películas:", error);
-           
+            
             if (timelineContainer) {
-                timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV esté en la misma carpeta.</p>`;
+                timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV se llame **Base marvel starwars.csv** y esté en la misma carpeta.</p>`;
             }
         }
     }

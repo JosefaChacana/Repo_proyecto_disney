@@ -9,18 +9,18 @@
     
     <style>
         
-        /* Estilo del menú de navegación fijo */
+        
         .navigation-menu {
-            position: fixed; /* Hace que el menú se quede pegado a la vista */
+            position: fixed; 
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente oscuro */
+            background-color: rgba(0, 0, 0, 0.9); 
             padding: 15px 0;
             text-align: center;
-            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            z-index: 1000; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid #ffcc00; /* Borde de color dorado/amarillo */
+            border-bottom: 2px solid #ffcc00; 
         }
 
         .navigation-menu a {
@@ -35,13 +35,13 @@
         }
 
         .navigation-menu a:hover {
-            background-color: #ffcc00; /* Fondo amarillo al pasar el mouse */
-            color: #000; /* Texto oscuro */
+            background-color: #ffcc00; 
+            color: #000; 
         }
         
-        /* Ajuste del body para compensar el menú fijo */
+        
         body {
-            /* Se añade un padding superior para que el contenido no quede oculto bajo el menú fijo */
+           
             padding-top: 70px; 
             font-family: 'Poppins', Arial, sans-serif; 
             background-color: #E8F6FA; 
@@ -129,8 +129,7 @@
             padding-top: 20px; /* Añadido para dar espacio después del salto de ancla */
         }
         
-        /* Estilo para los títulos anclados, para que no queden justo bajo el menú fijo */
-        h2:target, .subtitulo-seccion:target {
+        #seccion-linea-tiempo:target, h2:target, .subtitulo-seccion:target {
             padding-top: 90px;
             margin-top: -90px;
         }
@@ -255,7 +254,7 @@
             }
         }
         
-        
+        /* --- ESTILOS DE LÍNEA DE TIEMPO --- */
 
         .timeline-container {
             width: 90%; 
@@ -384,16 +383,16 @@
 
         
         @media (max-width: 768px) {
+            
             body {
                 padding-top: 120px; 
             }
             .navigation-menu {
                 padding: 10px 0;
-                /* El menú puede ocupar dos líneas, por eso el padding-top del body es mayor */
             }
             .navigation-menu a {
                 margin: 5px 10px;
-                display: block; /* Hace que los botones se apilen en pantallas pequeñas */
+                display: block; 
             }
 
             .timeline-container {
@@ -507,60 +506,11 @@
 
         <section class="seccion" id="seccion-linea-tiempo">
             <h2 class="subtitulo-seccion">Mapa Interactivo - Películas por Categoría y Año</h2>
-            <p> ¡Explora los momentos clave de la historia de Disney y clasifica las películas por tipo! Haz clic en el título de un evento para ver los detalles y el tipo de película. </p>
+            <p> ¡Explora los momentos clave de la historia de Disney y clasifica las películas por tipo! Haz clic en los títulos para ver los detalles. </p>
 
             <div class="timeline-container" id="mapa-interactivo">
                 <ul class="timeline">
-                    <li class="timeline-event">
-                        <div class="timeline-date">1928</div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-summary">Steamboat Willie: El Nacimiento (Clic para detalles)</h3>
-                            <div class="timeline-details hidden">
-                                <p><strong>Tipo: Original.</strong> Aunque no fue la primera aparición del personaje, marcó el debut sonoro y público de Mickey Mouse, cambiando la historia de la animación. Fue una apuesta 100% original.</p>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="timeline-event">
-                        <div class="timeline-date">1937</div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-summary">Blancanieves y los Siete Enanitos (Clic para detalles)</h3>
-                            <div class="timeline-details hidden">
-                                <p><strong>Tipo: Original/Adaptación.</strong> Fue la primera película de largometraje animada en la historia del cine, un riesgo enorme y un triunfo de la creatividad.</p>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="timeline-event">
-                        <div class="timeline-date">1995</div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-summary">Toy Story (Clic para detalles)</h3>
-                            <div class="timeline-details hidden">
-                                <p><strong>Tipo: Original.</strong> La primera película de Pixar, una sociedad clave. Revolucionó la animación 3D y demostró la rentabilidad de las historias originales con un alto componente tecnológico.</p>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="timeline-event">
-                        <div class="timeline-date">2010</div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-summary">Alicia en el País de las Maravillas (Clic para detalles)</h3>
-                            <div class="timeline-details hidden">
-                                <p><strong>Tipo: Remake Live-Action.</strong> Marca el inicio de la era moderna de los *Live-Action* de alto presupuesto, enfocándose en revisitar historias exitosas en un nuevo formato.</p>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="timeline-event">
-                        <div class="timeline-date">2019</div>
-                        <div class="timeline-content">
-                            <h3 class="timeline-summary">El Rey León (Clic para detalles)</h3>
-                            <div class="timeline-details hidden">
-                                <p><strong>Tipo: Remake Live-Action.</strong> Uno de los remakes más taquilleros, confirmando la estrategia de priorizar propiedades intelectuales conocidas para asegurar grandes ingresos globales.</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                    </ul>
             </div>
         </section>
         
@@ -635,7 +585,7 @@
     </div>
 
     <script>
-        // Este script ahora solo maneja la animación de inicio básica, el resto está en scripts.js
+    
         document.addEventListener("DOMContentLoaded", function() {
             const intro = document.getElementById('intro-animation');
             const duration = 1000; 
@@ -649,7 +599,7 @@
         });
     </script>
     
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>
