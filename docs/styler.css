@@ -34,19 +34,10 @@
 
 .contenedor-video {
     display: flex;
+    
     justify-content: space-around;
+   
     flex-wrap: wrap; 
+   
     align-items: center; 
-    width: 100%; 
-    margin: 15px 0;
-}
-
-
-.logo-fijo {
-    position: fixed; 
-    top: 10px;        
-    left: 15px;       
-    width: 50px;      
-    height: auto;     
-    z-index: 10001;   
 }
