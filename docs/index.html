@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-      
         #intro-animation {
             position: fixed;
             top: 0;
@@ -36,9 +35,7 @@
             font-weight: 700 !important; 
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) !important;
             font-size: 3rem !important; 
-            
-            animation: scale-up 1.5s ease-out forwards, 
-                        shadow-flicker 0.3s infinite alternate; 
+            animation: scale-up 1.5s ease-out forwards, shadow-flicker 0.3s infinite alternate; 
         }
 
         @keyframes scale-up {
@@ -47,10 +44,7 @@
             100% { transform: scale(1); }
         }
 
-        .fade-out {
-            opacity: 0;
-            pointer-events: none; 
-        }
+        .fade-out { opacity: 0; pointer-events: none; }
 
         .sparkle {
             position: fixed; 
@@ -188,7 +182,7 @@
             border-top: 1px solid #eee;
         }
 
-        .contenedor-grafico, .contenedor-galeria, .contenedor-mapa {
+        .contenedor-grafico, .contenedor-mapa {
             background-color: #ffffff; 
             border: 1px solid #e0e0e0; 
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
@@ -213,6 +207,18 @@
                 grid-template-columns: 1fr; 
             }
         }
+        
+        .timeline-container { position: relative; max-width: 800px; margin: 40px auto; padding: 20px 0; }
+        .timeline-line { position: absolute; top: 50%; left: 0; width: 100%; height: 4px; background-color: #aac5ef; z-index: 1; transform: translateY(-50%); }
+        .timeline-years { position: relative; display: flex; justify-content: space-between; z-index: 2; }
+        .year-node { background-color: white; border: 3px solid #1c5791; border-radius: 50%; width: 60px; height: 60px; font-weight: bold; color: #1c5791; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .year-node:hover, .year-node.active { background-color: #ffdf07; border-color: #113558; transform: scale(1.1); color: #113558; }
+        .tabla-peliculas { width: 100%; border-collapse: collapse; margin-top: 15px; background: #ffffff; }
+        .tabla-peliculas th, .tabla-peliculas td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        .tabla-peliculas th { background-color: #1c5791; color: white; text-transform: uppercase; font-size: 0.9rem; }
+        .tag-original { background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+        .tag-remake { background: #f59e0b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+        .tag-secuela { background: #3b82f6; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -235,65 +241,55 @@
             <p>¿Cuándo fue la última vez que viste una historia original de Disney?</p>
             
             <div id="opciones-respuesta" style="margin-top: 20px; font-size: 1rem;">
-                
                 <button class="opcion-btn">Opción 1</button>
                 <button class="opcion-btn">Opción 2</button>
                 <button class="opcion-btn">Opción 3</button>
             </div>
-            
         </div>
+
         <section class="seccion seccion-jose">
             <h2>Clasificación de Películas</h2>
+            <p id="texto-jose">¿Realmente Disney ha priorizado historias existentes en vez de crear material completamente nuevo?</p>
 
-            
-            <p id="texto-jose">
-                ¿Realmente Disney ha priorizado historias existentes en vez de crear material completamente nuevo?
-            </p>
-
-            
             <div class="contenedor-grafico" id="graficos-1">
-                <img 
-                    src="imagenes/t.png" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
-                >
+                <img src="imagenes/t.png" alt="Gráfico" style="max-width: 900px; height: auto; display: block; margin: 0 auto;">
             </div>
             
-            <p id="texto-jose">
-                Para comenzar el análisis, se dispuso de un gráfico que agrupa todas las películas producidas por Walt Disney Pictures, 
-                separando las películas originales (es decir, que son una historia completamente nueva y sin antecedentes) de las que vienen de historias ya existentes.
-            </p>
+            <p id="texto-jose">Para comenzar el análisis, se dispuso de un gráfico que agrupa todas las películas producidas por Walt Disney Pictures, separando las películas originales (es decir, que son una historia completamente nueva y sin antecedentes) de las que vienen de historias ya existentes.</p>
 
-            <p id="texto-jose">
-                Para comprender el gráfico se deben considerar las siguientes definiciones:
-            </p>
+            <p id="texto-jose">Para comprender el gráfico se deben considerar las siguientes definiciones:</p>
             <ul> 
                 <li>Original: película que nace de una idea nueva, sin antecedentes ni tampoco historia cinematográfica.</li>
                 <li>Secuela: película que forma parte de la continuidad de una película anteriormente estrenada.</li>
-                <li>Precuela: película que forma parte de una historia o universo cinematográfico pero se sitúa en un periodo anterior al de la o las primeras películas del universo cinematográfico.</li>
-                <li>Reboot: es una película que forma parte de una historia ya creada pero como una nueva versión de esta, descartando la continuidad y trama previa.</li>
-                <li>Remake: nueva versión de una película ya existente, adaptándola a otro formato siendo fiel a la original.</li>
+                <li>Precuela: historia situada en un periodo anterior al de las primeras películas del universo cinematográfico.</li>
+                <li>Reboot: es una película que forma parte de una historia ya creada pero como una nueva versión...</li>
+                <li>Remake: nueva versión de una película ya existente adaptándola a otro formato siendo fiel a la original.</li>
                 <li>Documental: película que narra eventos de la realidad con fines explicativos principalmente. </li>
-                <li>Spin-Off: una nueva película que forma parte de un acontecimiento o personaje de un universo cinematográfico, siguiendo su historia propia con una narrativa paralela.</li>
+                <li>Spin-Off: una nueva película que forma parte de un acontecimiento o personaje de un universo.</li>
             </ul>
 
             <div class="contenedor-grafico" id="graficos-2">
-                <img 
-                    src="imagenes/a.png" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
-                >
+                <img src="imagenes/a.png" alt="Gráfico" style="max-width: 900px; height: auto; display: block; margin: 0 auto;">
             </div>
             
-            
-            <p id="texto-jose">
-                Se puede apreciar el dominio que se presenta de las películas originales por sobre los otros tipos exitentes. Estos gráficos corresponden a un análisis realizado sin contabilizar la adquisición de los filmes de las franquicias de Marvel y LucasFilm. En este escenario, las producciones originales de Disney arrasan y se encuentran muy por sobre los otros tipos.
-            </p>
+            <p id="texto-jose">Se puede apreciar el dominio que se presenta de las películas originales por sobre los otros tipos exitentes. Estos gráficos corresponden a un análisis realizado sin contabilizar la adquisición de los filmes de las franquicias de Marvel y LucasFilm. En este escenario, las producciones originales de Disney arrasan y se encuentran muy por sobre los otros tipos.</p>
 
             <h3 class="subtitulo-seccion">Mapa Interactivo - Películas por Categoría y Año</h3>
-            <p> texto para el mapa interactivo </p>
+            <p>Haz clic en los años para explorar la evolución:</p>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-years">
+                    <button class="year-node" onclick="mostrarAnio(1990)">1990</button>
+                    <button class="year-node" onclick="mostrarAnio(2000)">2000</button>
+                    <button class="year-node" onclick="mostrarAnio(2010)">2010</button>
+                    <button class="year-node" onclick="mostrarAnio(2020)">2020</button>
+                </div>
+            </div>
+
             <div class="contenedor-mapa" id="mapa-interactivo">
-                [Espacio para el Mapa Interactivo (Tabla vertical por años)]
+                <div id="info-anio">
+                    <p style="text-align: center;">Selecciona un año en la línea de tiempo superior.</p>
+                </div>
             </div>
         </section>
         
@@ -301,67 +297,38 @@
             <h2>Análisis evolutivo del Ingreso-Recaudación</h2>
 
             <div class="seccion-milla-data">
-                
                 <div>
                     <h3>Gráfico de Inversión</h3>
-                    <p id="texto-milla-inversion">
-                     Disney no solo ha cambiado la forma en que cuenta historias, sino también la forma en cómo invierte y cómo recupera esa inversión en la taquilla global. Y al observar esa evolución a lo largo de tres décadas (1989 - 2025), se revela un patrón claro en cómo han cambiado sus estrategias y resultados. 
-                    </p>
+                    <p id="texto-milla-inversion">Disney no solo ha cambiado la forma en que cuenta historias, sino también la forma en cómo invierte y cómo recupera esa inversión en la taquilla global. Y al observar esa evolución a lo largo de tres décadas (1989 - 2025), se revela un patrón claro en cómo han cambiado sus estrategias y resultados.</p>
                         
                     <div class="contenedor-grafico" id="grafico-inversion-1">
-                        <img 
-                            src="imagenes/g3.jpeg" 
-                            alt="Gráfico de clasificación de películas de Disney por tipo"
-                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
-                        >
+                        <img src="imagenes/g3.jpeg" alt="Gráfico" style="max-width: 1000px; height: auto; display: block; margin: 0 auto;">
                     </div>
-                    <p id="texto-milla-inversion">
-                    La industria del ratón se mantuvo con una inversión relativamente estable desde 1989 hasta mediados de los 90s, con cifras que oscilaban entre los $10M y $40M USD. Fue una era marcada por el “Disney clásico”, donde predominaban las historias originales y una animación tradicional.
-                    A partir del 95, y especialmente desde los 2000 en adelante, la inversión comenzó a crecer de manera sostenida año tras año.
-                    Desde 2005 en adelante, Disney empezó a arriesgar más con ciertas producciones y la inversión superó con frecuencia los $120M, e incluso llegó a los $230M USD, mientras que la producción de secuelas comienza a ser mucho más común.
-                    En la última década (2015-2025), la inversión suele moverse entre los $150M y $250M USD. Es también, la etapa donde emergen con fuerza la producción de Live-Actions y sus inversiones se conviven con el resto, sin embargo, hay algunas que representan apuestas arriesgadas por parte del estudio, alcanzando cifras de $360M.
-                    </p>
+                    <p id="texto-milla-inversion">La industria del ratón se mantuvo con una inversión relativamente estable desde 1989 hasta mediados de los 90s, con cifras que oscilaban entre los $10M y $40M USD. Fue una era marcada por el “Disney clásico”, donde predominaban las historias originales y una animación tradicional. A partir del 95, y especialmente desde los 2000 en adelante, la inversión comenzó a crecer de manera sostenida año tras año. Desde 2005 en adelante, Disney empezó a arriesgar más con ciertas producciones y la inversión superó con frecuencia los $120M, e incluso llegó a los $230M USD, mientras que la producción de secuelas comienza a ser mucho más común. En la última década (2015-2025), la inversión suele moverse entre los $150M y $250M USD. Es también, la etapa donde emergen con fuerza la producción de Live-Actions y sus inversiones se conviven con el resto, sin embargo, hay algunas que representan apuestas arriesgadas por parte del estudio, alcanzando cifras de $360M.</p>
                 </div>
                 
                 <div>
                     <h3>Gráfico de Recaudación</h3>
-                    <p id="texto-milla-recaudacion"> 
-                    A lo largo del tiempo, Disney ha mantenido ganancias sostenidas y constantes. Sus películas originales suelen recaudar entre los $40M y los $300M USD,con algunas excepciones que superan los $650M. Pese a que la producción de títulos originales nunca, la aparición de las secuelas, especialmente desde 1995, ha sido clave para el éxito en taquilla, moviéndose generalmente entre los $100M y $400M UDS.
-                    En la última década (2015-2025) la tendencia se vuelve aún más evidente. Las producciones de secuelas y Live-Actions lideran ampliamente la taquilla con las cifras más altas, partiendo desde los $550M e incluso alcanzando los $1.700M USD, marcando una brecha cada vez mayor frente a la recaudación de las películas originales actuales. 
-
-                    </p>
+                    <p id="texto-milla-recaudacion">A lo largo del tiempo, Disney ha mantenido ganancias sostenidas y constantes. Sus películas originales suelen recaudar entre los $40M y los $300M USD,con algunas excepciones que superan los $650M. Pese a que la producción de títulos originales nunca para, la aparición de las secuelas, especialmente desde 1995, ha sido clave para el éxito en taquilla, moviéndose generalmente entre los $100M y $400M USD. En la última década (2015-2025) la tendencia se vuelve aún más evidente. Las producciones de secuelas y Live-Actions lideran ampliamente la taquilla con las cifras más altas, partiendo desde los $550M e incluso alcanzando los $1.700M USD, marcando una brecha cada vez mayor frente a la recaudación de las películas originales actuales.</p>
                     
                     <div class="contenedor-grafico" id="grafico-recaudacion-1">
-                        <img 
-                            src="imagenes/g1.jpeg" 
-                            alt="Gráfico de clasificación de películas de Disney por tipo"
-                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
-                        >
+                        <img src="imagenes/g1.jpeg" alt="Gráfico" style="max-width: 1000px; height: auto; display: block; margin: 0 auto;">
                     </div>
                     
                     <div class="contenedor-grafico" id="grafico-recaudacion-2">
-                        <img 
-                            src="imagenes/g.jpeg" 
-                            alt="Gráfico de clasificación de películas de Disney por tipo"
-                            style="max-width: 1000px; height: auto; display: block; margin: 0 auto;"
-                        >
+                        <img src="imagenes/g.jpeg" alt="Gráfico" style="max-width: 1000px; height: auto; display: block; margin: 0 auto;">
                     </div>
-                    <p id="texto-milla-recaudacion"> 
-                    Disney dejó de ser simplemente un estudio de animación para convertirse en un fabricante de éxitos globales…
-                    Las películas originales son las más numerosas a lo largo del tiempo, esto quiere decir que la industria sí ha mantenido la presencia creativa. Sin embargo, cuando Disney necesita un “golpe seguro” invierte en secuelas o Live-Actions, ya que les suele otorgar un “éxito seguro” en la recaudación. 
-
-                    </p>
+                    <p id="texto-milla-recaudacion">Disney dejó de ser simplemente un estudio de animación para convertirse en un fabricante de éxitos globales… Las películas originales son las más numerosas a lo largo del tiempo, esto quiere decir que la industria sí ha mantenido la presencia creativa. Sin embargo, cuando Disney necesita un “golpe seguro” invierte en secuelas o Live-Actions, ya que les suele otorgar un “éxito seguro” en la recaudación.</p>
                 </div>
             </div>
             
             <h3 class="subtitulo-seccion">Top 3 Inversiones más altas</h3>
-            
         </section>
 
         <section class="seccion seccion-cierre">
             <h2>Cierre del Análisis</h2>
             <div class="cuadrado" style="background-color: #10b981; color: white;">
-                <p>Cierre y conclusiones.</p>
+                <p>Cierre y conclusiones finales.</p>
             </div>
         </section>
         
@@ -370,18 +337,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const intro = document.getElementById('intro-animation');
-            const duration = 1000; 
-
             setTimeout(function() {
                 intro.classList.add('fade-out');
-                setTimeout(function() {
-                    intro.style.display = 'none';
-                }, 1000); 
-            }, duration);
+                setTimeout(() => intro.style.display = 'none', 1000); 
+            }, 1000);
         });
     </script>
-    
     <script src="scripts.js"></script>
-    
 </body>
 </html>
