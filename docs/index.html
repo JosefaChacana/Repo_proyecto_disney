@@ -9,7 +9,7 @@
     
     <style>
         
-        
+        /* ESTILOS DE NAVEGACIÓN */
         .navigation-menu {
             position: fixed; 
             top: 0;
@@ -40,8 +40,9 @@
         }
         
         
+        /* ESTILOS DE CUERPO Y FUENTES */
         body {
-           
+            
             padding-top: 70px; 
             font-family: 'Poppins', Arial, sans-serif; 
             background-color: #E8F6FA; 
@@ -50,6 +51,7 @@
             margin: 0;
         }
 
+        /* ESTILOS DE INTRO ANIMACIÓN */
         #intro-animation {
             position: fixed;
             top: 0;
@@ -111,6 +113,7 @@
         }
 
 
+        /* ESTILOS DE TEXTO Y CONTENEDOR */
         h1 {
             color: #ffdf07;
             text-align: center;
@@ -126,10 +129,16 @@
             border-bottom: 3px solid #ffdf07; 
             margin-bottom: 25px; 
             text-align: center; 
-            padding-top: 20px; /* Añadido para dar espacio después del salto de ancla */
+            padding-top: 20px; 
         }
         
-        #seccion-linea-tiempo:target, h2:target, .subtitulo-seccion:target {
+        /* ⬇️ CORRECCIÓN CLAVE: INCLUIR TODOS LOS ANCLAJES DEL MENÚ ⬇️ */
+        #seccion-linea-tiempo:target, 
+        #seccion-clasificacion:target, 
+        #seccion-analisis-evolutivo:target,
+        #seccion-cierre:target,
+        h2:target, 
+        .subtitulo-seccion:target {
             padding-top: 90px;
             margin-top: -90px;
         }
@@ -150,6 +159,12 @@
             margin: 20px auto;
             padding: 0; 
             text-align: justify;
+        }
+        
+        /* ⬇️ REGLA DE SEGURIDAD PARA IMÁGENES ⬇️ */
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         .contenedor-principal {
@@ -228,6 +243,7 @@
             border-top: 1px solid #eee;
         }
 
+        /* ESTILOS PARA GRÁFICOS Y VIDEOS */
         .contenedor-grafico, .contenedor-galeria, .contenedor-mapa {
             background-color: #ffffff; 
             border: 1px solid #e0e0e0; 
@@ -242,6 +258,14 @@
             text-align: center;
             color: #666;
         }
+        
+        .contenedor-video {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; 
+            align-items: center; 
+        }
+
 
         .seccion-milla-data {
             display: grid;
@@ -250,9 +274,29 @@
         }
         @media (min-width: 768px) {
             .seccion-milla-data {
-                grid-template-columns: 1fr; 
+                grid-template-columns: 1fr 1fr; /* Dividir en 2 columnas en escritorio */
             }
         }
+        
+        /* ⬇️ NUEVOS ESTILOS PARA IMÁGENES LADO A LADO (Punto 2) ⬇️ */
+        .contenedor-imagenes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; 
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .contenedor-imagenes img {
+            width: 45%; 
+            height: auto;
+            max-width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        /* ⬆️ FIN NUEVOS ESTILOS IMÁGENES ⬆️ */
+
         
         /* --- ESTILOS DE LÍNEA DE TIEMPO --- */
 
@@ -382,6 +426,7 @@
         }
 
         
+        /* MEDIA QUERIES (RESPONSIVE DESIGN) */
         @media (max-width: 768px) {
             
             body {
@@ -425,249 +470,3 @@
     <div id="intro-animation">
         <div class="logo-animado">La evolución de la magia</div>
     </div>
-
-    <nav class="navigation-menu">
-        <a href="#seccion-clasificacion">Clasificación</a>
-        <a href="#seccion-linea-tiempo">Línea de Tiempo</a>
-        <a href="#seccion-analisis-evolutivo">Análisis Económico</a>
-        <a href="#seccion-cierre">Conclusión</a>
-    </nav>
-    <div class="contenedor-principal">
-        
-        <header class="titulo-bloque">
-            <h1>Disney Industry: la evolución de la magia</h1>
-        </header>
-        
-        <p>A lo largo de un siglo, la magia de Disney ha acompañado a generaciones enteras con historias que marcaron infancias, encendieron la imaginación y se volvieron parte de una memoria colectiva.</p>
-
-        <p>Pero el estudio que alguna vez apostaba todo por crear nuevos mundos y personajes nunca antes vistos, hoy navega un escenario distinto: uno donde las franquicias conocidas, los remakes y las expansiones de universos se han convertido en su gran motor creativo.</p>
-
-        <div class="cuadrado" id="pregunta-interactiva">
-            <p>¿Cuándo fue la última vez que viste una historia original de Disney?</p>
-            
-            <div id="opciones-respuesta" style="margin-top: 20px; font-size: 1rem;">
-                
-                <button class="opcion-btn">Opción 1</button>
-                <button class="opcion-btn">Opción 2</button>
-                <button class="opcion-btn">Opción 3</button>
-            </div>
-            
-        </div>
-
-
-        <p>
-    <a href="https://thewaltdisneycompany.com/about/" target="_blank">The Walt Disney Company </a>
-    es hoy uno de los gigantes del entretenimiento mundial, con casi US$200 mil millones en activos, 
-    y una fuerte presencia en los estudios de cine y plataformas digitales. 
-    Además, ha expandido su imperio aún más con sus adquisiciones como Pixar, Marvel y Lucasfilm. En definitiva, lo que Disney decide producir tiene efectos reales en el ecosistema audiovisual global. </p>
-
-
-        <h2>Estrenos recientes en Chile</h2>
-        <p>En 2025, la cartelera nacional estuvo marcada por títulos como “Captain America: Brave New World”, “Blancanieves”, “Thunderbolts”, “Lilo & Stitch”, “Elio”, “The Fantastic Four: First Steps” y “Zootopia 2”.
-            De todas estas producciones, solo una es una historia completamente original, sin basarse en personajes ni universos ya conocidos. Y, paradójicamente, fue también la producción que obtuvo el debut más débil
-            en taquilla a nivel mundial, con una recaudación global de USD 35 millones durante su primer fin de semana en cines.
-            Este reciente hecho refuerza la pregunta central de nuestro análisis: ¿Está Disney dejando atrás la creación de nuevas y originales historias para priorizar franquicias ya establecidas?
-        </p> 
-        <div class="contenedor-video"><iframe width="520" height="300" src="https://www.youtube.com/embed/4_KaABhCPPk?si=pALUwcocicmLRws0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="520" height="300" src="https://www.youtube.com/embed/waf9snfaUFw?si=q_fy5ItPh5j4sLtz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        
-        <section class="seccion seccion-jose" id="seccion-clasificacion">
-            <h2>Clasificación de Películas</h2>
-
-            
-            <p id="texto-jose">
-                ¿Realmente Disney ha priorizado historias existentes en vez de crear material completamente nuevo?
-            </p>
-
-            
-            <div class="contenedor-grafico" id="graficos-1">
-                <img 
-                    src="imagenes/t.png" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
-                >
-            </div>
-            
-            <p id="texto-jose">
-                Para comenzar el análisis, se dispuso de un gráfico que agrupa todas las películas producidas por Walt Disney Pictures, 
-                separando las películas originales (es decir, que son una historia completamente nueva y sin antecedentes) de las que vienen de historias ya existentes.
-            </p>
-
-            <p id="texto-jose">
-                Para comprender el gráfico se deben considerar las siguientes definiciones:
-            </p>
-            <ul> 
-                <li>Original: película que nace de una idea nueva, sin antecedentes ni tampoco historia cinematográfica.</li>
-                <li>Secuela: película que forma parte de la continuidad de una película anteriormente estrenada.</li>
-                <li>Precuela: película que forma parte de una historia o universo cinematográfico pero se sitúa en un periodo anterior al de la o las primeras películas del universo cinematográfico.</li>
-                <li>Reboot: es una película que forma parte de una historia ya creada pero como una nueva versión de esta, descartando la continuidad y trama previa.</li>
-                <li>Remake: nueva versión de una película ya existente, adaptándola a otro formato siendo fiel a la original.</li>
-                <li>Documental: película que narra eventos de la realidad con fines explicativos principalmente. </li>
-                <li>Spin-Off: una nueva película que forma parte de un acontecimiento o personaje de un universo cinematográfico, siguiendo su historia propia con una narrativa paralela.</li>
-            </ul>
-
-            <div class="contenedor-grafico" id="graficos-2">
-                <img 
-                    src="imagenes/a.png" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 900px; height: auto; display: block; margin: 0 auto;"
-                >
-            </div>
-            
-            
-            <p id="texto-jose">
-                Se puede apreciar el dominio que se presenta de las películas originales por sobre los otros tipos exitentes. Estos gráficos corresponden a un análisis realizado sin contabilizar la adquisición de los filmes de las franquicias de Marvel y LucasFilm. En este escenario, las producciones originales de Disney arrasan y se encuentran muy por sobre los otros tipos.
-            </p>
-
-            <h2 class="subtitulo-seccion">¿Qué pasa al considerar las películas de Marvel y Star Wars?</h2>
-
-            <div class="contenedor-imagenes">
-                <img src="imagenes/SW.png" alt="sw">
-                <img src="imagenes/marvel1.jpg" alt="marvel">
-            </div>  
-
-
-
-
-                   <div class="contenedor-grafico" id="grafico">
-        
-                    <iframe 
-                        src="msw.html" 
-                        width="100%" 
-                        height="500px" 
-                        frameborder="0" 
-                        style="border: none;">
-                        </iframe>
-        
-                </div>
-
-
-
-         </section>
-
-
-        <section class="seccion" id="seccion-linea-tiempo">
-            <h2 class="subtitulo-seccion">Mapa Interactivo - Películas por Categoría y Año</h2>
-            <p> ¡Explora los momentos clave de la historia de Disney y clasifica las películas por tipo! Haz clic en los títulos para ver los detalles. </p>
-
-            <div class="timeline-container" id="mapa-interactivo">
-                <ul class="timeline">
-                    </ul>
-            </div>
-        </section>
-        
-        <section class="seccion seccion-milla" id="seccion-analisis-evolutivo">
-            <h2>Análisis evolutivo del Ingreso-Recaudación</h2>
-
-            <div class="seccion-milla-data">
-                
-                <div>
-                    <h3>Gráfico de Inversión</h3>
-                    <p id="texto-milla-inversion">
-                    Disney no solo ha cambiado la forma en que cuenta historias, sino también la forma en cómo invierte y cómo recupera esa inversión en la taquilla global. Y al observar esa evolución a lo largo de tres décadas (1989 - 2025), se revela un patrón claro en cómo han cambiado sus estrategias y resultados. 
-                    </p>
-                        
-                    <div class="contenedor-grafico" id="grafico-inversion-1">
-        
-                        <iframe 
-                        src="DISNEY_INV.html" 
-                        width="100%" 
-                        height="500px" 
-                        frameborder="0" 
-                        style="border: none;">
-                        </iframe>
-        
-                    </div>
-                    <p id="texto-milla-inversion">
-                     La industria del ratón se mantuvo con una inversión relativamente estable desde 1989 hasta mediados de los 90s, con cifras que oscilaban entre los $10M y $40M USD. Fue una era marcada por el “Disney clásico”, donde predominaban las historias originales y una animación tradicional.
-                     </p>
-                        <P>A partir de finales de los  90s y especialmente desde los 2000 en adelante, la inversión comenzó a crecer de manera sostenida año tras año. Por ejemplo: Dinosaur (2000) con USD 127.5M o Tarzan (1999) con USD 130M. Producciones que muestran el salto de escala necesario para competir globalmente. </P>
-                     <p>Desde 2005 en adelante, Disney empezó a arriesgar más con ciertas producciones y la inversión superó con frecuencia los $120M, e incluso llegó a los $230M USD, mientras que la producción de secuelas comienza a ser mucho más común. Por ejemplo: las entregas de Pirates of the Caribbean, que alcanzan presupuestos entre $225M y $410M USD.</p>
-                     <P>En la última década (2015-2025), la inversión suele moverse entre los $150M y $250M USD. Es también, la etapa donde emergen con fuerza la producción de Live-Actions: Dumbo (2019) con $170M o Mufasa (2024) con $200M USD. Sus inversiones conviven con el resto, sin embargo, hay algunas que representan apuestas arriesgadas por parte del estudio, alcanzando cifras de $300M, como The Little Mermaid (2023).
-                        Estas cifras refuerzan la idea de que el estudio ha tenido un aumento sostenido en la inversión y que se ha fomentado la producción de títulos ya conocidos.</P>
-                    </div>
-                
-        <div>
-                    <h3>Gráfico de Recaudación</h3>
-                    <p id="texto-milla-recaudacion"> 
-                    A lo largo de más de tres décadas, Disney ha mantenido ganancias sostenidas y constantes. Las recaudaciones de sus películas oscilan ampliamente, pero con una tendencia clara: las producciones originales mantienen ingresos estables y moderados, mientras que las secuelas y los live-actions se consolidan como los verdaderos motores de taquilla. </p>
-                    
-                  <div class="contenedor-grafico" id="grafico-inversion-1">
-        
-                        <iframe 
-                        src="DISNEY_REC.html" 
-                        width="100%" 
-                        height="500px" 
-                        frameborder="0" 
-                        style="border: none;">
-                        </iframe>
-        
-                    </div>
-                    <p id="texto-milla-recaudacion"> 
-                    En el caso de sus películas originales, la mayoría suele recaudar entre los $20M y los $350M USD, con algunas excepciones históricas que logran romper la barrera de los $500M USD, como El Rey León (1994) con $761M o Buscando a Nemo (2003) con $518M.
-                    </p>
-                    <p>La aparición de secuelas, que ha sido clave para el éxito en taquilla, comienza a destacar desde mediados de los 90s y especialmente desde los años 2000. La mayoría se ubica entre los $100M y $450M USD. Sin embargo, durante la última década esta categoría explota en la taquilla, alcanzando inigualables cifras como Frozen II (2019) con $1.453B o Inside Out 2 (2024) con $1.698B USD. </p>
-                    <P>Este mismo fenómeno se replica con los live-actions, donde la tendencia se vuelve aún más evidente gracias a títulos como El Rey León (2019) con $1.662B o Lilo & Stitch (2025) con $1.036B USD, lo que marca una brecha cada vez mayor frente a las recaudaciones de historias originales actuales.</P>
-                    <p>Ambos gráficos demuestran que Disney no opera únicamente como un estudio creativo, sino como un fabricante de éxitos globales, donde cada decisión de inversión está estrechamente vinculada al retorno que tendrá en la recaudación económica de sus producciones. </p>
-                    <p>Si bien las películas originales siguen siendo las más numerosas a lo largo del tiempo, lo que evidencia que la compañía aún mantiene su presencia creativa en la industria. Sin embargo, se evidencia que no son estas producciones las que reciben las mayores inversiones ni las que generan los mayores retornos económicos. 
-                    Por el contrario, cuando Disney busca un “golpe seguro”, concentra sus recursos en secuelas, precuelas y live-actions, es decir, en franquicias ya establecidas. 
-                    </p>
-                    <p>La estrategia contemporánea de Disney se fundamenta en expandir universos ya conocidos, priorizando la seguridad financiera por sobre el riesgo creativo, debido a que las franquicias suelen garantizar un retorno económico estable y elevado, posicionándose como un “éxito seguro”.</p>
-            
-                </div>
-            </div>
-            <h2>La llegada de Marvel</h2>
-
-             <div class="contenedor-grafico" id="graficos-2">
-                <img 
-                    src="imagenes/marvel1.jpg" 
-                    alt="Gráfico de clasificación de películas de Disney por tipo"
-                    style="max-width: 600px; height: auto; display: block; margin: 0 auto;"
-                >
-            </div>
-
-            <div> 
-                <p>En 2009, The Walt Disney Company dio un paso decisivo en su expansión de imperio audiovisual: adquirió a Marvel Entertainment, dueña de un masivo y famoso catálogo de cómics de superhéroes.
-                A partir de entonces, Marvel Studios pasó a ser uno de los motores más poderosos del cine global bajo la industria del ratón. 
-                </p>
-                <p>Pese a que la compra del estudio fue en 2009, la primera película distribuida por Disney fue The Avengers (2012), ya que los derechos de distribución de Iron Man, Iron Man 2, Thor y Captain America fueron adquiridos posteriormente. 
-                Por otro lado, muchos personajes destacados del MCU están licenciados en otros estudios, como es el caso de los derechos cinematográficos de tu amigo Spiderman, quien quedó en manos de Sony Pictures Entertainment. Sin embargo, esto detuvo a Disney que siguió construyendo su propio camino, apostando por personajes que sí tenían los derechos disponibles. </p>
-            
-
-
-
-
-            </div>
-            
-            <h2 class="subtitulo-seccion">Top 3 Inversiones más altas</h2>
-            
-        </section>
-
-        <section class="seccion seccion-cierre" id="seccion-cierre">
-            <h2>Cierre del Análisis</h2>
-            <div class="cuadrado" style="background-color: #10b981; color: white;">
-                <p>Cierre y conclusiones.</p>
-            </div>
-        </section>
-        
-    </div>
-
-    <script>
-    
-        document.addEventListener("DOMContentLoaded", function() {
-            const intro = document.getElementById('intro-animation');
-            const duration = 1000; 
-
-            setTimeout(function() {
-                intro.classList.add('fade-out');
-                setTimeout(function() {
-                    intro.style.display = 'none';
-                }, 1000); 
-            }, duration);
-        });
-    </script>
-    
-    <script src="script.js"></script>
-    
-</body>
-</html>
