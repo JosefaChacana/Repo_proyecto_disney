@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-da4cf89b8fab9af38edefa792e018e75"},
+  "mark": {"type": "circle", "size": 100},
+  "encoding": {
+    "color": {
+      "field": "Categoria",
+      "scale": {
+        "domain": ["Original", "Secuela/Precuela"],
+        "range": ["#1c5791", "#D41C16"]
+      },
+      "title": "Tipo de Película",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Titulo", "title": "Película", "type": "nominal"},
+      {
+        "field": "Anio_Estreno",
+        "title": "Año de Estreno",
+        "type": "quantitative"
+      },
+      {
+        "field": "Recaudacion_USD",
+        "format": "$,.0f",
+        "title": "Recaudación (USD)",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "axis": {"tickCount": 10},
+      "field": "Anio_Estreno",
+      "scale": {"domain": [2011.5, 2025.5]},
+      "title": "Año de Estreno",
+      "type": "quantitative"
+    },
+    "y": {
+      "axis": {"format": "~s", "tickCount": 5},
+      "field": "Recaudacion_MM",
+      "scale": {"domain": [195.82998374999997, 2939.411055]},
+      "title": "Recaudación Global (Millones de USD)",
+      "type": "quantitative"
+    }
+  },
+  "params": [
+    {
+      "name": "param_4",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
+    }
+  ],
+  "title": "Recaudación de Películas Marvel por Año y Tipo",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-da4cf89b8fab9af38edefa792e018e75": [
+      {
+        "Titulo": "The Avengers",
+        "Anio_Estreno": 2012,
+        "Tipo": "Original",
+        "Recaudacion": "1.520.538.536",
+        "Recaudacion_USD": 1520538536,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 1520.538536,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Iron Man 3",
+        "Anio_Estreno": 2013,
+        "Tipo": "Secuela",
+        "Recaudacion": "1.215.577.205",
+        "Recaudacion_USD": 1215577205,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 1215.577205,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thor: The Dark World",
+        "Anio_Estreno": 2013,
+        "Tipo": "Secuela",
+        "Recaudacion": "644.783.140",
+        "Recaudacion_USD": 644783140,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 644.78314,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Captain America: The Winter Soldier",
+        "Anio_Estreno": 2014,
+        "Tipo": "Secuela",
+        "Recaudacion": "714.766.572",
+        "Recaudacion_USD": 714766572,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 714.766572,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Guardians of the Galaxy",
+        "Anio_Estreno": 2014,
+        "Tipo": "Original",
+        "Recaudacion": "773.350.376",
+        "Recaudacion_USD": 773350376,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 773.350376,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Avengers: Age of Ultron",
+        "Anio_Estreno": 2015,
+        "Tipo": "Secuela",
+        "Recaudacion": "1.405.018.048",
+        "Recaudacion_USD": 1405018048,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 1405.018048,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Ant-Man",
+        "Anio_Estreno": 2015,
+        "Tipo": "Original",
+        "Recaudacion": "519.311.965",
+        "Recaudacion_USD": 519311965,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 519.311965,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Captain America: Civil War",
+        "Anio_Estreno": 2016,
+        "Tipo": "Secuela",
+        "Recaudacion": "1.155.046.416",
+        "Recaudacion_USD": 1155046416,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 1155.046416,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Doctor Strange",
+        "Anio_Estreno": 2016,
+        "Tipo": "Original",
+        "Recaudacion": "677.796.833",
+        "Recaudacion_USD": 677796833,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 677.796833,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Guardians of the Galaxy 2",
+        "Anio_Estreno": 2017,
+        "Tipo": "Secuela",
+        "Recaudacion": "863.764.214",
+        "Recaudacion_USD": 863764214,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 863.764214,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thor: Ragnarok",
+        "Anio_Estreno": 2017,
+        "Tipo": "Secuela",
+        "Recaudacion": "855.301.806",
+        "Recaudacion_USD": 855301806,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 855.301806,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Black Panther",
+        "Anio_Estreno": 2018,
+        "Tipo": "Original",
+        "Recaudacion": "1.349.926.083",
+        "Recaudacion_USD": 1349926083,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 1349.926083,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Avengers: Infinity War",
+        "Anio_Estreno": 2018,
+        "Tipo": "Secuela ",
+        "Recaudacion": "2.052.415.039",
+        "Recaudacion_USD": 2052415039,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 2052.415039,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Ant-Man and the Wasp",
+        "Anio_Estreno": 2018,
+        "Tipo": "Secuela",
+        "Recaudacion": "622.674.139",
+        "Recaudacion_USD": 622674139,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 622.674139,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Captain Marvel",
+        "Anio_Estreno": 2019,
+        "Tipo": "Original",
+        "Recaudacion": "1.131.416.446",
+        "Recaudacion_USD": 1131416446,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 1131.416446,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Avengers: Endgame",
+        "Anio_Estreno": 2019,
+        "Tipo": "Secuela",
+        "Recaudacion": "2.799.439.100",
+        "Recaudacion_USD": 2799439100,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 2799.4391,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Black Widow",
+        "Anio_Estreno": 2021,
+        "Tipo": "Precuela",
+        "Recaudacion": "379.751.655",
+        "Recaudacion_USD": 379751655,
+        "Tipo_Limpio": "Precuela",
+        "Recaudacion_MM": 379.751655,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Shang-Chi and the Legend of the Ten Rings",
+        "Anio_Estreno": 2021,
+        "Tipo": "Original",
+        "Recaudacion": "432.243.292",
+        "Recaudacion_USD": 432243292,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 432.243292,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Eternals",
+        "Anio_Estreno": 2021,
+        "Tipo": "Original",
+        "Recaudacion": "402.064.899",
+        "Recaudacion_USD": 402064899,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 402.064899,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Doctor Strange in the Mulverse of Madness",
+        "Anio_Estreno": 2022,
+        "Tipo": "Secuela",
+        "Recaudacion": "955.775.804",
+        "Recaudacion_USD": 955775804,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 955.775804,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thor: Love and Thunder",
+        "Anio_Estreno": 2022,
+        "Tipo": "Secuela",
+        "Recaudacion": "760.928.081",
+        "Recaudacion_USD": 760928081,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 760.928081,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Black Panther: Wakanda Forever",
+        "Anio_Estreno": 2022,
+        "Tipo": "Secuela",
+        "Recaudacion": "859.208.836",
+        "Recaudacion_USD": 859208836,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 859.208836,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Ant-Man and the Wasp: Quantumania",
+        "Anio_Estreno": 2023,
+        "Tipo": "Secuela",
+        "Recaudacion": "476.071.180",
+        "Recaudacion_USD": 476071180,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 476.07118,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Guardians of the Galaxy Vol.3",
+        "Anio_Estreno": 2023,
+        "Tipo": "Secuela",
+        "Recaudacion": "845.555.777",
+        "Recaudacion_USD": 845555777,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 845.555777,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "The Marvels",
+        "Anio_Estreno": 2023,
+        "Tipo": "Secuela",
+        "Recaudacion": "206.136.825",
+        "Recaudacion_USD": 206136825,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 206.136825,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Deadpool & Wolverine",
+        "Anio_Estreno": 2024,
+        "Tipo": "Secuela",
+        "Recaudacion": "1.338.073.645",
+        "Recaudacion_USD": 1338073645,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 1338.073645,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Captain America: Brave New World",
+        "Anio_Estreno": 2025,
+        "Tipo": "Secuela",
+        "Recaudacion": "415.101.577",
+        "Recaudacion_USD": 415101577,
+        "Tipo_Limpio": "Secuela",
+        "Recaudacion_MM": 415.101577,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thunderbolts",
+        "Anio_Estreno": 2025,
+        "Tipo": "Original",
+        "Recaudacion": "382.436.917",
+        "Recaudacion_USD": 382436917,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 382.436917,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Fantastic Four: First Steps",
+        "Anio_Estreno": 2025,
+        "Tipo": "Original",
+        "Recaudacion": "521.858.728",
+        "Recaudacion_USD": 521858728,
+        "Tipo_Limpio": "Original",
+        "Recaudacion_MM": 521.858728,
+        "Categoria": "Original"
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>

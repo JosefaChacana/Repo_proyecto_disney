@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.1.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-2b6fafcf6fadcccec2154d8d27413b1b"},
+  "mark": {"type": "circle", "size": 100},
+  "encoding": {
+    "color": {
+      "field": "Categoria",
+      "scale": {
+        "domain": ["Original", "Secuela/Precuela"],
+        "range": ["#1c5791", "#D41C16"]
+      },
+      "title": "Tipo de Película",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "Titulo", "title": "Película", "type": "nominal"},
+      {
+        "field": "Anio_Estreno",
+        "title": "Año de Estreno",
+        "type": "quantitative"
+      },
+      {
+        "field": "Inversion_USD",
+        "format": "$,.0f",
+        "title": "Inversión (USD)",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "Anio_Estreno",
+      "scale": {"domain": [2011.5, 2025.5]},
+      "title": "Año de Estreno",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Inversion_MM",
+      "scale": {"domain": [100, 435.645]},
+      "title": "Inversión (Millones de USD)",
+      "type": "quantitative"
+    }
+  },
+  "params": [
+    {
+      "name": "param_7",
+      "select": {"type": "interval", "encodings": ["x", "y"]},
+      "bind": "scales"
+    }
+  ],
+  "title": " Inversión en Películas Marvel por Año y Tipo (Altair)",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-2b6fafcf6fadcccec2154d8d27413b1b": [
+      {
+        "Titulo": "The Avengers",
+        "Anio_Estreno": 2012,
+        "Tipo": "Original",
+        "Inversion": "220.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 220000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 220,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Iron Man 3",
+        "Anio_Estreno": 2013,
+        "Tipo": "Secuela",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 200,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thor: The Dark World",
+        "Anio_Estreno": 2013,
+        "Tipo": "Secuela",
+        "Inversion": "170.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 170000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 170,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Captain America: The Winter Soldier",
+        "Anio_Estreno": 2014,
+        "Tipo": "Secuela",
+        "Inversion": "170.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 170000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 170,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Guardians of the Galaxy",
+        "Anio_Estreno": 2014,
+        "Tipo": "Original",
+        "Inversion": "170.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 170000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 170,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Avengers: Age of Ultron",
+        "Anio_Estreno": 2015,
+        "Tipo": "Secuela",
+        "Inversion": "170.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 170000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 170,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Ant-Man",
+        "Anio_Estreno": 2015,
+        "Tipo": "Original",
+        "Inversion": "130.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 130000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 130,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Captain America: Civil War",
+        "Anio_Estreno": 2016,
+        "Tipo": "Secuela",
+        "Inversion": "250.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 250000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 250,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Doctor Strange",
+        "Anio_Estreno": 2016,
+        "Tipo": "Original",
+        "Inversion": "165.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 165000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 165,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Guardians of the Galaxy 2",
+        "Anio_Estreno": 2017,
+        "Tipo": "Secuela",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 200,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thor: Ragnarok",
+        "Anio_Estreno": 2017,
+        "Tipo": "Secuela",
+        "Inversion": "180.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 180000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 180,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Black Panther",
+        "Anio_Estreno": 2018,
+        "Tipo": "Original",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 200,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Avengers: Infinity War",
+        "Anio_Estreno": 2018,
+        "Tipo": "Secuela ",
+        "Inversion": "321.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 321000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 321,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Ant-Man and the Wasp",
+        "Anio_Estreno": 2018,
+        "Tipo": "Secuela",
+        "Inversion": "162.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 162000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 162,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Captain Marvel",
+        "Anio_Estreno": 2019,
+        "Tipo": "Original",
+        "Inversion": "175.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 175000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 175,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Avengers: Endgame",
+        "Anio_Estreno": 2019,
+        "Tipo": "Secuela",
+        "Inversion": "356.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 356000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 356,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Black Widow",
+        "Anio_Estreno": 2021,
+        "Tipo": "Precuela",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Precuela",
+        "Inversion_MM": 200,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Shang-Chi and the Legend of the Ten Rings",
+        "Anio_Estreno": 2021,
+        "Tipo": "Original",
+        "Inversion": "150.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 150000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 150,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Eternals",
+        "Anio_Estreno": 2021,
+        "Tipo": "Original",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 200,
+        "Categoria": "Original"
+      },
+      {
+        "Titulo": "Doctor Strange in the Mulverse of Madness",
+        "Anio_Estreno": 2022,
+        "Tipo": "Secuela",
+        "Inversion": "414.900.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 414900000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 414.9,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thor: Love and Thunder",
+        "Anio_Estreno": 2022,
+        "Tipo": "Secuela",
+        "Inversion": "250.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 250000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 250,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Black Panther: Wakanda Forever",
+        "Anio_Estreno": 2022,
+        "Tipo": "Secuela",
+        "Inversion": "250.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 250000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 250,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Ant-Man and the Wasp: Quantumania",
+        "Anio_Estreno": 2023,
+        "Tipo": "Secuela",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 200,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Guardians of the Galaxy Vol.3",
+        "Anio_Estreno": 2023,
+        "Tipo": "Secuela",
+        "Inversion": "250.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 250000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 250,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "The Marvels",
+        "Anio_Estreno": 2023,
+        "Tipo": "Secuela",
+        "Inversion": "220.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 220000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 220,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Deadpool & Wolverine",
+        "Anio_Estreno": 2024,
+        "Tipo": "Secuela",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 200,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Captain America: Brave New World",
+        "Anio_Estreno": 2025,
+        "Tipo": "Secuela",
+        "Inversion": "200.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 200000000,
+        "Tipo_Limpio": "Secuela",
+        "Inversion_MM": 200,
+        "Categoria": "Secuela/Precuela"
+      },
+      {
+        "Titulo": "Thunderbolts",
+        "Anio_Estreno": 2025,
+        "Tipo": "Original",
+        "Inversion": "180.000.000",
+        "Columna_Vacia_1": null,
+        "Columna_Vacia_2": null,
+        "Inversion_USD": 180000000,
+        "Tipo_Limpio": "Original",
+        "Inversion_MM": 180,
+        "Categoria": "Original"
+      }
+    ]
+  }
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
