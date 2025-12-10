@@ -1,13 +1,3 @@
-// =======================================================
-// FUNCIONES DE UTILIDAD (loadCSVData)
-// =======================================================
-
-/**
- * Carga y parsea un archivo CSV de manera asíncrona.
- * @param {string} filePath - La ruta del archivo CSV.
- * @param {string} delimiter - El delimitador de las columnas (ej: ";").
- * @returns {Promise<{data: Array<Object>}>} Objeto con el array de datos.
- */
 async function loadCSVData(filePath, delimiter) {
     const response = await fetch(filePath);
     
@@ -34,7 +24,7 @@ async function loadCSVData(filePath, delimiter) {
             rowObject[header] = values[index] ? values[index].trim() : ''; 
         });
         
-        
+    
         if (rowObject['TÍTULO'] && rowObject['AÑO'] && rowObject['TÍTULO'].length > 0) {
             data.push(rowObject);
         } else {
@@ -49,7 +39,7 @@ async function loadCSVData(filePath, delimiter) {
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Lógica de la Animación Inicial (Sparkles y Fade-out) ---
+    
     const intro = document.getElementById('intro-animation');
     const durationFadeOut = 1000; 
     
@@ -84,41 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     
-    const inputField = document.getElementById('datoInput');
-    const actionButton = document.getElementById('miBoton');
-    const resultText = document.getElementById('resultado');
-
-    if (actionButton) {
-        actionButton.addEventListener('click', function() {
-            const valorIngresado = inputField ? inputField.value.trim() : '';
-
-            if (valorIngresado === "") {
-                if (resultText) {
-                    resultText.textContent = "¡Por favor, ingresa algún dato en el campo!";
-                    resultText.style.color = "red";
-                }
-            } else {
-                // Lógica de respuesta:
-                if (resultText) {
-                    resultText.textContent = `¡Tu dato, "${valorIngresado}", fue procesado con éxito!`;
-                    resultText.style.color = "#28a745"; // Color verde para éxito
-                }
-                if (inputField) {
-                     inputField.value = ''; 
-                }
-            }
-        });
-    }
-
-    
     
     const timelineContainer = document.querySelector('.timeline');
     
     
     async function cargarPeliculas() {
         
-    
-        const CSV_FILE_NAME = "Base marvel starwars.csv"; 
+        const CSV_FILE_NAME = "data.csv"; 
         
         try {
             
@@ -167,13 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Error al cargar la base de datos de películas:", error);
             
             if (timelineContainer) {
-                
-                timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV se llame **${CSV_FILE_NAME}** y esté en la misma carpeta.</p>`;
+                timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV se llame **Base marvel starwars.csv** y esté en la misma carpeta.</p>`;
             }
         }
     }
 
-  
     function adjuntarInteractividadClic() {
         const summaries = document.querySelectorAll('.timeline-summary');
 
