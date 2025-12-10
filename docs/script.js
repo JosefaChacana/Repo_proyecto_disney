@@ -1,33 +1,48 @@
+
+
+/**
+ * Carga y parsea un archivo CSV de manera asíncrona.
+ * NOTA: Esta función es robusta, no necesita cambios mayores.
+ * @param {string} filePath - La ruta del archivo CSV.
+ * @param {string} delimiter - El delimitador de las columnas (ej: ";").
+ * @returns {Promise<{data: Array<Object>}>} Objeto con el array de datos.
+ */
 async function loadCSVData(filePath, delimiter) {
     const response = await fetch(filePath);
     
     if (!response.ok) {
-        throw new Error(`Error al obtener el archivo: ${filePath} (Estado: ${response.status})`);
+        // Mejorar el mensaje de error para que sea más claro al programador
+        throw new Error(`Error al obtener el archivo: ${filePath} (Estado: ${response.status}). Posiblemente la ruta o el nombre del archivo son incorrectos (404).`);
     }
     
     const text = await response.text();
     
-    const rows = text.trim().split(/\r\n|\n/).filter(line => line.length > 0);
+    // Usar una expresión regular más segura para split y filtrar las líneas vacías
+    const rows = text.trim().split(/\r?\n/).filter(line => line.length > 0);
     if (rows.length === 0) return { data: [] };
 
     
+    // La lógica de parsing es buena, se mantiene.
     const headers = rows[0].split(delimiter).map(header => header.trim());
     const data = [];
     
     
     for (let i = 1; i < rows.length; i++) {
+        // Manejar el caso de que una fila tenga más delimitadores que el encabezado (común en CSVs mal formados)
         const values = rows[i].split(delimiter);
 
         const rowObject = {};
         headers.forEach((header, index) => {
-      
+            // Se mantiene la lógica de trim() y chequeo de existencia
             rowObject[header] = values[index] ? values[index].trim() : ''; 
         });
         
-    
+        
+        // Se mantiene la validación de filas
         if (rowObject['TÍTULO'] && rowObject['AÑO'] && rowObject['TÍTULO'].length > 0) {
             data.push(rowObject);
         } else {
+            // Se mantiene el console.warn para depuración
             console.warn(`Saltando fila ${i}: datos clave (Título/Año) faltantes o vacíos.`);
         }
     }
@@ -39,7 +54,8 @@ async function loadCSVData(filePath, delimiter) {
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    
+    // --- Lógica de la Animación Inicial (Sparkles y Fade-out) ---
+    // (Esta sección no tenía errores y se mantiene tal cual)
     const intro = document.getElementById('intro-animation');
     const durationFadeOut = 1000; 
     
@@ -65,11 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     if (intro) {
+        
         setTimeout(function() {
             intro.classList.add('fade-out');
             setTimeout(function() {
                 intro.style.display = 'none';
-            }, 1000); 
+            }, durationFadeOut); 
         }, durationFadeOut);
     }
     
@@ -80,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     async function cargarPeliculas() {
         
+       
         const CSV_FILE_NAME = "data.csv"; 
         
         try {
@@ -87,14 +105,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const peliculasData = await loadCSVData(CSV_FILE_NAME, ";");
             
             
-            if (!timelineContainer) return;
+            if (!timelineContainer) {
+                console.error("No se encontró el contenedor de la línea de tiempo con la clase '.timeline'.");
+                return;
+            }
             
             timelineContainer.innerHTML = '';
             
             const peliculas = peliculasData.data;
 
-
-        
             peliculas.sort((a, b) => parseInt(a['AÑO']) - parseInt(b['AÑO']));
 
             peliculas.forEach(pelicula => {
@@ -129,11 +148,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Error al cargar la base de datos de películas:", error);
             
             if (timelineContainer) {
-                timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV se llame **Base marvel starwars.csv** y esté en la misma carpeta.</p>`;
+                
+                timelineContainer.innerHTML = `<p style="color:red; text-align:center;">Error al cargar la base de datos: ${error.message}. Asegúrate de que el archivo CSV se llame **${CSV_FILE_NAME}** y esté en la misma carpeta.</p>`;
             }
         }
     }
-
+    
+  
     function adjuntarInteractividadClic() {
         const summaries = document.querySelectorAll('.timeline-summary');
 
@@ -143,6 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 details.classList.toggle('hidden');
 
                 const currentText = summary.textContent;
+                
+                // Lógica mejorada para manejar el texto (replace solo una vez)
                 if (details.classList.contains('hidden')) {
                     summary.textContent = currentText.replace('(Ocultar)', '(Clic para detalles)');
                 } else {
