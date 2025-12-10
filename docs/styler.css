@@ -27,6 +27,7 @@
     color: #1c5791; 
 }
 
+
 #seccion-linea-tiempo:target, h2:target, .subtitulo-seccion:target {
     padding-top: 90px;
     margin-top: -90px;
@@ -58,4 +59,106 @@
 img {
     max-width: 100%;
     height: auto;
+}
+
+
+
+.contenedor-podio {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end; 
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 0;
+}
+
+.pelicula-podio {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    padding-top: 20px;
+    background-color: #f0f8ff; 
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.pelicula-podio:hover {
+    transform: translateY(-5px);
+}
+
+.poster {
+    width: 130px; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.primero {
+    order: 2; 
+    height: 380px; 
+    background-color: #ffdf07; 
+    color: #1c5791;
+}
+
+.segundo {
+    order: 1; 
+    height: 330px;
+    background-color: #c0c0c0; 
+}
+
+.tercero {
+  
+    order: 3;
+    height: 280px;
+    background-color: #cd7f32; 
+}
+
+
+.ranking-numero {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    top: -15px; 
+    border: 3px solid white;
+}
+
+.titulo-pelicula {
+    font-size: 1.1em;
+    margin: 5px 0 0;
+    color: #113558;
+    font-weight: 600;
+}
+
+.primero .ranking-numero {
+    background-color: #1c5791;
+    color: #ffdf07;
+}
+
+@media (max-width: 600px) {
+    .contenedor-podio {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .pelicula-podio {
+        width: 80%; 
+        margin-bottom: 20px;
+        height: auto !important; 
+        padding: 15px;
+    }
+    .poster {
+        width: 100px;
+    }
 }
