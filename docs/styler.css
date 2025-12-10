@@ -1,72 +1,9 @@
-.navigation-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1c5791; 
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid #ffdf07; 
-}
-
-.navigation-menu a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 25px;
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.navigation-menu a:hover {
-    background-color: #ffdf07; 
-    color: #1c5791; 
-}
-
-
-#seccion-linea-tiempo:target, h2:target, .subtitulo-seccion:target {
-    padding-top: 90px;
-    margin-top: -90px;
-}
-
-.contenedor-video {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; 
-    align-items: center; 
-}
-
-
-.contenedor-imagenes-dobles {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; 
-    max-width: 300px;
-    margin: 20px auto;
-}
-
-.contenedor-imagenes-dobles img {
-    width: 48%; 
-    height: auto;
-    margin-bottom: 20px; 
-    max-width: 100%; 
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
+/* --- ESTILOS PARA EL PODIO TOP 3 (CORREGIDOS) --- */
 
 .contenedor-podio {
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-end; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinea por abajo para las distintas alturas */
     max-width: 900px;
     margin: 40px auto;
     padding: 20px 0;
@@ -74,15 +11,23 @@ img {
 
 .pelicula-podio {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0 10px;
-    padding-top: 20px;
-    background-color: #f0f8ff; 
+    margin: 0 5px; /* Reducimos el margen horizontal para ahorrar espacio */
+    padding: 20px 10px 10px; /* Reducimos el padding inferior */
+    
+    /* 1. Usamos ancho flexible en lugar de forzar un ancho fijo */
+    flex-basis: 30%; 
+    min-width: 150px; /* Establecemos un mínimo para que no se compriman demasiado */
+    
+    background-color: #f0f8ff;
     border-radius: 8px 8px 0 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    
+    /* 2. El contenido interno debe ajustarse al tamaño flexible */
+    box-sizing: border-box; 
 }
 
 .pelicula-podio:hover {
@@ -90,56 +35,63 @@ img {
 }
 
 .poster {
-    width: 130px; 
+    width: 100px; /* Reducimos el ancho del póster */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
+
+/* 🏆 TAMAÑOS Y COLORES DEL PODIO (Alturas Corregidas) 🏆 */
 
 .primero {
     order: 2; 
-    height: 380px; 
+    height: 360px; /* Altura más cómoda */
     background-color: #ffdf07; 
     color: #1c5791;
 }
 
 .segundo {
     order: 1; 
-    height: 330px;
+    height: 300px; /* Altura ajustada */
     background-color: #c0c0c0; 
 }
 
 .tercero {
-  
-    order: 3;
-    height: 280px;
+    order: 3; 
+    height: 250px; /* Altura ajustada */
     background-color: #cd7f32; 
 }
 
-
+/* Estilos de la etiqueta de ranking (1, 2, 3) */
 .ranking-numero {
-    font-size: 2.5em;
+    font-size: 2em; /* Reducimos el tamaño de la fuente */
     font-weight: 700;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     position: relative;
-    top: -15px; 
+    top: -10px; 
     border: 3px solid white;
 }
 
 .titulo-pelicula {
-    font-size: 1.1em;
+    font-size: 1em; /* Ligeramente más pequeño */
     margin: 5px 0 0;
     color: #113558;
     font-weight: 600;
+}
+
+.dato-extra {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+    color: #333333; /* Usamos un color que contraste con el fondo de cada podio */
 }
 
 .primero .ranking-numero {
@@ -147,18 +99,19 @@ img {
     color: #ffdf07;
 }
 
+/* 3. Corrección de Responsividad para móviles */
 @media (max-width: 600px) {
     .contenedor-podio {
-        flex-direction: column; 
+        flex-direction: column; /* Apila las películas verticalmente */
         align-items: center;
     }
     .pelicula-podio {
         width: 80%; 
         margin-bottom: 20px;
-        height: auto !important; 
+        height: auto !important; /* Desactiva la altura fija en móvil */
         padding: 15px;
     }
     .poster {
-        width: 100px;
+        width: 130px; /* Podemos hacer el póster más grande en móvil */
     }
 }
